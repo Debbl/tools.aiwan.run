@@ -2,6 +2,11 @@
   "name": "tools.aiwan.run",
   "version": "0.1.0",
   "private": true,
+  "description": "https://tools.aiwan.run",
+  "author": {
+    "name": "Debbl",
+    "email": "me@aiwan.run"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,5 +24,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@debbl/eslint-config-basic": "^0.0.27",
+    "@debbl/eslint-config-prettier": "^0.0.27",
+    "@debbl/eslint-config-react": "^0.0.27"
   }
 }
