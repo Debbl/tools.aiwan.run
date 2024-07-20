@@ -1,0 +1,57 @@
+{
+  "name": "tools.aiwan.run",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "description": "starter next app",
+  "author": "Brendan Dash <me@aiwna.run> (https://github.com/Debbl/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Debbl/tools.aiwan.run",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Debbl/tools.aiwan.run.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "ANALYZE=true next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@debbl/ahooks": "^0.1.0",
+    "@monaco-editor/react": "^4.6.0",
+    "@nextui-org/react": "^2.4.6",
+    "framer-motion": "^11.3.8",
+    "highlight.js": "^11.10.0",
+    "jotai": "^2.9.0",
+    "monaco-editor": "^0.50.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@debbl/eslint-config": "^3.4.0",
+    "@next/bundle-analyzer": "^14.2.5",
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "8.57.0",
+    "lint-staged": "^15.2.7",
+    "postcss": "^8.4.39",
+    "simple-git-hooks": "^2.11.1",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
