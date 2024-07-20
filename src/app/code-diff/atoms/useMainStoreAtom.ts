@@ -17,7 +17,11 @@ export const useMainStoreAtom = atomWithStorage<MainStoreState>(
     originalValue: "",
     modifiedValue: "",
     language: "plaintext",
-    languages: [],
+    languages: [
+      {
+        id: "plaintext",
+      },
+    ],
     theme: "light",
     renderSideBySide: true,
   },
