@@ -1,6 +1,8 @@
 "use client";
 import { Button, Checkbox, Select, SelectItem } from "@nextui-org/react";
 import type { Monaco, Theme } from "@monaco-editor/react";
+import { type ChangeEventHandler, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { useMainStore } from "../hooks/useMainStore";
 import { RiResetRightFill } from "../icons";
 
@@ -8,17 +10,29 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   const {
     language,
     languages,
-    theme,
-    setTheme,
+    theme: editorTheme,
+    setTheme: setEditorTheme,
     renderSideBySide,
     setLanguage,
     setRenderSideBySide,
   } = useMainStore();
 
+  const { setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme(editorTheme === "light" ? "light" : "dark");
+  }, [editorTheme, setTheme]);
+
   const resetMonacoValue = () => {
     monaco?.editor.getModels().forEach((model) => {
       model.setValue("");
     });
+  };
+
+  const handleSetTheme: ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const theme = e.target.value as Theme;
+
+    setEditorTheme(theme);
   };
 
   return (
@@ -40,8 +54,8 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       </Select>
 
       <Select
-        selectedKeys={[theme]}
-        onChange={(e) => setTheme(e.target.value as Theme)}
+        selectedKeys={[editorTheme]}
+        onChange={handleSetTheme}
         label="选择主题"
         size="sm"
         classNames={{
@@ -51,7 +65,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         labelPlacement="outside-left"
       >
         <SelectItem key="light">light</SelectItem>
-        <SelectItem key="vs-code">vs-dark</SelectItem>
+        <SelectItem key="vs-dark">vs-dark</SelectItem>
       </Select>
 
       <Checkbox

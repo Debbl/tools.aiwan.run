@@ -23,8 +23,11 @@ export default function DiffEditorContainer() {
   } = useMainStore();
 
   const monacoRef = useRef<Monaco>();
-  const languageRef = useLatest(language);
+
   const { isHydrated } = useHydrated();
+
+  const languageRef = useLatest(language);
+  const themeRef = useLatest(theme);
 
   const handleOnMount: DiffOnMount = (editor, monaco) => {
     monacoRef.current = monaco;
@@ -47,6 +50,12 @@ export default function DiffEditorContainer() {
       ) {
         toast.success(`已自动检测到语言: ${guessLanguage}`, {
           position: "top-right",
+          ...(themeRef.current === "vs-dark" && {
+            style: {
+              background: "#333",
+              color: "#fff",
+            },
+          }),
         });
         setLanguage(guessLanguage);
       }
