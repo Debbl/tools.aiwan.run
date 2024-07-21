@@ -8,8 +8,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "tools.aiwan.run",
-  description: "a tools",
+  title: "Magic tools",
+  description: "a magic tools for developers",
   icons: ["favicon.ico"],
 };
 

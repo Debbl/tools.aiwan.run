@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import type { Messages } from "~/atoms/localeAtom";
 import { localeAtom } from "~/atoms/localeAtom";
 
-export function useTranslations<T>(messages: Messages<T>) {
+export function useTranslations<T>(messages?: Messages<T>) {
   const [locale, setLocale] = useAtom(localeAtom);
 
   useEffect(() => {
@@ -13,6 +13,6 @@ export function useTranslations<T>(messages: Messages<T>) {
   return {
     locale,
     setLocale,
-    t: (key: keyof T) => messages[locale][key],
+    t: (key: keyof T) => (messages ? messages[locale][key] : ""),
   };
 }

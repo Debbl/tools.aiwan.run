@@ -78,7 +78,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         label={t("selectTheme")}
         size="sm"
         classNames={{
-          base: "max-w-40 items-center",
+          base: "max-w-52 items-center",
           mainWrapper: "flex-1",
         }}
         labelPlacement="outside-left"
