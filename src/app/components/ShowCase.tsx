@@ -9,7 +9,10 @@ import {
   Link,
   Skeleton,
 } from "@nextui-org/react";
+import { motion } from "framer-motion";
 import { useTranslations } from "~/hooks/useTranslations";
+
+const MotionCard = motion(Card);
 
 export default function Showcase() {
   const { t } = useTranslations({
@@ -25,7 +28,20 @@ export default function Showcase() {
   const { isHydrated } = useHydrated();
 
   return (
-    <Card className="max-w-[380px]">
+    <MotionCard
+      initial={{
+        opacity: 0,
+        scale: 0.9,
+        y: 80,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      }}
+      whileHover={{ scale: 1.05 }}
+      className="max-w-[380px]"
+    >
       <Skeleton isLoaded={isHydrated}>
         <CardHeader className="flex gap-3">
           <Image
@@ -48,6 +64,6 @@ export default function Showcase() {
         </CardBody>
         <Divider />
       </Skeleton>
-    </Card>
+    </MotionCard>
   );
 }
