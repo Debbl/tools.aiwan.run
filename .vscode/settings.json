@@ -1,4 +1,5 @@
 {
   "eslint.useFlatConfig": true,
-  "cSpell.words": ["nextui"]
+
+  "cSpell.words": ["Dexie", "nextui", "Todos"]
 }
