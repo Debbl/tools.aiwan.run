@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import Showcase from "./components/ShowCase";
+import Header from "../components/Header";
+import Showcase from "../components/ShowCase";
 
 export default function RootPage() {
   return (

@@ -1,13 +1,13 @@
 "use client";
-import type { DiffOnMount, Monaco } from "@monaco-editor/react";
+import { useHydrated, useLatest } from "@debbl/ahooks";
 import { DiffEditor } from "@monaco-editor/react";
 import hljs from "highlight.js";
 import { useRef } from "react";
-import { useHydrated, useLatest } from "@debbl/ahooks";
 import toast from "react-hot-toast";
+import type { DiffOnMount, Monaco } from "@monaco-editor/react";
+import { useTranslations } from "~/hooks/useTranslations";
 import { useMainStore } from "../hooks/useMainStore";
 import Operator from "./Operator";
-import { useTranslations } from "~/hooks/useTranslations";
 
 export default function DiffEditorContainer() {
   const {
@@ -77,6 +77,7 @@ export default function DiffEditorContainer() {
 
   return (
     <>
+      {/* eslint-disable-next-line react-compiler/react-compiler */}
       <Operator monaco={monacoRef.current} />
 
       {isHydrated && (

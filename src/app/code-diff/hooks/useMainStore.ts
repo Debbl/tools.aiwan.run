@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
-import type { MainStoreState } from "../atoms/useMainStoreAtom";
 import { useMainStoreAtom } from "../atoms/useMainStoreAtom";
+import type { MainStoreState } from "../atoms/useMainStoreAtom";
 
 export interface MainStoreActions {
   setOriginalValue: (originalValue: MainStoreState["originalValue"]) => void;
