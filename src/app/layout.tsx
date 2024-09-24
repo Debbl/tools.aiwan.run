@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Magic tools",
   description: "a magic tools for developers",
-  icons: ["favicon.ico"],
 };
 
 export default async function RootLayout({
