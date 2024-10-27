@@ -3,11 +3,11 @@ import { useHydrated } from "@debbl/ahooks";
 import { Button, Checkbox, Select, SelectItem } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import type { Monaco, Theme } from "@monaco-editor/react";
-import type { ChangeEventHandler } from "react";
 import { useTranslations } from "~/hooks/useTranslations";
 import { useMainStore } from "../hooks/useMainStore";
 import { FlowbiteLanguageOutline, RiResetRightFill } from "../icons";
+import type { Monaco, Theme } from "@monaco-editor/react";
+import type { ChangeEventHandler } from "react";
 
 export default function Operator({ monaco }: { monaco?: Monaco }) {
   const {
