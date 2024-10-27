@@ -2,7 +2,7 @@
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useTranslations } from "~/hooks/useTranslations";
-import { FlowbiteLanguageOutline } from "~/icons";
+import { Icon } from "~/icons";
 
 export default function Header() {
   const { locale, setLocale } = useTranslations();
@@ -24,7 +24,7 @@ export default function Header() {
           setLocale(locale === "en" ? "zh" : "en");
         }}
       >
-        <FlowbiteLanguageOutline />
+        <Icon icon="FlowbiteLanguageOutline" />
       </Button>
     </motion.header>
   );

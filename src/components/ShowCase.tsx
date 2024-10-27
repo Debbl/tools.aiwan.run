@@ -20,10 +20,12 @@ export default function Showcase() {
       codeDiff:
         "Code Diff is a tool that allows you to compare two code snippets side by side.",
       battery: "Get battery information",
+      base64: "a tool that transforms text to base64 and vice versa",
     },
     zh: {
       codeDiff: "代码对比是一个工具，允许您将两个代码片段并排进行比较。",
       battery: "获取电池信息",
+      base64: "一个将文本转换为base64的工具",
     },
   });
 
@@ -40,12 +42,18 @@ export default function Showcase() {
       link: "battery",
       icon: "./battery/icon.svg",
     },
+    {
+      title: "Base64",
+      description: t("base64"),
+      link: "base64",
+      icon: "./base64/icon.svg",
+    },
   ];
 
   const { isHydrated } = useHydrated();
 
   return (
-    <div className="grid gap-2">
+    <div className="grid grid-cols-2 gap-4">
       {LIST.map((item) => (
         <MotionCard
           key={item.title}
