@@ -9,7 +9,7 @@ export function CopyButton({
   className,
 }: {
   text: string;
-  className: string;
+  className?: string;
 }) {
   const [isCopied, setIsCopied] = useState(false);
 

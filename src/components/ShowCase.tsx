@@ -21,11 +21,13 @@ export default function Showcase() {
         "Code Diff is a tool that allows you to compare two code snippets side by side.",
       battery: "Get battery information",
       base64: "a tool that transforms text to base64 and vice versa",
+      miwifiSn: "MiWiFi SSH Password Calculator",
     },
     zh: {
       codeDiff: "代码对比是一个工具，允许您将两个代码片段并排进行比较。",
       battery: "获取电池信息",
       base64: "一个将文本转换为base64的工具",
+      miwifiSn: "小米路由器SSH密码计算器",
     },
   });
 
@@ -47,6 +49,12 @@ export default function Showcase() {
       description: t("base64"),
       link: "base64",
       icon: "./base64/icon.svg",
+    },
+    {
+      title: "MiWiFi SN",
+      description: t("miwifiSn"),
+      link: "miwifi-sn",
+      icon: "./miwifi-sn/icon.svg",
     },
   ];
 
@@ -90,7 +98,6 @@ export default function Showcase() {
             <CardBody>
               <p>{item.description}</p>
             </CardBody>
-            <Divider />
           </Skeleton>
         </MotionCard>
       ))}
