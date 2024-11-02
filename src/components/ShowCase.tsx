@@ -22,12 +22,14 @@ export default function Showcase() {
       battery: "Get battery information",
       base64: "a tool that transforms text to base64 and vice versa",
       miwifiSn: "MiWiFi SSH Password Calculator",
+      generateQuery: "Generate Query",
     },
     zh: {
       codeDiff: "代码对比是一个工具，允许您将两个代码片段并排进行比较。",
       battery: "获取电池信息",
       base64: "一个将文本转换为base64的工具",
       miwifiSn: "小米路由器SSH密码计算器",
+      generateQuery: "生成查询",
     },
   });
 
@@ -56,6 +58,12 @@ export default function Showcase() {
       link: "miwifi-sn",
       icon: "./miwifi-sn/icon.svg",
     },
+    {
+      title: "Generate Query",
+      description: t("generateQuery"),
+      link: "generate-query",
+      icon: "./generate-query/icon.svg",
+    },
   ];
 
   const { isHydrated } = useHydrated();
@@ -81,9 +89,12 @@ export default function Showcase() {
           <Skeleton isLoaded={isHydrated}>
             <CardHeader className="flex gap-3">
               <Image
+                isBlurred
+                classNames={{
+                  img: "rounded-none",
+                }}
                 alt={`${item.title} logo`}
                 height={40}
-                radius="sm"
                 src={item.icon}
                 width={40}
               />
