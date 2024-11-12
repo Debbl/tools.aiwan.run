@@ -99,7 +99,7 @@ export default function Showcase() {
                 width={40}
               />
               <div className="flex flex-col">
-                <p className="text-xl">Code Diff</p>
+                <p className="text-xl">{item.title}</p>
                 <Link isExternal href={item.link} showAnchorIcon>
                   {item.link}
                 </Link>
