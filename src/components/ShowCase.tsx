@@ -23,6 +23,7 @@ export default function Showcase() {
       base64: "a tool that transforms text to base64 and vice versa",
       miwifiSn: "MiWiFi SSH Password Calculator",
       generateQuery: "Generate Query",
+      diceRoller: "Dice Roller",
     },
     zh: {
       codeDiff: "代码对比是一个工具，允许您将两个代码片段并排进行比较。",
@@ -30,6 +31,7 @@ export default function Showcase() {
       base64: "一个将文本转换为base64的工具",
       miwifiSn: "小米路由器SSH密码计算器",
       generateQuery: "生成查询",
+      diceRoller: "掷骰子",
     },
   });
 
@@ -63,6 +65,12 @@ export default function Showcase() {
       description: t("generateQuery"),
       link: "generate-query",
       icon: "./generate-query/icon.svg",
+    },
+    {
+      title: "Dice Roller",
+      description: t("diceRoller"),
+      link: "dice-roller",
+      icon: "./dice-roller/icon.svg",
     },
   ];
 

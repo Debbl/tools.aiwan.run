@@ -9,6 +9,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig: NextConfig = {
   output: "export",
   experimental: {},
+  transpilePackages: ["three"],
 };
 
 export default withBundleAnalyzer(nextConfig);
