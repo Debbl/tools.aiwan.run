@@ -4,6 +4,7 @@
 import { CameraControls } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";
+import { useDice } from "../Provider";
 import Dice from "./Dice";
 
 function Plane() {
@@ -19,6 +20,7 @@ function Plane() {
 
 export default function Scene() {
   const camera = useRef<CameraControls>(null);
+  const { cameraEnabled } = useDice();
 
   useEffect(() => {
     if (camera.current) {
@@ -31,7 +33,7 @@ export default function Scene() {
       <Plane />
 
       <Dice />
-      <CameraControls ref={camera} />
+      <CameraControls ref={camera} enabled={cameraEnabled} />
     </>
   );
 }
