@@ -17,15 +17,15 @@ importers:
       '@nextui-org/react':
         specifier: ^2.4.8
         version: 2.4.8(@types/react@18.3.12)(framer-motion@11.11.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15)
-      '@react-three/cannon':
-        specifier: ^6.6.0
-        version: 6.6.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(react@18.3.1)(three@0.170.0)(typescript@5.6.3)
       '@react-three/drei':
         specifier: ^9.117.0
         version: 9.117.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(@types/react@18.3.12)(@types/three@0.170.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
       '@react-three/fiber':
         specifier: 9.0.0-alpha.8
         version: 9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
+      '@react-three/rapier':
+        specifier: ^1.5.0
+        version: 1.5.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(react@18.3.1)(three@0.170.0)
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
@@ -245,6 +245,9 @@ packages:
     resolution: {integrity: sha512-2G+R83dr8W5HkaOjCEUnnhVSY+gJqiyDPAEfG83rzxfnbC3go21krxse81jUfMi4KZxxulSbCMZ2J5mcDxTVcQ==}
     peerDependencies:
       eslint: '>=8.40.0'
+
+  '@dimforge/rapier3d-compat@0.14.0':
+    resolution: {integrity: sha512-/uHrUzS+CRQ+NQrrJCEDUkhwHlNsAAexbNXgbN9sHY+GwR+SFFAFrxRr8Llf5/AJZzqiLANdQIfJ63Cw4gJVqw==}
 
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -1077,11 +1080,6 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@pmndrs/cannon-worker-api@2.4.0':
-    resolution: {integrity: sha512-oJA1Bboc+WObksRaGDKJG0Wna9Q75xi1MdXVAZ9qXzBOyPsadmAnrmiKOEF0R8v/4zsuJElvscNZmyo3msbZjA==}
-    peerDependencies:
-      three: '>=0.139'
-
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
@@ -1392,13 +1390,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
-  '@react-three/cannon@6.6.0':
-    resolution: {integrity: sha512-lP9rJoVHQi0w+dYF8FJAm2xr5eLfNEckb04j72kjqndUkuOPr26N4rSBhQbHl5b5N3tEnhQaIMungAvHkcY8/A==}
-    peerDependencies:
-      '@react-three/fiber': '>=8'
-      react: '>=18'
-      three: '>=0.139'
-
   '@react-three/drei@9.117.0':
     resolution: {integrity: sha512-UuYnM/qNiP+37R2dVR68R9ufGrWI/OdtDxfJRxtHaXyHWWfj7muEy4vbLZRe95a4fGEfaKy0gdplbG2BFedHtg==}
     peerDependencies:
@@ -1437,6 +1428,13 @@ packages:
         optional: true
       react-native:
         optional: true
+
+  '@react-three/rapier@1.5.0':
+    resolution: {integrity: sha512-gylk2KyCer9EoymFyTyc+g2IqyAq4mTbZgaHoSJi6gHoXlJsC2LVeN4jedvegvjUsXPExdE60wHjCPa+DS4iXw==}
+    peerDependencies:
+      '@react-three/fiber': '>=8.9.0'
+      react: '>=18.0.0'
+      three: '>=0.139.0'
 
   '@react-types/accordion@3.0.0-alpha.21':
     resolution: {integrity: sha512-cbE06jH/ZoI+1898xd7ocQ/A/Rtkz8wTJAVOYgc8VRY1SYNQ/XZTGH5T6dD6aERAmiDwL/kjD7xhsE80DyaEKA==}
@@ -1960,19 +1958,6 @@ packages:
 
   caniuse-lite@1.0.30001680:
     resolution: {integrity: sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==}
-
-  cannon-es-debugger@1.0.0:
-    resolution: {integrity: sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g==}
-    peerDependencies:
-      cannon-es: 0.x
-      three: 0.x
-      typescript: '>=3.8'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
-  cannon-es@0.20.0:
-    resolution: {integrity: sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -4855,6 +4840,8 @@ snapshots:
       - typescript
       - vitest
 
+  '@dimforge/rapier3d-compat@0.14.0': {}
+
   '@discoveryjs/json-ext@0.5.7': {}
 
   '@emnapi/runtime@1.3.1':
@@ -6158,10 +6145,6 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@pmndrs/cannon-worker-api@2.4.0(three@0.170.0)':
-    dependencies:
-      three: 0.170.0
-
   '@polka/url@1.0.0-next.28': {}
 
   '@react-aria/breadcrumbs@3.5.13(react@18.3.1)':
@@ -6769,17 +6752,6 @@ snapshots:
       '@swc/helpers': 0.5.15
       react: 18.3.1
 
-  '@react-three/cannon@6.6.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(react@18.3.1)(three@0.170.0)(typescript@5.6.3)':
-    dependencies:
-      '@pmndrs/cannon-worker-api': 2.4.0(three@0.170.0)
-      '@react-three/fiber': 9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
-      cannon-es: 0.20.0
-      cannon-es-debugger: 1.0.0(cannon-es@0.20.0)(three@0.170.0)(typescript@5.6.3)
-      react: 18.3.1
-      three: 0.170.0
-    transitivePeerDependencies:
-      - typescript
-
   '@react-three/drei@9.117.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(@types/react@18.3.12)(@types/three@0.170.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)':
     dependencies:
       '@babel/runtime': 7.26.0
@@ -6841,6 +6813,15 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
       - immer
+
+  '@react-three/rapier@1.5.0(@react-three/fiber@9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(react@18.3.1)(three@0.170.0)':
+    dependencies:
+      '@dimforge/rapier3d-compat': 0.14.0
+      '@react-three/fiber': 9.0.0-alpha.8(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
+      react: 18.3.1
+      suspend-react: 0.1.3(react@18.3.1)
+      three: 0.170.0
+      three-stdlib: 2.34.0(three@0.170.0)
 
   '@react-types/accordion@3.0.0-alpha.21(react@18.3.1)':
     dependencies:
@@ -7436,15 +7417,6 @@ snapshots:
   caniuse-lite@1.0.30001662: {}
 
   caniuse-lite@1.0.30001680: {}
-
-  cannon-es-debugger@1.0.0(cannon-es@0.20.0)(three@0.170.0)(typescript@5.6.3):
-    dependencies:
-      cannon-es: 0.20.0
-      three: 0.170.0
-    optionalDependencies:
-      typescript: 5.6.3
-
-  cannon-es@0.20.0: {}
 
   ccount@2.0.1: {}
 
