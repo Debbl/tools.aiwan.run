@@ -7,7 +7,7 @@ export function useTranslations<T>(messages?: Messages<T>) {
   const [locale, setLocale] = useAtom(localeAtom);
 
   useEffect(() => {
-    document.documentElement.lang = locale;
+    // document.documentElement.lang = locale;
   }, [locale]);
 
   return {

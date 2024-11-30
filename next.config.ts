@@ -8,7 +8,18 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   output: "export",
-  experimental: {},
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.po$/,
+      use: {
+        loader: "@lingui/loader",
+      },
+    });
+    return config;
+  },
+  experimental: {
+    swcPlugins: [["@lingui/swc-plugin", {}]],
+  },
   transpilePackages: ["three"],
 };
 
