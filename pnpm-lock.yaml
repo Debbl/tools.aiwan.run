@@ -17,9 +17,6 @@ importers:
       '@lingui/react':
         specifier: ^5.0.0
         version: 5.0.0(@lingui/babel-plugin-lingui-macro@5.0.0(babel-plugin-macros@3.1.0)(typescript@5.7.2))(babel-plugin-macros@3.1.0)(react@18.3.1)
-      '@lingui/swc-plugin':
-        specifier: ^5.0.0
-        version: 5.0.0(@lingui/macro@4.14.1(@lingui/react@5.0.0(@lingui/babel-plugin-lingui-macro@5.0.0(babel-plugin-macros@3.1.0)(typescript@5.7.2))(babel-plugin-macros@3.1.0)(react@18.3.1))(babel-plugin-macros@3.1.0)(typescript@5.7.2))(next@15.0.3(@babel/core@7.26.0)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@monaco-editor/react':
         specifier: ^4.6.0
         version: 4.6.0(monaco-editor@0.52.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -87,6 +84,9 @@ importers:
       '@lingui/loader':
         specifier: ^5.0.0
         version: 5.0.0(typescript@5.7.2)(webpack@5.96.1)
+      '@lingui/swc-plugin':
+        specifier: ^5.0.0
+        version: 5.0.0(@lingui/macro@4.14.1(@lingui/react@5.0.0(@lingui/babel-plugin-lingui-macro@5.0.0(babel-plugin-macros@3.1.0)(typescript@5.7.2))(babel-plugin-macros@3.1.0)(react@18.3.1))(babel-plugin-macros@3.1.0)(typescript@5.7.2))(next@15.0.3(@babel/core@7.26.0)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@next/bundle-analyzer':
         specifier: ^15.0.3
         version: 15.0.3
