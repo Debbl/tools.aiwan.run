@@ -4,7 +4,7 @@ import { useLingui } from "@lingui/react/macro";
 import { Button, Checkbox, Select, SelectItem } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { useI18n } from "~/hooks/useI18n";
+import { useI18nHelper } from "~/hooks/useI18nHelper";
 import { useMainStore } from "../hooks/useMainStore";
 import { FlowbiteLanguageOutline, RiResetRightFill } from "../icons";
 import type { Monaco, Theme } from "@monaco-editor/react";
@@ -36,7 +36,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   const { isHydrated } = useHydrated();
 
   const { t } = useLingui();
-  const { switchLocale } = useI18n();
+  const { switchLocale } = useI18nHelper();
 
   const handleSetTheme: ChangeEventHandler<HTMLSelectElement> = (e) => {
     const theme = e.target.value as Theme;

@@ -11,10 +11,12 @@ import {
   Skeleton,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useI18nHelper } from "~/hooks/useI18nHelper";
 
 const MotionCard = motion(Card);
 
 export default function Showcase() {
+  const { getRealPathname } = useI18nHelper();
   const { t } = useLingui();
 
   const LIST = [
@@ -54,7 +56,10 @@ export default function Showcase() {
       link: "dice-roller",
       icon: "./dice-roller/icon.svg",
     },
-  ];
+  ].map((i) => ({
+    ...i,
+    href: getRealPathname(i.link),
+  }));
 
   const { isHydrated } = useHydrated();
 
@@ -90,7 +95,7 @@ export default function Showcase() {
               />
               <div className="flex flex-col">
                 <p className="text-xl">{item.title}</p>
-                <Link isExternal href={item.link} showAnchorIcon>
+                <Link isExternal href={item.href} showAnchorIcon>
                   {item.link}
                 </Link>
               </div>

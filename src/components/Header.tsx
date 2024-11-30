@@ -2,11 +2,11 @@
 import { useGitHubInfo } from "@debbl/ahooks";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { useI18n } from "~/hooks/useI18n";
+import { useI18nHelper } from "~/hooks/useI18nHelper";
 import { Icon } from "~/icons";
 
 export default function Header() {
-  const { switchLocale } = useI18n();
+  const { switchLocale } = useI18nHelper();
   const { GitHubInfo } = useGitHubInfo(
     "https://github.com/Debbl/tools.aiwan.run/",
   );
