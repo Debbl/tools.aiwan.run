@@ -2,11 +2,11 @@
 import { useGitHubInfo } from "@debbl/ahooks";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { useTranslations } from "~/hooks/useTranslations";
+import { useI18n } from "~/hooks/useI18n";
 import { Icon } from "~/icons";
 
 export default function Header() {
-  const { locale, setLocale } = useTranslations();
+  const { switchLocale } = useI18n();
   const { GitHubInfo } = useGitHubInfo(
     "https://github.com/Debbl/tools.aiwan.run/",
   );
@@ -21,14 +21,7 @@ export default function Header() {
       <h1>Magic Tools</h1>
 
       <div className="absolute right-4 flex items-center gap-x-2">
-        <Button
-          size="sm"
-          variant="ghost"
-          isIconOnly
-          onClick={() => {
-            setLocale(locale === "en" ? "zh" : "en");
-          }}
-        >
+        <Button size="sm" variant="ghost" isIconOnly onClick={switchLocale}>
           <Icon icon="FlowbiteLanguageOutline" />
         </Button>
         <GitHubInfo className="size-6" />

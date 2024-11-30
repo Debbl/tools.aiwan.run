@@ -13,6 +13,42 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/[lang]/page.tsx:6
-msgid "Hello"
-msgstr "Hello"
+#: src/components/ShowCase.tsx:35
+msgid "A tool that transforms text to base64 and vice versa"
+msgstr "A tool that transforms text to base64 and vice versa"
+
+#: src/app/(main)/code-diff/components/DiffEditorContainer.tsx:54
+msgid "auto detect language"
+msgstr "auto detect language"
+
+#: src/components/ShowCase.tsx:23
+msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
+msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
+
+#: src/components/ShowCase.tsx:53
+msgid "Dice Roller"
+msgstr "Dice Roller"
+
+#: src/components/ShowCase.tsx:47
+msgid "Generate Query"
+msgstr "Generate Query"
+
+#: src/components/ShowCase.tsx:29
+msgid "Get battery information"
+msgstr "Get battery information"
+
+#: src/components/ShowCase.tsx:41
+msgid "MiWiFi SSH Password Calculator"
+msgstr "MiWiFi SSH Password Calculator"
+
+#: src/app/(main)/code-diff/components/Operator.tsx:67
+msgid "selectLanguage"
+msgstr "selectLanguage"
+
+#: src/app/(main)/code-diff/components/Operator.tsx:83
+msgid "selectTheme"
+msgstr "selectTheme"
+
+#: src/app/(main)/code-diff/components/Operator.tsx:101
+msgid "sideBySide"
+msgstr "sideBySide"
