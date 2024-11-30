@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Magic tools",
   description: "a magic tools for developers",
+  icons: ["/favicon.ico"],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
