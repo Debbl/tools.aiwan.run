@@ -1,5 +1,6 @@
 "use client";
 import { useHydrated } from "@debbl/ahooks";
+import { useLingui } from "@lingui/react/macro";
 import {
   Card,
   CardBody,
@@ -10,69 +11,55 @@ import {
   Skeleton,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { useTranslations } from "~/hooks/useTranslations";
+import { useI18nHelper } from "~/hooks/useI18nHelper";
 
 const MotionCard = motion(Card);
 
 export default function Showcase() {
-  const { t } = useTranslations({
-    en: {
-      codeDiff:
-        "Code Diff is a tool that allows you to compare two code snippets side by side.",
-      battery: "Get battery information",
-      base64: "a tool that transforms text to base64 and vice versa",
-      miwifiSn: "MiWiFi SSH Password Calculator",
-      generateQuery: "Generate Query",
-      diceRoller: "Dice Roller",
-    },
-    zh: {
-      codeDiff: "代码对比是一个工具，允许您将两个代码片段并排进行比较。",
-      battery: "获取电池信息",
-      base64: "一个将文本转换为base64的工具",
-      miwifiSn: "小米路由器SSH密码计算器",
-      generateQuery: "生成查询",
-      diceRoller: "掷骰子",
-    },
-  });
+  const { getRealPathname } = useI18nHelper();
+  const { t } = useLingui();
 
   const LIST = [
     {
       title: "Code Diff",
-      description: t("codeDiff"),
+      description: t`Code Diff is a tool that allows you to compare two code snippets side by side.`,
       link: "code-diff",
       icon: "./code-diff/icon.svg",
     },
     {
       title: "Battery",
-      description: t("battery"),
+      description: t`Get battery information`,
       link: "battery",
       icon: "./battery/icon.svg",
     },
     {
       title: "Base64",
-      description: t("base64"),
+      description: t`A tool that transforms text to base64 and vice versa`,
       link: "base64",
       icon: "./base64/icon.svg",
     },
     {
       title: "MiWiFi SN",
-      description: t("miwifiSn"),
+      description: t`MiWiFi SSH Password Calculator`,
       link: "miwifi-sn",
       icon: "./miwifi-sn/icon.svg",
     },
     {
       title: "Generate Query",
-      description: t("generateQuery"),
+      description: t`Generate Query`,
       link: "generate-query",
       icon: "./generate-query/icon.svg",
     },
     {
       title: "Dice Roller",
-      description: t("diceRoller"),
+      description: t`Dice Roller`,
       link: "dice-roller",
       icon: "./dice-roller/icon.svg",
     },
-  ];
+  ].map((i) => ({
+    ...i,
+    href: getRealPathname(i.link),
+  }));
 
   const { isHydrated } = useHydrated();
 
@@ -108,7 +95,7 @@ export default function Showcase() {
               />
               <div className="flex flex-col">
                 <p className="text-xl">{item.title}</p>
-                <Link isExternal href={item.link} showAnchorIcon>
+                <Link isExternal href={item.href} showAnchorIcon>
                   {item.link}
                 </Link>
               </div>

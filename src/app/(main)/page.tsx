@@ -1,7 +1,7 @@
-import Header from "../components/Header";
-import Showcase from "../components/ShowCase";
+import Header from "../../components/Header";
+import Showcase from "../../components/ShowCase";
 
-export default function RootPage() {
+export default function Page() {
   return (
     <div className="flex h-full flex-col">
       <Header />

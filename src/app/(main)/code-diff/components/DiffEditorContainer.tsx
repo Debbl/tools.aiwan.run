@@ -1,10 +1,10 @@
 "use client";
 import { useHydrated, useLatest } from "@debbl/ahooks";
+import { useLingui } from "@lingui/react/macro";
 import { DiffEditor } from "@monaco-editor/react";
 import hljs from "highlight.js";
 import { useRef } from "react";
 import toast from "react-hot-toast";
-import { useTranslations } from "~/hooks/useTranslations";
 import { useMainStore } from "../hooks/useMainStore";
 import Operator from "./Operator";
 import type { DiffOnMount, Monaco } from "@monaco-editor/react";
@@ -30,14 +30,7 @@ export default function DiffEditorContainer() {
   const languageRef = useLatest(language);
   const themeRef = useLatest(theme);
 
-  const { t } = useTranslations({
-    en: {
-      "auto detect language": "Auto detect language",
-    },
-    zh: {
-      "auto detect language": "已自动检测到语言",
-    },
-  });
+  const { t } = useLingui();
 
   const handleOnMount: DiffOnMount = (editor, monaco) => {
     monacoRef.current = monaco;
@@ -58,7 +51,7 @@ export default function DiffEditorContainer() {
         guessLanguage !== languageRef.current &&
         languagesId.includes(guessLanguage)
       ) {
-        toast.success(`${t("auto detect language")}: ${guessLanguage}`, {
+        toast.success(`${t`auto detect language`}: ${guessLanguage}`, {
           position: "top-right",
           ...(themeRef.current === "vs-dark" && {
             style: {

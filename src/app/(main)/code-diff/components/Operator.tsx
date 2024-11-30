@@ -1,9 +1,10 @@
 "use client";
 import { useHydrated } from "@debbl/ahooks";
+import { useLingui } from "@lingui/react/macro";
 import { Button, Checkbox, Select, SelectItem } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { useTranslations } from "~/hooks/useTranslations";
+import { useI18nHelper } from "~/hooks/useI18nHelper";
 import { useMainStore } from "../hooks/useMainStore";
 import { FlowbiteLanguageOutline, RiResetRightFill } from "../icons";
 import type { Monaco, Theme } from "@monaco-editor/react";
@@ -34,18 +35,8 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
 
   const { isHydrated } = useHydrated();
 
-  const { t, locale, setLocale } = useTranslations({
-    en: {
-      selectLanguage: "Select Language",
-      selectTheme: "Select Theme",
-      sideBySide: "Side by Side",
-    },
-    zh: {
-      selectLanguage: "选择语言",
-      selectTheme: "选择主题",
-      sideBySide: "并排显示",
-    },
-  });
+  const { t } = useLingui();
+  const { switchLocale } = useI18nHelper();
 
   const handleSetTheme: ChangeEventHandler<HTMLSelectElement> = (e) => {
     const theme = e.target.value as Theme;
@@ -60,7 +51,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       <Select
         selectedKeys={[language]}
         onChange={(e) => setLanguage(e.target.value)}
-        label={t("selectLanguage")}
+        label={t`selectLanguage`}
         size="sm"
         classNames={{
           base: "max-w-xs items-center",
@@ -76,7 +67,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       <Select
         selectedKeys={[editorTheme]}
         onChange={handleSetTheme}
-        label={t("selectTheme")}
+        label={t`selectTheme`}
         size="sm"
         classNames={{
           base: "max-w-52 items-center",
@@ -94,20 +85,13 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         size="md"
         defaultSelected
       >
-        {t("sideBySide")}
+        {t`sideBySide`}
       </Checkbox>
 
       <Button size="sm" isIconOnly onClick={resetMonacoValue}>
         <RiResetRightFill />
       </Button>
-      <Button
-        size="sm"
-        isIconOnly
-        variant="ghost"
-        onClick={() => {
-          setLocale(locale === "en" ? "zh" : "en");
-        }}
-      >
+      <Button size="sm" isIconOnly variant="ghost" onClick={switchLocale}>
         <FlowbiteLanguageOutline />
       </Button>
     </div>
