@@ -51,7 +51,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       <Select
         selectedKeys={[language]}
         onChange={(e) => setLanguage(e.target.value)}
-        label={t`selectLanguage`}
+        label={t`Select Language`}
         size="sm"
         classNames={{
           base: "max-w-xs items-center",
@@ -67,7 +67,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       <Select
         selectedKeys={[editorTheme]}
         onChange={handleSetTheme}
-        label={t`selectTheme`}
+        label={t`Select Theme`}
         size="sm"
         classNames={{
           base: "max-w-52 items-center",
@@ -85,7 +85,7 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         size="md"
         defaultSelected
       >
-        {t`sideBySide`}
+        {t`Side By Side`}
       </Checkbox>
 
       <Button size="sm" isIconOnly onClick={resetMonacoValue}>
