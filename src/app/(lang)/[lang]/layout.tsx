@@ -1,4 +1,4 @@
-import { locales } from "~/i18n";
+import { locales, sourceLocale } from "~/i18n";
 import { getRootLayout } from "../../_layout";
 
 export { metadata } from "../../_layout";
@@ -11,7 +11,9 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({ lang: locale }));
+  return locales
+    .filter((l) => l !== sourceLocale)
+    .map((locale) => ({ lang: locale }));
 }
 
 export default async function Layout({ params, children }: Props) {
