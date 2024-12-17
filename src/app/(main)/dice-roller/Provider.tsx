@@ -14,13 +14,13 @@ export default function Provider({ children }: { children: ReactNode }) {
   const [cameraEnabled, setCameraEnabled] = useState(true);
 
   return (
-    <Content.Provider
+    <Content
       value={{
         cameraEnabled,
         setCameraEnabled,
       }}
     >
       {children}
-    </Content.Provider>
+    </Content>
   );
 }

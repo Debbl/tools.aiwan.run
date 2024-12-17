@@ -1,6 +1,4 @@
 "use client";
-/* eslint-disable react/no-unknown-property */
-
 import { CameraControls } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import { useEffect, useRef } from "react";

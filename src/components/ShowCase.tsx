@@ -13,6 +13,8 @@ import {
 import { motion } from "framer-motion";
 import { useI18nHelper } from "~/hooks/useI18nHelper";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const MotionCard = motion(Card);
 
 export default function Showcase() {

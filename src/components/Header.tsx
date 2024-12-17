@@ -21,7 +21,7 @@ export default function Header() {
       <h1>Magic Tools</h1>
 
       <div className="absolute right-4 flex items-center gap-x-2">
-        <Button size="sm" variant="ghost" isIconOnly onClick={switchLocale}>
+        <Button size="sm" variant="ghost" isIconOnly onPress={switchLocale}>
           <Icon icon="FlowbiteLanguageOutline" />
         </Button>
         <GitHubInfo className="size-6" />

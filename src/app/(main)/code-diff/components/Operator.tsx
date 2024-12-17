@@ -88,10 +88,10 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         {t`Side By Side`}
       </Checkbox>
 
-      <Button size="sm" isIconOnly onClick={resetMonacoValue}>
+      <Button size="sm" isIconOnly onPress={resetMonacoValue}>
         <RiResetRightFill />
       </Button>
-      <Button size="sm" isIconOnly variant="ghost" onClick={switchLocale}>
+      <Button size="sm" isIconOnly variant="ghost" onPress={switchLocale}>
         <FlowbiteLanguageOutline />
       </Button>
     </div>

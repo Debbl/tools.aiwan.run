@@ -23,7 +23,7 @@ export default function DiffEditorContainer() {
     setLanguages,
   } = useMainStore();
 
-  const monacoRef = useRef<Monaco>();
+  const monacoRef = useRef<Monaco | undefined>(undefined);
 
   const { isHydrated } = useHydrated();
 

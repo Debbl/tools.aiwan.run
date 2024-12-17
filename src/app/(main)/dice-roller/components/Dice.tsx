@@ -1,6 +1,4 @@
 "use client";
-
-/* eslint-disable react/no-unknown-property */
 import { useGLTF } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import { useRef, useState } from "react";
@@ -8,7 +6,7 @@ import type { Mesh } from "three";
 
 export default function Dice() {
   const gltf = useGLTF("/dice.gltf", "/draco-gltf");
-  const meshRef = useRef<Mesh>();
+  const meshRef = useRef<Mesh | undefined>(undefined);
   const [isDragging, _setIsDragging] = useState(false);
 
   return (
