@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/ShowCase.tsx:37
+#: src/components/ShowCase.tsx:39
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "A tool that transforms text to base64 and vice versa"
 
@@ -21,25 +21,52 @@ msgstr "A tool that transforms text to base64 and vice versa"
 msgid "auto detect language"
 msgstr "auto detect language"
 
-#: src/components/ShowCase.tsx:25
+#: src/components/ShowCase.tsx:27
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
-#: src/components/ShowCase.tsx:55
+#: src/components/ShowCase.tsx:63
+#: src/app/(main)/pinyin/layout.tsx:7
+msgid "Convert chinese to pinyin"
+msgstr "Convert chinese to pinyin"
+
+#: src/components/ShowCase.tsx:57
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
-#: src/components/ShowCase.tsx:49
+#: src/app/(main)/pinyin/page.tsx:42
+msgid "Enter your input text"
+msgstr "Enter your input text"
+
+#: src/app/(main)/pinyin/page.tsx:53
+#~ msgid "Enter your pinyin text"
+#~ msgstr "Enter your pinyin text"
+
+#: src/components/ShowCase.tsx:51
 msgid "Generate Query"
 msgstr "Generate Query"
 
-#: src/components/ShowCase.tsx:31
+#: src/components/ShowCase.tsx:33
 msgid "Get battery information"
 msgstr "Get battery information"
 
-#: src/components/ShowCase.tsx:43
+#: src/app/(main)/pinyin/page.tsx:20
+msgid "Invalid input"
+msgstr "Invalid input"
+
+#: src/components/ShowCase.tsx:45
 msgid "MiWiFi SSH Password Calculator"
 msgstr "MiWiFi SSH Password Calculator"
+
+#: src/app/(main)/pinyin/page.tsx:53
+msgid "No input"
+msgstr "No input"
+
+#: src/app/(main)/pinyin/page.tsx:29
+#: src/app/(main)/pinyin/page.tsx:51
+#: src/app/(main)/pinyin/layout.tsx:6
+msgid "Pinyin"
+msgstr "Pinyin"
 
 #: src/app/(main)/code-diff/components/Operator.tsx:54
 msgid "Select Language"
@@ -52,3 +79,7 @@ msgstr "Select Theme"
 #: src/app/(main)/code-diff/components/Operator.tsx:88
 msgid "Side By Side"
 msgstr "Side By Side"
+
+#: src/app/(main)/pinyin/page.tsx:41
+msgid "Text"
+msgstr "Text"

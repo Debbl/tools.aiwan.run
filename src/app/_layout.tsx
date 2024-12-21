@@ -22,7 +22,7 @@ export function getRootLayout(lang: string) {
     setI18n(i18n);
 
     return (
-      <html lang={lang}>
+      <html lang={lang} suppressHydrationWarning>
         <body className={inter.className}>
           <Toaster />
           <LinguiClientProvider

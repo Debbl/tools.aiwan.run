@@ -58,6 +58,12 @@ export default function Showcase() {
       link: "dice-roller",
       icon: "./dice-roller/icon.svg",
     },
+    {
+      title: "Pin Yin",
+      description: t`Convert chinese to pinyin`,
+      link: "pinyin",
+      icon: "./pinyin/icon.svg",
+    },
   ].map((i) => ({
     ...i,
     href: getRealPathname(i.link),

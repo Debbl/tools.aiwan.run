@@ -1,38 +1,33 @@
 "use client";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { Textarea } from "@nextui-org/react";
+import pinyin from "pinyin";
 import { useState } from "react";
 import { CopyButton } from "~/components/CopyButton";
 
 export default function Page() {
+  const { t } = useLingui();
   const [inputText, setInputText] = useState("");
-  const [base64Text, setBase64Text] = useState("");
+  const [pingyinText, setPingyinText] = useState("");
 
   const handleInputTextChange = (value: string) => {
     setInputText(value);
-    let newBase64Text = "";
-    try {
-      newBase64Text = btoa(value);
-    } catch {
-      newBase64Text = "Invalid input";
-    }
-    setBase64Text(newBase64Text);
-  };
 
-  const handleBase64TextChange = (value: string) => {
-    setBase64Text(value);
-    let newInputText = "";
+    let newPingyinText = "";
     try {
-      newInputText = atob(value);
+      newPingyinText = pinyin(value).join(" ");
     } catch {
-      newInputText = "Invalid input";
+      newPingyinText = t`Invalid input`;
     }
-    setInputText(newInputText);
+    setPingyinText(newPingyinText);
   };
 
   return (
     <div className="grid h-full content-center gap-y-2">
       <div>
-        <h1 className="text-center">Base64</h1>
+        <h1 className="text-center">
+          <Trans>Pinyin</Trans>
+        </h1>
       </div>
       <div className="grid gap-2 gap-y-4 px-2 sm:grid-cols-2">
         <Textarea
@@ -43,21 +38,21 @@ export default function Page() {
             inputWrapper: "relative",
           }}
           minRows={8}
-          label="text"
-          placeholder="Enter your input text"
+          label={t`Text`}
+          placeholder={t`Enter your input text`}
           endContent={
             <CopyButton className="absolute right-3 top-2" text={inputText} />
           }
         />
         <Textarea
-          isInvalid={base64Text === "Invalid input"}
-          value={base64Text}
-          onValueChange={handleBase64TextChange}
-          label="base64"
+          isInvalid={pingyinText === "Invalid input"}
+          value={pingyinText}
+          disabled
+          label={t`Pinyin`}
           minRows={8}
-          placeholder="Enter your base64 text"
+          placeholder={t`No input`}
           endContent={
-            <CopyButton className="absolute right-3 top-2" text={base64Text} />
+            <CopyButton className="absolute right-3 top-2" text={pingyinText} />
           }
         />
       </div>

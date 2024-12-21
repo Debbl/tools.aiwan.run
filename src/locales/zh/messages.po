@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/ShowCase.tsx:37
+#: src/components/ShowCase.tsx:39
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "一个将文本转换为base64的工具"
 
@@ -21,25 +21,48 @@ msgstr "一个将文本转换为base64的工具"
 msgid "auto detect language"
 msgstr "自动检测语言"
 
-#: src/components/ShowCase.tsx:25
+#: src/components/ShowCase.tsx:27
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "代码对比是一个工具，允许您将两个代码片段并排进行比较。"
 
-#: src/components/ShowCase.tsx:55
+#: src/components/ShowCase.tsx:63
+#: src/app/(main)/pinyin/layout.tsx:7
+msgid "Convert chinese to pinyin"
+msgstr "汉字拼音转换"
+
+#: src/components/ShowCase.tsx:57
 msgid "Dice Roller"
 msgstr "掷骰子"
 
-#: src/components/ShowCase.tsx:49
+#: src/app/(main)/pinyin/page.tsx:42
+msgid "Enter your input text"
+msgstr "输入文本"
+
+#: src/components/ShowCase.tsx:51
 msgid "Generate Query"
 msgstr "生成查询"
 
-#: src/components/ShowCase.tsx:31
+#: src/components/ShowCase.tsx:33
 msgid "Get battery information"
 msgstr "获取电池信息"
 
-#: src/components/ShowCase.tsx:43
+#: src/app/(main)/pinyin/page.tsx:20
+msgid "Invalid input"
+msgstr "非法输入"
+
+#: src/components/ShowCase.tsx:45
 msgid "MiWiFi SSH Password Calculator"
 msgstr "小米路由器SSH密码计算器"
+
+#: src/app/(main)/pinyin/page.tsx:53
+msgid "No input"
+msgstr "未输入"
+
+#: src/app/(main)/pinyin/page.tsx:29
+#: src/app/(main)/pinyin/page.tsx:51
+#: src/app/(main)/pinyin/layout.tsx:6
+msgid "Pinyin"
+msgstr "拼音"
 
 #: src/app/(main)/code-diff/components/Operator.tsx:54
 msgid "Select Language"
@@ -52,3 +75,7 @@ msgstr "选择主题"
 #: src/app/(main)/code-diff/components/Operator.tsx:88
 msgid "Side By Side"
 msgstr "并排显示"
+
+#: src/app/(main)/pinyin/page.tsx:41
+msgid "Text"
+msgstr "文本"
