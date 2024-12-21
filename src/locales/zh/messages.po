@@ -34,7 +34,7 @@ msgstr "汉字拼音转换"
 msgid "Dice Roller"
 msgstr "掷骰子"
 
-#: src/app/(main)/pinyin/page.tsx:42
+#: src/app/(main)/pinyin/page.tsx:53
 msgid "Enter your input text"
 msgstr "输入文本"
 
@@ -46,7 +46,7 @@ msgstr "生成查询"
 msgid "Get battery information"
 msgstr "获取电池信息"
 
-#: src/app/(main)/pinyin/page.tsx:20
+#: src/app/(main)/pinyin/page.tsx:26
 msgid "Invalid input"
 msgstr "非法输入"
 
@@ -54,12 +54,12 @@ msgstr "非法输入"
 msgid "MiWiFi SSH Password Calculator"
 msgstr "小米路由器SSH密码计算器"
 
-#: src/app/(main)/pinyin/page.tsx:53
+#: src/app/(main)/pinyin/page.tsx:72
 msgid "No input"
 msgstr "未输入"
 
-#: src/app/(main)/pinyin/page.tsx:29
-#: src/app/(main)/pinyin/page.tsx:51
+#: src/app/(main)/pinyin/page.tsx:35
+#: src/app/(main)/pinyin/page.tsx:70
 #: src/app/(main)/pinyin/layout.tsx:6
 msgid "Pinyin"
 msgstr "拼音"
@@ -76,6 +76,10 @@ msgstr "选择主题"
 msgid "Side By Side"
 msgstr "并排显示"
 
-#: src/app/(main)/pinyin/page.tsx:41
+#: src/app/(main)/pinyin/page.tsx:52
 msgid "Text"
 msgstr "文本"
+
+#: src/app/(main)/pinyin/page.tsx:40
+msgid "Tone"
+msgstr "声调"

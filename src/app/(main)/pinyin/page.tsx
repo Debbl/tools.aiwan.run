@@ -1,33 +1,44 @@
 "use client";
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Textarea } from "@nextui-org/react";
+import { Button, Checkbox, Textarea } from "@nextui-org/react";
+import { CircleX } from "lucide-react";
 import pinyin from "pinyin";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { CopyButton } from "~/components/CopyButton";
 
 export default function Page() {
   const { t } = useLingui();
+
   const [inputText, setInputText] = useState("");
-  const [pingyinText, setPingyinText] = useState("");
+  const [isShowTone, setIsShowTone] = useState(true);
 
   const handleInputTextChange = (value: string) => {
     setInputText(value);
+  };
 
+  const pingyinText = useMemo(() => {
     let newPingyinText = "";
     try {
-      newPingyinText = pinyin(value).join(" ");
+      newPingyinText = pinyin(inputText, {
+        style: isShowTone ? pinyin.STYLE_TONE : pinyin.STYLE_NORMAL,
+      }).join(" ");
     } catch {
       newPingyinText = t`Invalid input`;
     }
-    setPingyinText(newPingyinText);
-  };
+    return newPingyinText;
+  }, [inputText, isShowTone, t]);
 
   return (
-    <div className="grid h-full content-center gap-y-2">
+    <div className="grid h-full content-center gap-y-8">
       <div>
         <h1 className="text-center">
           <Trans>Pinyin</Trans>
         </h1>
+      </div>
+      <div className="flex justify-center gap-x-4">
+        <Checkbox isSelected={isShowTone} onValueChange={setIsShowTone}>
+          <Trans>Tone</Trans>
+        </Checkbox>
       </div>
       <div className="grid gap-2 gap-y-4 px-2 sm:grid-cols-2">
         <Textarea
@@ -41,7 +52,15 @@ export default function Page() {
           label={t`Text`}
           placeholder={t`Enter your input text`}
           endContent={
-            <CopyButton className="absolute right-3 top-2" text={inputText} />
+            <Button
+              className="absolute right-3 top-2"
+              size="sm"
+              isIconOnly
+              variant="light"
+              onPress={() => setInputText("")}
+            >
+              <CircleX size={16} className="hover:text-red-500" />
+            </Button>
           }
         />
         <Textarea
