@@ -1,15 +1,11 @@
 "use client";
-import { useGitHubInfo } from "@debbl/ahooks";
 import { Button } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useI18nHelper } from "~/hooks/useI18nHelper";
 import { Icon } from "~/icons";
 
-export default function Header() {
+export function Header() {
   const { switchLocale } = useI18nHelper();
-  const { GitHubInfo } = useGitHubInfo(
-    "https://github.com/Debbl/tools.aiwan.run/",
-  );
 
   return (
     <motion.header
@@ -24,7 +20,6 @@ export default function Header() {
         <Button size="sm" variant="ghost" isIconOnly onPress={switchLocale}>
           <Icon icon="FlowbiteLanguageOutline" />
         </Button>
-        <GitHubInfo className="size-6" />
       </div>
     </motion.header>
   );

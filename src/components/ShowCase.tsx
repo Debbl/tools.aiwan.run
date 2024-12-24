@@ -10,14 +10,14 @@ import {
   Link,
   Skeleton,
 } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useI18nHelper } from "~/hooks/useI18nHelper";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
-export default function Showcase() {
+export function Showcase() {
   const { getRealPathname } = useI18nHelper();
   const { t } = useLingui();
 
@@ -72,7 +72,7 @@ export default function Showcase() {
   const { isHydrated } = useHydrated();
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 p-4">
       {LIST.map((item) => (
         <MotionCard
           key={item.title}

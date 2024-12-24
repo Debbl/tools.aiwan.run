@@ -1,6 +1,8 @@
 import { setI18n } from "@lingui/react/server";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "~/components/Footer";
 import { getI18nInstance } from "~/i18n";
 import { LinguiClientProvider } from "~/providers/LinguiClientProvider";
 import { Providers } from "../providers";
@@ -24,13 +26,16 @@ export function getRootLayout(lang: string) {
     return (
       <html lang={lang} suppressHydrationWarning>
         <body className={inter.className}>
-          <Toaster />
-          <LinguiClientProvider
-            initialLocale={lang}
-            initialMessages={i18n.messages}
-          >
-            <Providers>{children}</Providers>
-          </LinguiClientProvider>
+          <ThemeProvider attribute="class" defaultTheme="light">
+            <LinguiClientProvider
+              initialLocale={lang}
+              initialMessages={i18n.messages}
+            >
+              <Toaster />
+              <Providers>{children}</Providers>
+              <Footer />
+            </LinguiClientProvider>
+          </ThemeProvider>
         </body>
       </html>
     );
