@@ -15,7 +15,32 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Magic tools",
   description: "a magic tools for developers",
-  icons: ["/favicon.ico"],
+  appleWebApp: {
+    title: "Magic Tools",
+  },
+  icons: [
+    {
+      rel: "shortcut icon",
+      type: "image/x-icon",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "icon",
+      sizes: "96x96",
+      type: "image/png",
+      url: "/favicon-96x96.png",
+    },
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      url: "/favicon.svg",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      url: "/apple-icon.png",
+    },
+  ],
 };
 
 export function getRootLayout(lang: string) {
