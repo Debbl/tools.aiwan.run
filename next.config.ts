@@ -1,5 +1,11 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
+import withSerwistInit from "@serwist/next";
 import type { NextConfig } from "next";
+
+const withSerwist = withSerwistInit({
+  swSrc: "src/app/sw.ts",
+  swDest: "public/sw.js",
+});
 
 const withBundleAnalyzer = bundleAnalyzer({
   // eslint-disable-next-line n/prefer-global/process
@@ -23,4 +29,8 @@ const nextConfig: NextConfig = {
   transpilePackages: ["three"],
 };
 
-export default withBundleAnalyzer(nextConfig);
+function pipeline(fns: ((config: NextConfig) => NextConfig)[]) {
+  return fns.reduce((acc, fn) => fn(acc), nextConfig);
+}
+
+export default pipeline([withSerwist, withBundleAnalyzer]);

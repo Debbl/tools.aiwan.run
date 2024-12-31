@@ -3,13 +3,14 @@
     "incremental": true,
     "target": "ESNext",
     "jsx": "preserve",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
       "~/*": ["./src/*"]
     },
     "resolveJsonModule": true,
+    "types": ["@serwist/next/typings"],
     "allowJs": true,
     "strict": true,
     "noEmit": true,
