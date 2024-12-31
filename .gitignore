@@ -35,6 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Serwist
+# serwist
 public/sw*
 public/swe-worker*
+
+# lingui
+src/locales/**/*.js
