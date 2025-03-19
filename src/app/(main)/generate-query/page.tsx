@@ -68,7 +68,7 @@ export default function Page() {
       <div className="mt-6 grid gap-y-2">
         {queries.map(([key, value], index) => (
           <div
-            // eslint-disable-next-line react/no-array-index-key
+            // eslint-disable-next-line react-x/no-array-index-key
             key={index}
             className="grid grid-cols-[1fr_4fr_40px] items-center gap-x-4"
           >

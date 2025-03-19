@@ -8,4 +8,9 @@ export default defineConfig({
     compiler: true,
   },
   tailwindcss: true,
+  customConfig: {
+    rules: {
+      "react-dom/no-unknown-property": "off",
+    },
+  },
 });

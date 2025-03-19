@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, use, useState } from "react";
 import type { ReactNode } from "react";
 
 const Content = createContext<{
@@ -8,7 +8,7 @@ const Content = createContext<{
 }>({});
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useDice = () => useContext(Content);
+export const useDice = () => use(Content);
 
 export default function Provider({ children }: { children: ReactNode }) {
   const [cameraEnabled, setCameraEnabled] = useState(true);
