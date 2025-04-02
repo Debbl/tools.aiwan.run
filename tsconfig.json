@@ -10,7 +10,7 @@
       "~/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["@serwist/next/typings"],
+    "types": ["@serwist/next/typings", "new-javascript"],
     "allowJs": true,
     "strict": true,
     "noEmit": true,
