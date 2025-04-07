@@ -50,6 +50,14 @@ export function getRootLayout(lang: string) {
 
     return (
       <html lang={lang} suppressHydrationWarning>
+        <head>
+          <script
+            defer
+            src="https://umami.aiwan.run/script.js"
+            data-website-id="5797cc0c-aef5-451e-b650-bd96e54f49c9"
+            data-domains="tools.aiwan.run"
+          />
+        </head>
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="light">
             <LinguiClientProvider
