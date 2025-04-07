@@ -20,8 +20,8 @@
     "extract": "lingui extract",
     "compile": "lingui compile",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
