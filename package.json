@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm compile && next build",
+    "build": "pnpm extract && pnpm compile && next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "extract": "lingui extract",

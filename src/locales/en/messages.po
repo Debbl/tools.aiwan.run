@@ -26,7 +26,6 @@ msgid "Code Diff is a tool that allows you to compare two code snippets side by 
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
 #: src/components/ShowCase.tsx:63
-#: src/app/(main)/pinyin/layout.tsx:7
 msgid "Convert chinese to pinyin"
 msgstr "Convert chinese to pinyin"
 
@@ -64,7 +63,6 @@ msgstr "No input"
 
 #: src/app/(main)/pinyin/page.tsx:35
 #: src/app/(main)/pinyin/page.tsx:70
-#: src/app/(main)/pinyin/layout.tsx:6
 msgid "Pinyin"
 msgstr "Pinyin"
 
