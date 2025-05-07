@@ -52,7 +52,7 @@
     "react-hot-toast": "^2.5.2",
     "segmentit": "^2.0.3",
     "three": "^0.176.0",
-    "twl": "0.0.0-alpha.6"
+    "twl": "0.0.0"
   },
   "devDependencies": {
     "@debbl/eslint-config": "^3.10.2",
