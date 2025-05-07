@@ -1,2 +1,4 @@
 onlyBuiltDependencies:
+  - esbuild
+  - sharp
   - simple-git-hooks
