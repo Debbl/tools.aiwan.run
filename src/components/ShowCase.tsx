@@ -1,6 +1,5 @@
 "use client";
 import { useHydrated } from "@debbl/ahooks";
-import { useLingui } from "@lingui/react/macro";
 import {
   Card,
   CardBody,
@@ -9,7 +8,8 @@ import {
   Image,
   Link,
   Skeleton,
-} from "@nextui-org/react";
+} from "@heroui/react";
+import { useLingui } from "@lingui/react/macro";
 import { motion } from "motion/react";
 import { useI18nHelper } from "~/hooks/useI18nHelper";
 

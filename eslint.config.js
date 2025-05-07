@@ -8,7 +8,7 @@ export default defineConfig(
       next: true,
       compiler: true,
     },
-    tailwindcss: true,
+    tailwindcss: "prettier",
   },
   {
     rules: {

@@ -1,7 +1,7 @@
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <NextUIProvider className="h-full min-h-screen">{children}</NextUIProvider>
+    <HeroUIProvider className="h-full min-h-screen">{children}</HeroUIProvider>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useHydrated } from "@debbl/ahooks";
+import { Button, Checkbox, Select, SelectItem } from "@heroui/react";
 import { useLingui } from "@lingui/react/macro";
-import { Button, Checkbox, Select, SelectItem } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { useI18nHelper } from "~/hooks/useI18nHelper";

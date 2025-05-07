@@ -1,5 +1,5 @@
 "use client";
-import { Input, Link } from "@nextui-org/react";
+import { Input, Link } from "@heroui/react";
 import { useMemo, useState } from "react";
 import { CopyButton } from "~/components/CopyButton";
 import { getPasswd } from "./utils";

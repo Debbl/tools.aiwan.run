@@ -1,11 +1,6 @@
 "use client";
 import { useHydrated } from "@debbl/ahooks";
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@nextui-org/react";
+import { Button, Popover, PopoverContent, PopoverTrigger } from "@heroui/react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import { Icon } from "~/icons";

@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@nextui-org/react";
+import { Progress } from "@heroui/react";
 import { useBattery } from "./hooks/useBattery";
 
 export default function BatteryPage() {

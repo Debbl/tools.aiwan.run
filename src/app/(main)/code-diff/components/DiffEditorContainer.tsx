@@ -70,7 +70,7 @@ export default function DiffEditorContainer() {
 
   return (
     <>
-      {/* eslint-disable-next-line react-compiler/react-compiler */}
+      {}
       <Operator monaco={monacoRef.current} />
 
       {isHydrated && (

@@ -1,6 +1,6 @@
 "use client";
+import { Button, Checkbox, Textarea } from "@heroui/react";
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Button, Checkbox, Textarea } from "@nextui-org/react";
 import { CircleX } from "lucide-react";
 import pinyin from "pinyin";
 import { useMemo, useState } from "react";
@@ -53,7 +53,7 @@ export default function Page() {
           placeholder={t`Enter your input text`}
           endContent={
             <Button
-              className="absolute right-3 top-2"
+              className="absolute top-2 right-3"
               size="sm"
               isIconOnly
               variant="light"
@@ -71,7 +71,7 @@ export default function Page() {
           minRows={8}
           placeholder={t`No input`}
           endContent={
-            <CopyButton className="absolute right-3 top-2" text={pingyinText} />
+            <CopyButton className="absolute top-2 right-3" text={pingyinText} />
           }
         />
       </div>

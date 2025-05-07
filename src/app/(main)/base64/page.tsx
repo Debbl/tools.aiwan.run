@@ -1,5 +1,5 @@
 "use client";
-import { Textarea } from "@nextui-org/react";
+import { Textarea } from "@heroui/react";
 import { useState } from "react";
 import { CopyButton } from "~/components/CopyButton";
 
@@ -46,7 +46,7 @@ export default function Page() {
           label="text"
           placeholder="Enter your input text"
           endContent={
-            <CopyButton className="absolute right-3 top-2" text={inputText} />
+            <CopyButton className="absolute top-2 right-3" text={inputText} />
           }
         />
         <Textarea
@@ -57,7 +57,7 @@ export default function Page() {
           minRows={8}
           placeholder="Enter your base64 text"
           endContent={
-            <CopyButton className="absolute right-3 top-2" text={base64Text} />
+            <CopyButton className="absolute top-2 right-3" text={base64Text} />
           }
         />
       </div>

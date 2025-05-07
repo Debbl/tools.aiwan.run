@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { motion } from "motion/react";
 import { useI18nHelper } from "~/hooks/useI18nHelper";
 import { Icon } from "~/icons";
