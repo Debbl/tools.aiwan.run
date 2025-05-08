@@ -2,7 +2,7 @@
 import { CameraControls } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 import { useEffect, useRef } from 'react'
-import { useDice } from '../Provider'
+import { useDice } from '../provider'
 import { Dice } from './dice'
 
 function Plane() {

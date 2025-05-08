@@ -1,4 +1,4 @@
-import Provider from './Provider'
+import Provider from './provider'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
