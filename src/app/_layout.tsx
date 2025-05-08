@@ -1,6 +1,5 @@
 import { setI18n } from '@lingui/react/server'
 import { ThemeProvider } from 'next-themes'
-import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import { Footer } from '~/components/Footer'
 import { getI18nInstance } from '~/i18n'
@@ -9,8 +8,6 @@ import { Providers } from '../providers'
 import './globals.css'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Magic tools',
@@ -58,7 +55,7 @@ export function getRootLayout(lang: string) {
             data-domains='tools.aiwan.run'
           />
         </head>
-        <body className={inter.className}>
+        <body>
           <ThemeProvider attribute='class' defaultTheme='light'>
             <LinguiClientProvider initialLocale={lang} initialMessages={i18n.messages}>
               <Toaster />
