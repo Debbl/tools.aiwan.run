@@ -56,6 +56,11 @@ export function Showcase() {
       link: 'pinyin',
       icon: './pinyin/icon.svg',
     },
+    {
+      title: 'Base64 to png',
+      description: t`transform base64 data to png`,
+      link: 'base64-to-png',
+    },
   ].map((i) => ({
     ...i,
     href: getRealPathname(i.link),
