@@ -85,3 +85,7 @@ msgstr "Text"
 #: src/app/(main)/pinyin/page.tsx:40
 msgid "Tone"
 msgstr "Tone"
+
+#: src/components/show-case.tsx:61
+msgid "transform base64 data to png"
+msgstr "transform base64 data to png"
