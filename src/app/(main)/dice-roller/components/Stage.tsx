@@ -2,7 +2,7 @@
 
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
-import Scene from './Scene'
+import { Scene } from './scene'
 
 export default function Stage() {
   return (

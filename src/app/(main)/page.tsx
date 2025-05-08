@@ -1,5 +1,5 @@
-import { Header } from '~/components/Header'
-import { Showcase } from '~/components/ShowCase'
+import { Header } from '~/components/header'
+import { Showcase } from '~/components/show-case'
 
 export default function Page() {
   return (

@@ -1,7 +1,7 @@
 'use client'
 import { Textarea } from '@heroui/react'
 import { useState } from 'react'
-import { CopyButton } from '~/components/CopyButton'
+import { CopyButton } from '~/components/copy-button'
 
 export default function Page() {
   const [inputText, setInputText] = useState('')

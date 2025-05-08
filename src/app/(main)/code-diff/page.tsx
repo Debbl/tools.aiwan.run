@@ -1,4 +1,4 @@
-import DiffEditorContainer from './components/DiffEditorContainer'
+import { DiffEditorContainer } from './components/diff-editor-container'
 
 export default function CodeDiffPage() {
   return (

@@ -1,5 +1,5 @@
 import { Image } from '@heroui/react'
-import { ThemeSwitcher } from './ThemeSwitcher'
+import { ThemeSwitcher } from './theme-switcher'
 
 export function Footer() {
   return (

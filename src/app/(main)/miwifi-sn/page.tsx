@@ -1,7 +1,7 @@
 'use client'
 import { Input, Link } from '@heroui/react'
 import { useMemo, useState } from 'react'
-import { CopyButton } from '~/components/CopyButton'
+import { CopyButton } from '~/components/copy-button'
 import { getPasswd } from './utils'
 
 export default function Page() {

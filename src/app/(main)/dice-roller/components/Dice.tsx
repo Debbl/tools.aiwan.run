@@ -4,7 +4,7 @@ import { RigidBody } from '@react-three/rapier'
 import { useRef, useState } from 'react'
 import type { Mesh } from 'three'
 
-export default function Dice() {
+export function Dice() {
   const gltf = useGLTF('/dice.gltf', '/draco-gltf')
   const meshRef = useRef<Mesh | undefined>(undefined)
   const [isDragging, _setIsDragging] = useState(false)

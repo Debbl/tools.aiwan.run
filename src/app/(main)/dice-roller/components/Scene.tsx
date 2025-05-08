@@ -3,7 +3,7 @@ import { CameraControls } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 import { useEffect, useRef } from 'react'
 import { useDice } from '../Provider'
-import Dice from './Dice'
+import { Dice } from './dice'
 
 function Plane() {
   return (
@@ -16,7 +16,7 @@ function Plane() {
   )
 }
 
-export default function Scene() {
+export function Scene() {
   const camera = useRef<CameraControls>(null)
   const { cameraEnabled } = useDice()
 

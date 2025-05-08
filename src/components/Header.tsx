@@ -1,7 +1,7 @@
 'use client'
 import { Button } from '@heroui/react'
 import { motion } from 'motion/react'
-import { useI18nHelper } from '~/hooks/useI18nHelper'
+import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { Icon } from '~/icons'
 
 export function Header() {

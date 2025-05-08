@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
-const ClientStage = dynamic(() => import('./components/Stage'), { ssr: false })
+const ClientStage = dynamic(() => import('./components/stage'), { ssr: false })
 
 export default function Page() {
   return (

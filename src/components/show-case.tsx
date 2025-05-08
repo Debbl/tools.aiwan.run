@@ -3,7 +3,7 @@ import { useHydrated } from '@debbl/ahooks'
 import { Card, CardBody, CardHeader, Divider, Image, Link, Skeleton } from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
 import { motion } from 'motion/react'
-import { useI18nHelper } from '~/hooks/useI18nHelper'
+import { useI18nHelper } from '~/hooks/use-i18n-helper'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error

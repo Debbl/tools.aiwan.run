@@ -13,23 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/ShowCase.tsx:39
+#: src/components/show-case.tsx:31
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "A tool that transforms text to base64 and vice versa"
 
-#: src/app/(main)/code-diff/components/DiffEditorContainer.tsx:54
+#: src/app/(main)/code-diff/components/diff-editor-container.tsx:50
 msgid "auto detect language"
 msgstr "auto detect language"
 
-#: src/components/ShowCase.tsx:27
+#: src/components/show-case.tsx:19
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
-#: src/components/ShowCase.tsx:63
+#: src/components/show-case.tsx:55
 msgid "Convert chinese to pinyin"
 msgstr "Convert chinese to pinyin"
 
-#: src/components/ShowCase.tsx:57
+#: src/components/show-case.tsx:49
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
@@ -41,11 +41,11 @@ msgstr "Enter your input text"
 #~ msgid "Enter your pinyin text"
 #~ msgstr "Enter your pinyin text"
 
-#: src/components/ShowCase.tsx:51
+#: src/components/show-case.tsx:43
 msgid "Generate Query"
 msgstr "Generate Query"
 
-#: src/components/ShowCase.tsx:33
+#: src/components/show-case.tsx:25
 msgid "Get battery information"
 msgstr "Get battery information"
 
@@ -53,7 +53,7 @@ msgstr "Get battery information"
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: src/components/ShowCase.tsx:45
+#: src/components/show-case.tsx:37
 msgid "MiWiFi SSH Password Calculator"
 msgstr "MiWiFi SSH Password Calculator"
 
@@ -66,15 +66,15 @@ msgstr "No input"
 msgid "Pinyin"
 msgstr "Pinyin"
 
-#: src/app/(main)/code-diff/components/Operator.tsx:54
+#: src/app/(main)/code-diff/components/opeerator.tsx:54
 msgid "Select Language"
 msgstr "Select Language"
 
-#: src/app/(main)/code-diff/components/Operator.tsx:70
+#: src/app/(main)/code-diff/components/opeerator.tsx:70
 msgid "Select Theme"
 msgstr "Select Theme"
 
-#: src/app/(main)/code-diff/components/Operator.tsx:88
+#: src/app/(main)/code-diff/components/opeerator.tsx:83
 msgid "Side By Side"
 msgstr "Side By Side"
 

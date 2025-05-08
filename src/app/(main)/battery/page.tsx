@@ -1,6 +1,6 @@
 'use client'
 import { Progress } from '@heroui/react'
-import { useBattery } from './hooks/useBattery'
+import { useBattery } from './hooks/use-battery'
 
 export default function BatteryPage() {
   const battery = useBattery()

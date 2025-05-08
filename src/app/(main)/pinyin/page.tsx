@@ -4,7 +4,7 @@ import { Trans, useLingui } from '@lingui/react/macro'
 import { CircleX } from 'lucide-react'
 import pinyin from 'pinyin'
 import { useMemo, useState } from 'react'
-import { CopyButton } from '~/components/CopyButton'
+import { CopyButton } from '~/components/copy-button'
 
 export default function Page() {
   const { t } = useLingui()
