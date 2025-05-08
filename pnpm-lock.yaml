@@ -90,8 +90,8 @@ importers:
         specifier: ^0.176.0
         version: 0.176.0
       twl:
-        specifier: 0.0.0-alpha.6
-        version: 0.0.0-alpha.6
+        specifier: 0.0.0
+        version: 0.0.0
     devDependencies:
       '@debbl/eslint-config':
         specifier: ^3.10.2
@@ -4764,6 +4764,9 @@ packages:
   tailwind-merge@3.0.2:
     resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
 
+  tailwind-merge@3.2.0:
+    resolution: {integrity: sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA==}
+
   tailwind-variants@0.3.0:
     resolution: {integrity: sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==}
     engines: {node: '>=16.x', pnpm: '>=7.x'}
@@ -4881,8 +4884,8 @@ packages:
   tunnel-rat@0.1.2:
     resolution: {integrity: sha512-lR5VHmkPhzdhrM092lI2nACsLO4QubF0/yoOhzX7c+wIpbN1GjHNzCc91QlpxBi+cnx8vVJ+Ur6vL5cEoQPFpQ==}
 
-  twl@0.0.0-alpha.6:
-    resolution: {integrity: sha512-EH2iqRcuxaPJjNFzg56cdGjMRtHX+872thnrmtxH0At/6EYuz60cUjQdfGmEXsP7CVQjxLYiqLjIC3JlzYn70g==}
+  twl@0.0.0:
+    resolution: {integrity: sha512-0USjUxkw2GnED8S+PP5WFzA+nCuorRXCOQRiwBoDcQvnShx7lTdIsTJclVNmvnFu97t9g1cEMZZjK1RVWtmN4w==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -10981,6 +10984,8 @@ snapshots:
 
   tailwind-merge@3.0.2: {}
 
+  tailwind-merge@3.2.0: {}
+
   tailwind-variants@0.3.0(tailwindcss@4.1.5):
     dependencies:
       tailwind-merge: 2.6.0
@@ -11090,10 +11095,10 @@ snapshots:
       - immer
       - react
 
-  twl@0.0.0-alpha.6:
+  twl@0.0.0:
     dependencies:
       clsx: 2.1.1
-      tailwind-merge: 2.6.0
+      tailwind-merge: 3.2.0
 
   type-check@0.4.0:
     dependencies:
