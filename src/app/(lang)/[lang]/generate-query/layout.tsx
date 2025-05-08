@@ -1,1 +1,1 @@
-export { default, metadata } from "../../../(main)/generate-query/layout";
+export { default, metadata } from '../../../(main)/generate-query/layout'

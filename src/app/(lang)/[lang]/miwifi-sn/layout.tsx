@@ -1,1 +1,1 @@
-export { default, metadata } from "../../../(main)/miwifi-sn/layout";
+export { default, metadata } from '../../../(main)/miwifi-sn/layout'

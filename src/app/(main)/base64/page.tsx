@@ -1,66 +1,62 @@
-"use client";
-import { Textarea } from "@heroui/react";
-import { useState } from "react";
-import { CopyButton } from "~/components/CopyButton";
+'use client'
+import { Textarea } from '@heroui/react'
+import { useState } from 'react'
+import { CopyButton } from '~/components/CopyButton'
 
 export default function Page() {
-  const [inputText, setInputText] = useState("");
-  const [base64Text, setBase64Text] = useState("");
+  const [inputText, setInputText] = useState('')
+  const [base64Text, setBase64Text] = useState('')
 
   const handleInputTextChange = (value: string) => {
-    setInputText(value);
-    let newBase64Text = "";
+    setInputText(value)
+    let newBase64Text = ''
     try {
-      newBase64Text = btoa(value);
+      newBase64Text = btoa(value)
     } catch {
-      newBase64Text = "Invalid input";
+      newBase64Text = 'Invalid input'
     }
-    setBase64Text(newBase64Text);
-  };
+    setBase64Text(newBase64Text)
+  }
 
   const handleBase64TextChange = (value: string) => {
-    setBase64Text(value);
-    let newInputText = "";
+    setBase64Text(value)
+    let newInputText = ''
     try {
-      newInputText = atob(value);
+      newInputText = atob(value)
     } catch {
-      newInputText = "Invalid input";
+      newInputText = 'Invalid input'
     }
-    setInputText(newInputText);
-  };
+    setInputText(newInputText)
+  }
 
   return (
-    <div className="grid h-full content-center gap-y-2">
+    <div className='grid h-full content-center gap-y-2'>
       <div>
-        <h1 className="text-center">Base64</h1>
+        <h1 className='text-center'>Base64</h1>
       </div>
-      <div className="grid gap-2 gap-y-4 px-2 sm:grid-cols-2">
+      <div className='grid gap-2 gap-y-4 px-2 sm:grid-cols-2'>
         <Textarea
-          isInvalid={inputText === "Invalid input"}
+          isInvalid={inputText === 'Invalid input'}
           value={inputText}
           onValueChange={handleInputTextChange}
           classNames={{
-            inputWrapper: "relative",
+            inputWrapper: 'relative',
           }}
           minRows={8}
-          label="text"
-          placeholder="Enter your input text"
-          endContent={
-            <CopyButton className="absolute top-2 right-3" text={inputText} />
-          }
+          label='text'
+          placeholder='Enter your input text'
+          endContent={<CopyButton className='absolute top-2 right-3' text={inputText} />}
         />
         <Textarea
-          isInvalid={base64Text === "Invalid input"}
+          isInvalid={base64Text === 'Invalid input'}
           value={base64Text}
           onValueChange={handleBase64TextChange}
-          label="base64"
+          label='base64'
           minRows={8}
-          placeholder="Enter your base64 text"
-          endContent={
-            <CopyButton className="absolute top-2 right-3" text={base64Text} />
-          }
+          placeholder='Enter your base64 text'
+          endContent={<CopyButton className='absolute top-2 right-3' text={base64Text} />}
         />
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { getRootLayout } from "../_layout";
+import { getRootLayout } from '../_layout'
 
-export { metadata } from "../_layout";
+export { metadata } from '../_layout'
 
-const RootLayout = getRootLayout("en");
-export default RootLayout;
+const RootLayout = getRootLayout('en')
+export default RootLayout

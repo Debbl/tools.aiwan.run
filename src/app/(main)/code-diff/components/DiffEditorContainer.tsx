@@ -1,13 +1,13 @@
-"use client";
-import { useHydrated, useLatest } from "@debbl/ahooks";
-import { useLingui } from "@lingui/react/macro";
-import { DiffEditor } from "@monaco-editor/react";
-import hljs from "highlight.js";
-import { useRef } from "react";
-import toast from "react-hot-toast";
-import { useMainStore } from "../hooks/useMainStore";
-import Operator from "./Operator";
-import type { DiffOnMount, Monaco } from "@monaco-editor/react";
+'use client'
+import { useHydrated, useLatest } from '@debbl/ahooks'
+import { useLingui } from '@lingui/react/macro'
+import { DiffEditor } from '@monaco-editor/react'
+import hljs from 'highlight.js'
+import { useRef } from 'react'
+import toast from 'react-hot-toast'
+import { useMainStore } from '../hooks/useMainStore'
+import Operator from './Operator'
+import type { DiffOnMount, Monaco } from '@monaco-editor/react'
 
 export default function DiffEditorContainer() {
   const {
@@ -21,52 +21,48 @@ export default function DiffEditorContainer() {
     setModifiedValue,
     setLanguage,
     setLanguages,
-  } = useMainStore();
+  } = useMainStore()
 
-  const monacoRef = useRef<Monaco | undefined>(undefined);
+  const monacoRef = useRef<Monaco | undefined>(undefined)
 
-  const { isHydrated } = useHydrated();
+  const { isHydrated } = useHydrated()
 
-  const languageRef = useLatest(language);
-  const themeRef = useLatest(theme);
+  const languageRef = useLatest(language)
+  const themeRef = useLatest(theme)
 
-  const { t } = useLingui();
+  const { t } = useLingui()
 
   const handleOnMount: DiffOnMount = (editor, monaco) => {
-    monacoRef.current = monaco;
+    monacoRef.current = monaco
 
-    setLanguages(monaco.languages.getLanguages());
-    editor.getOriginalEditor().setValue(originalValue);
-    editor.getModifiedEditor().setValue(modifiedValue);
+    setLanguages(monaco.languages.getLanguages())
+    editor.getOriginalEditor().setValue(originalValue)
+    editor.getModifiedEditor().setValue(modifiedValue)
 
     editor.onDidUpdateDiff(() => {
-      const ov = editor.getModel()?.original.getValue() || "";
-      const mv = editor.getModel()?.modified.getValue() || "";
+      const ov = editor.getModel()?.original.getValue() || ''
+      const mv = editor.getModel()?.modified.getValue() || ''
 
-      const guessLanguage = hljs.highlightAuto(ov).language;
-      const languagesId = languages.map((v) => v.id);
+      const guessLanguage = hljs.highlightAuto(ov).language
+      const languagesId = languages.map((v) => v.id)
 
-      if (
-        guessLanguage &&
-        guessLanguage !== languageRef.current &&
-        languagesId.includes(guessLanguage)
-      ) {
+      if (guessLanguage && guessLanguage !== languageRef.current && languagesId.includes(guessLanguage)) {
         toast.success(`${t`auto detect language`}: ${guessLanguage}`, {
-          position: "top-right",
-          ...(themeRef.current === "vs-dark" && {
+          position: 'top-right',
+          ...(themeRef.current === 'vs-dark' && {
             style: {
-              background: "#333",
-              color: "#fff",
+              background: '#333',
+              color: '#fff',
             },
           }),
-        });
-        setLanguage(guessLanguage);
+        })
+        setLanguage(guessLanguage)
       }
 
-      setOriginalValue(ov);
-      setModifiedValue(mv);
-    });
-  };
+      setOriginalValue(ov)
+      setModifiedValue(mv)
+    })
+  }
 
   return (
     <>
@@ -80,11 +76,11 @@ export default function DiffEditorContainer() {
             renderSideBySide,
           }}
           onMount={handleOnMount}
-          height="100%"
+          height='100%'
           theme={theme}
           language={language}
         />
       )}
     </>
-  );
+  )
 }

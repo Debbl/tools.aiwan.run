@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/miwifi-sn/page";
+export { default } from '../../../(main)/miwifi-sn/page'

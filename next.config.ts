@@ -1,36 +1,32 @@
-import bundleAnalyzer from "@next/bundle-analyzer";
-import withSerwistInit from "@serwist/next";
-import type { NextConfig } from "next";
+import bundleAnalyzer from '@next/bundle-analyzer'
+import withSerwistInit from '@serwist/next'
+import type { NextConfig } from 'next'
 
 const withSerwist = withSerwistInit({
-  swSrc: "src/app/sw.ts",
-  swDest: "public/sw.js",
-});
+  swSrc: 'src/app/sw.ts',
+  swDest: 'public/sw.js',
+})
 
 const withBundleAnalyzer = bundleAnalyzer({
   // eslint-disable-next-line n/prefer-global/process
-  enabled: process.env.ANALYZE === "true",
-});
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: 'export',
   webpack: (config) => {
     config.module.rules.push({
       test: /\.po$/,
       use: {
-        loader: "@lingui/loader",
+        loader: '@lingui/loader',
       },
-    });
-    return config;
+    })
+    return config
   },
   experimental: {
-    swcPlugins: [["@lingui/swc-plugin", {}]],
+    swcPlugins: [['@lingui/swc-plugin', {}]],
   },
-  transpilePackages: ["three"],
-};
-
-function pipeline(fns: ((config: NextConfig) => NextConfig)[]) {
-  return fns.reduce((acc, fn) => fn(acc), nextConfig);
+  transpilePackages: ['three'],
 }
 
-export default pipeline([withSerwist, withBundleAnalyzer]);
+export default [withSerwist, withBundleAnalyzer].reduce((config, fn) => fn(config), nextConfig)

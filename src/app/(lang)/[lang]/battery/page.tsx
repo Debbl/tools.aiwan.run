@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/battery/page";
+export { default } from '../../../(main)/battery/page'

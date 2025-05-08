@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/code-diff/page";
+export { default } from '../../../(main)/code-diff/page'

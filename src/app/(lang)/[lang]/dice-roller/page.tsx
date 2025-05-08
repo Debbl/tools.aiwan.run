@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/dice-roller/page";
+export { default } from '../../../(main)/dice-roller/page'

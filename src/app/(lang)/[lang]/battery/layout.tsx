@@ -1,1 +1,1 @@
-export { default, metadata } from "../../../(main)/battery/layout";
+export { default, metadata } from '../../../(main)/battery/layout'

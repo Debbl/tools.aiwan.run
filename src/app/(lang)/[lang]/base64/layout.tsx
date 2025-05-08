@@ -1,1 +1,1 @@
-export { default, metadata } from "../../../(main)/base64/layout";
+export { default, metadata } from '../../../(main)/base64/layout'

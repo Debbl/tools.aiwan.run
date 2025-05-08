@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/generate-query/page";
+export { default } from '../../../(main)/generate-query/page'

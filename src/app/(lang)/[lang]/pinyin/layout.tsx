@@ -1,1 +1,1 @@
-export { default, metadata } from "~/app/(main)/pinyin/layout";
+export { default, metadata } from '~/app/(main)/pinyin/layout'

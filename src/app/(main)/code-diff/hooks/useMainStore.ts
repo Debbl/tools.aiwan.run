@@ -1,20 +1,18 @@
-import { useAtom } from "jotai";
-import { useMainStoreAtom } from "../atoms/useMainStoreAtom";
-import type { MainStoreState } from "../atoms/useMainStoreAtom";
+import { useAtom } from 'jotai'
+import { useMainStoreAtom } from '../atoms/useMainStoreAtom'
+import type { MainStoreState } from '../atoms/useMainStoreAtom'
 
 export interface MainStoreActions {
-  setOriginalValue: (originalValue: MainStoreState["originalValue"]) => void;
-  setModifiedValue: (modifiedValue: MainStoreState["modifiedValue"]) => void;
-  setLanguage: (language: MainStoreState["language"]) => void;
-  setLanguages: (languages: MainStoreState["languages"]) => void;
-  setTheme: (theme: MainStoreState["theme"]) => void;
-  setRenderSideBySide: (
-    renderSideBySide: MainStoreState["renderSideBySide"],
-  ) => void;
+  setOriginalValue: (originalValue: MainStoreState['originalValue']) => void
+  setModifiedValue: (modifiedValue: MainStoreState['modifiedValue']) => void
+  setLanguage: (language: MainStoreState['language']) => void
+  setLanguages: (languages: MainStoreState['languages']) => void
+  setTheme: (theme: MainStoreState['theme']) => void
+  setRenderSideBySide: (renderSideBySide: MainStoreState['renderSideBySide']) => void
 }
 
 export function useMainStore() {
-  const [state, set] = useAtom(useMainStoreAtom);
+  const [state, set] = useAtom(useMainStoreAtom)
 
   return {
     ...state,
@@ -23,7 +21,6 @@ export function useMainStore() {
     setLanguage: (language) => set((s) => ({ ...s, language })),
     setLanguages: (languages) => set((s) => ({ ...s, languages })),
     setTheme: (theme) => set((s) => ({ ...s, theme })),
-    setRenderSideBySide: (renderSideBySide) =>
-      set((s) => ({ ...s, renderSideBySide })),
-  } as MainStoreActions & MainStoreState;
+    setRenderSideBySide: (renderSideBySide) => set((s) => ({ ...s, renderSideBySide })),
+  } as MainStoreActions & MainStoreState
 }

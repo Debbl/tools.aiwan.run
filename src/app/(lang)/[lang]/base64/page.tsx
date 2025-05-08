@@ -1,1 +1,1 @@
-export { default } from "../../../(main)/base64/page";
+export { default } from '../../../(main)/base64/page'

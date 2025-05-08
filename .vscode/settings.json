@@ -1,12 +1,4 @@
 {
   "eslint.useFlatConfig": true,
-  "cSpell.words": [
-    "drei",
-    "GLTF",
-    "heroui",
-    "Lingui",
-    "nextui",
-    "pingyin",
-    "Serwist"
-  ]
+  "cSpell.words": ["drei", "GLTF", "heroui", "Lingui", "nextui", "pingyin", "Serwist"]
 }

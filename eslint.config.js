@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "@debbl/eslint-config";
+import { defineConfig } from '@debbl/eslint-config'
 
 export default defineConfig(
   {
@@ -8,11 +8,11 @@ export default defineConfig(
       next: true,
       compiler: true,
     },
-    tailwindcss: "prettier",
+    tailwindcss: 'prettier',
   },
   {
     rules: {
-      "react-dom/no-unknown-property": "off",
+      'react-dom/no-unknown-property': 'off',
     },
   },
-);
+)
