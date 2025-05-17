@@ -1,6 +1,6 @@
 import { setI18n } from '@lingui/react/server'
 import { ThemeProvider } from 'next-themes'
-import { Toaster } from 'react-hot-toast'
+import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
 import { getI18nInstance } from '~/i18n'
 import { LinguiClientProvider } from '~/providers/lingui-clien-provider'
@@ -58,7 +58,7 @@ export function getRootLayout(lang: string) {
         <body>
           <ThemeProvider attribute='class' defaultTheme='light'>
             <LinguiClientProvider initialLocale={lang} initialMessages={i18n.messages}>
-              <Toaster />
+              <Toaster richColors />
               <Providers>{children}</Providers>
               <Footer />
             </LinguiClientProvider>
