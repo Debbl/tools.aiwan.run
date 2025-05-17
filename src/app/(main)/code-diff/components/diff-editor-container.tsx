@@ -6,7 +6,7 @@ import hljs from 'highlight.js'
 import { useRef } from 'react'
 import { toast } from 'sonner'
 import { useMainStore } from '../hooks/use-main-store'
-import Operator from './opeerator'
+import Operator from './operator'
 import type { DiffOnMount, Monaco } from '@monaco-editor/react'
 
 export function DiffEditorContainer() {
