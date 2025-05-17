@@ -2,10 +2,10 @@
 'use client'
 import { useEffectEvent } from '@debbl/ahooks'
 import { imageMeta } from 'image-meta'
-import { CircleXIcon, CopyIcon } from 'lucide-react'
+import { CircleXIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { toast } from 'sonner'
 import { match } from 'ts-pattern'
+import { CopyButton } from '~/components/copy-button'
 import { Button } from '~/components/ui/button'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
 import { Textarea } from '~/components/ui/textarea'
@@ -55,13 +55,6 @@ export default function Base64ToPngPage() {
     handleBase64Change(base64)
   }, [base64, handleBase64Change])
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(base64)
-    toast.success('Copied to clipboard', {
-      position: 'top-right',
-    })
-  }
-
   return (
     <div className='flex h-full flex-col items-center px-6'>
       <header className='flex w-full items-end justify-between gap-1 py-4 text-left text-2xl font-medium'>
@@ -74,9 +67,7 @@ export default function Base64ToPngPage() {
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
-                  <Button variant='ghost' size='icon' onClick={handleCopy}>
-                    <CopyIcon className='size-4' />
-                  </Button>
+                  <CopyButton text={base64} />
                   <Button variant='ghost' size='icon' onClick={() => setBase64('')}>
                     <CircleXIcon className='size-4' />
                   </Button>

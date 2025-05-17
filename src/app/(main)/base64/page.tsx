@@ -1,7 +1,10 @@
 'use client'
-import { Textarea } from '@heroui/react'
+import { CircleXIcon } from 'lucide-react'
 import { useState } from 'react'
 import { CopyButton } from '~/components/copy-button'
+import { Button } from '~/components/ui/button'
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
+import { Textarea } from '~/components/ui/textarea'
 
 export default function Page() {
   const [inputText, setInputText] = useState('')
@@ -30,32 +33,57 @@ export default function Page() {
   }
 
   return (
-    <div className='grid h-full content-center gap-y-2'>
-      <div>
+    <div className='flex h-full flex-col items-start gap-y-2'>
+      <header className='mt-4 flex w-full items-end justify-between gap-1 px-4 text-left text-2xl font-medium'>
         <h1 className='text-center'>Base64</h1>
-      </div>
-      <div className='grid gap-2 gap-y-4 px-2 sm:grid-cols-2'>
-        <Textarea
-          isInvalid={inputText === 'Invalid input'}
-          value={inputText}
-          onValueChange={handleInputTextChange}
-          classNames={{
-            inputWrapper: 'relative',
-          }}
-          minRows={8}
-          label='text'
-          placeholder='Enter your input text'
-          endContent={<CopyButton className='absolute top-2 right-3' text={inputText} />}
-        />
-        <Textarea
-          isInvalid={base64Text === 'Invalid input'}
-          value={base64Text}
-          onValueChange={handleBase64TextChange}
-          label='base64'
-          minRows={8}
-          placeholder='Enter your base64 text'
-          endContent={<CopyButton className='absolute top-2 right-3' text={base64Text} />}
-        />
+      </header>
+
+      <div className='border-border flex size-full flex-col gap-1 overflow-hidden p-4'>
+        <ResizablePanelGroup className='border-border size-full rounded-md border' direction='horizontal'>
+          <ResizablePanel>
+            <ResizablePanelGroup direction='vertical'>
+              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+                <div className='flex h-full items-center justify-end gap-2 px-2'>
+                  <CopyButton text={inputText} />
+
+                  <Button variant='ghost' size='icon' onClick={() => setInputText('')}>
+                    <CircleXIcon className='size-4' />
+                  </Button>
+                </div>
+              </ResizablePanel>
+              <ResizablePanel>
+                <Textarea
+                  placeholder='Enter your input text'
+                  className='h-full resize-none border-none focus-visible:border-none focus-visible:ring-0'
+                  value={inputText}
+                  onChange={(e) => handleInputTextChange(e.target.value)}
+                />
+              </ResizablePanel>
+            </ResizablePanelGroup>
+          </ResizablePanel>
+          <ResizableHandle withHandle />
+          <ResizablePanel>
+            <ResizablePanelGroup direction='vertical'>
+              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+                <div className='flex h-full items-center justify-end gap-2 px-2'>
+                  <CopyButton text={inputText} />
+
+                  <Button variant='ghost' size='icon' onClick={() => setInputText('')}>
+                    <CircleXIcon className='size-4' />
+                  </Button>
+                </div>
+              </ResizablePanel>
+              <ResizablePanel>
+                <Textarea
+                  placeholder='Enter your base64 text'
+                  className='h-full resize-none border-none focus-visible:border-none focus-visible:ring-0'
+                  value={base64Text}
+                  onChange={(e) => handleBase64TextChange(e.target.value)}
+                />
+              </ResizablePanel>
+            </ResizablePanelGroup>
+          </ResizablePanel>
+        </ResizablePanelGroup>
       </div>
     </div>
   )
