@@ -47,7 +47,7 @@ export default function Page() {
   }
 
   return (
-    <div className='grid h-full place-content-center'>
+    <div className='grid min-h-screen place-content-center'>
       <div className='flex items-center gap-x-2'>
         <Input
           classNames={{

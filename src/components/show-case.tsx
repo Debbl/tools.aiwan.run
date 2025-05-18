@@ -62,6 +62,12 @@ export function Showcase() {
       link: 'base64-to-png',
       icon: './base64-to-png/icon.svg',
     },
+    {
+      title: 'Keep Screen On',
+      description: t`Keep your device screen always on`,
+      link: 'keep-screen-on',
+      icon: './keep-screen-on/icon.svg',
+    },
   ].map((i) => ({
     ...i,
     href: getRealPathname(i.link),

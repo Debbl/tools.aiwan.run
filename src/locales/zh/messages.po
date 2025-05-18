@@ -37,7 +37,7 @@ msgstr "掷骰子"
 msgid "Enter your input text"
 msgstr "输入文本"
 
-#: src/app/(main)/base64-to-png/page.tsx:120
+#: src/app/(main)/base64-to-png/page.tsx:125
 msgid "Error"
 msgstr "错误"
 
@@ -49,13 +49,29 @@ msgstr "生成查询"
 msgid "Get battery information"
 msgstr "获取电池信息"
 
+#: src/app/(main)/keep-screen-on/page.tsx:120
+msgid "inspired by"
+msgstr "灵感"
+
 #: src/app/(main)/pinyin/page.tsx:26
 msgid "Invalid input"
 msgstr "非法输入"
 
-#: src/app/(main)/base64-to-png/page.tsx:113
+#: src/app/(main)/keep-screen-on/page.tsx:112
+msgid "Keep Screen On"
+msgstr "保持屏幕常亮"
+
+#: src/app/(main)/keep-screen-on/page.tsx:135
+msgid "Keep your device screen always on."
+msgstr "保持设备屏幕常亮。"
+
+#: src/app/(main)/base64-to-png/page.tsx:118
 msgid "Loading..."
 msgstr "加载中..."
+
+#: src/app/(main)/keep-screen-on/page.tsx:30
+msgid "Long Break"
+msgstr "长休息"
 
 #: src/components/show-case.tsx:37
 msgid "MiWiFi SSH Password Calculator"
@@ -65,16 +81,24 @@ msgstr "小米路由器SSH密码计算器"
 msgid "No input"
 msgstr "未输入"
 
-#: src/app/(main)/base64-to-png/page.tsx:83
+#: src/app/(main)/base64-to-png/page.tsx:88
 msgid "Paste base64 here..."
 msgstr "粘贴 Base64"
+
+#: src/app/(main)/keep-screen-on/page.tsx:189
+msgid "Pause"
+msgstr "暂停"
 
 #: src/app/(main)/pinyin/page.tsx:35
 #: src/app/(main)/pinyin/page.tsx:70
 msgid "Pinyin"
 msgstr "拼音"
 
-#: src/app/(main)/base64-to-png/page.tsx:108
+#: src/app/(main)/keep-screen-on/page.tsx:22
+msgid "Promote"
+msgstr "专注"
+
+#: src/app/(main)/base64-to-png/page.tsx:113
 msgid "Ready"
 msgstr "已准备"
 
@@ -86,9 +110,21 @@ msgstr "选择语言"
 msgid "Select Theme"
 msgstr "选择主题"
 
+#: src/app/(main)/keep-screen-on/page.tsx:26
+msgid "Short Break"
+msgstr "短休息"
+
 #: src/app/(main)/code-diff/components/operator.tsx:83
 msgid "Side By Side"
 msgstr "并排显示"
+
+#: src/app/(main)/keep-screen-on/page.tsx:186
+msgid "Start"
+msgstr "开始"
+
+#: src/app/(main)/keep-screen-on/page.tsx:192
+msgid "Stop"
+msgstr "停止"
 
 #: src/app/(main)/pinyin/page.tsx:52
 msgid "Text"

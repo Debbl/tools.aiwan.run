@@ -10,7 +10,7 @@ export default function Page() {
   const password = useMemo(() => (sn ? getPasswd(sn) : ''), [sn])
 
   return (
-    <div className='flex h-full flex-col items-center justify-center'>
+    <div className='flex min-h-screen flex-col items-center justify-center'>
       <h1>
         <Link href='https://miwifi.dev/ssh' target='_blank' rel='noreferrer'>
           MiWiFi SSH Password Calculator

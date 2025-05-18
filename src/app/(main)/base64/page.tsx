@@ -40,14 +40,14 @@ export default function Page() {
   }
 
   return (
-    <div className='flex h-full flex-col items-start gap-y-2'>
+    <div className='flex min-h-screen flex-col items-start gap-y-2'>
       <header className='mt-4 flex w-full items-end justify-between gap-1 px-4 text-left text-2xl font-medium'>
         <h1 className='text-center'>Base64</h1>
       </header>
 
-      <div className='border-border flex size-full flex-col gap-1 overflow-hidden p-4'>
+      <div className='border-border flex size-full flex-1 flex-col overflow-hidden p-4'>
         <ResizablePanelGroup
-          className='border-border size-full rounded-md border'
+          className='border-border flex-1 rounded-md border'
           direction={isMobile ? 'vertical' : 'horizontal'}
         >
           <ResizablePanel>

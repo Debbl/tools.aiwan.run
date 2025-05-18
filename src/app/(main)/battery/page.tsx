@@ -8,7 +8,7 @@ export default function BatteryPage() {
   if (!battery) return null
 
   return (
-    <div className='flex h-full items-center justify-center'>
+    <div className='flex min-h-screen items-center justify-center'>
       <div className=''>
         <h1 className='mt-6 text-center text-lg font-bold'>Battery</h1>
         <p className='mt-2 text-center'>{JSON.stringify(battery)}</p>

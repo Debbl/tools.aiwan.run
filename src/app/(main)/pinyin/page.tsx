@@ -29,7 +29,7 @@ export default function Page() {
   }, [inputText, isShowTone, t])
 
   return (
-    <div className='grid h-full content-center gap-y-8'>
+    <div className='grid min-h-screen content-center gap-y-8'>
       <div>
         <h1 className='text-center'>
           <Trans>Pinyin</Trans>
