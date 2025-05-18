@@ -138,7 +138,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className='bg-accent flex flex-col items-center justify-center gap-y-2 rounded-lg p-4'>
+        <div className='bg-accent flex min-w-80 flex-col items-center justify-center gap-y-2 rounded-lg p-4'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='flex items-center gap-x-2'>
               <div className='flex gap-2 rounded-[8px] bg-gray-100 p-[2px] dark:bg-zinc-800'>
