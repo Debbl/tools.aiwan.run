@@ -5,10 +5,10 @@ import { LucideInfo } from 'lucide-react'
 import NoSleep from 'nosleep.js'
 import { useEffect, useRef } from 'react'
 import { match } from 'ts-pattern'
+import { RippleButton } from '~/components/animate-ui/buttons/ripple'
 import { Switch } from '~/components/animate-ui/radix/switch'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/animate-ui/radix/tooltip'
 import { AnimatedBackground } from '~/components/motion-primitives/animated-background'
-import { Button } from '~/components/ui/button'
 
 export default function Page() {
   const noSleep = useRef<NoSleep | null>(null)
@@ -76,6 +76,8 @@ export default function Page() {
   }
 
   const handleStart = () => {
+    if (isEnabled) return
+
     if (!isInPromote) {
       setIsInPromote(true)
       const time = match(promote)
@@ -173,7 +175,15 @@ export default function Page() {
                   promote,
                   isInPromote,
                 })
-                  .with({ isInPromote: true }, () => <div>{format(new Date(sleepTime * 1000), 'mm:ss')}</div>)
+                  .with({ isInPromote: true }, () => (
+                    <div
+                      className={cn({
+                        'text-gray-500': !isEnabled && isInPromote,
+                      })}
+                    >
+                      {format(new Date(sleepTime * 1000), 'mm:ss')}
+                    </div>
+                  ))
                   .with({ promote: 'promote' }, () => <div>25:00</div>)
                   .with({ promote: 'short-break' }, () => <div>05:00</div>)
                   .with({ promote: 'long-break' }, () => <div>15:00</div>)
@@ -182,15 +192,22 @@ export default function Page() {
             </div>
 
             <div className='flex items-center gap-x-2'>
-              <Button variant='outline' onClick={handleStart}>
-                <Trans>Start</Trans>
-              </Button>
-              <Button variant='outline' onClick={handlePause}>
-                <Trans>Pause</Trans>
-              </Button>
-              <Button variant='outline' onClick={handleStop}>
-                <Trans>Stop</Trans>
-              </Button>
+              {!isEnabled && (
+                <RippleButton variant='default' onClick={handleStart}>
+                  <Trans>Start</Trans>
+                </RippleButton>
+              )}
+
+              {isInPromote && (
+                <>
+                  <RippleButton variant='outline' onClick={handlePause}>
+                    <Trans>Pause</Trans>
+                  </RippleButton>
+                  <RippleButton variant='destructive' onClick={handleStop}>
+                    <Trans>Stop</Trans>
+                  </RippleButton>
+                </>
+              )}
             </div>
           </div>
         </div>
