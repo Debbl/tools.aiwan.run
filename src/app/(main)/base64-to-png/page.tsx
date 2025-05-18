@@ -71,14 +71,7 @@ export default function Base64ToPngPage() {
           className='border-border rounded-md border'
           direction={isMobile ? 'vertical' : 'horizontal'}
         >
-          <ResizablePanel
-            // className={cn('border-border rounded-md border', {
-            //   'rounded-b-none border-b-0': isMobile,
-            //   'rounded-r-none border-r-0': !isMobile,
-            // })}
-            defaultSize={50}
-            minSize={10}
-          >
+          <ResizablePanel defaultSize={50} minSize={10}>
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
@@ -101,13 +94,7 @@ export default function Base64ToPngPage() {
 
           <ResizableHandle withHandle />
 
-          <ResizablePanel
-            // className={cn('border-border rounded-md border', {
-            //   'rounded-t-none border-t-0': isMobile,
-            //   'rounded-l-none border-l-0': !isMobile,
-            // })}
-            defaultSize={50}
-          >
+          <ResizablePanel defaultSize={50}>
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 {status === 'success' && (
