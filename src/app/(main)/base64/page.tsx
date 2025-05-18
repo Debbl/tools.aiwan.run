@@ -1,6 +1,7 @@
 'use client'
 import { CircleXIcon } from 'lucide-react'
 import { useState } from 'react'
+import { useIsMatchMedia } from 'use-is-match-media'
 import { CopyButton } from '~/components/copy-button'
 import { Button } from '~/components/ui/button'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
@@ -10,6 +11,7 @@ export default function Page() {
   const [inputText, setInputText] = useState('')
   const [base64Text, setBase64Text] = useState('')
 
+  const isMobile = useIsMatchMedia('(max-width: 768px)')
   const handleInputTextChange = (value: string) => {
     setInputText(value)
     let newBase64Text = ''
@@ -32,6 +34,11 @@ export default function Page() {
     setInputText(newInputText)
   }
 
+  const handleReset = () => {
+    setInputText('')
+    setBase64Text('')
+  }
+
   return (
     <div className='flex h-full flex-col items-start gap-y-2'>
       <header className='mt-4 flex w-full items-end justify-between gap-1 px-4 text-left text-2xl font-medium'>
@@ -39,14 +46,17 @@ export default function Page() {
       </header>
 
       <div className='border-border flex size-full flex-col gap-1 overflow-hidden p-4'>
-        <ResizablePanelGroup className='border-border size-full rounded-md border' direction='horizontal'>
+        <ResizablePanelGroup
+          className='border-border size-full rounded-md border'
+          direction={isMobile ? 'vertical' : 'horizontal'}
+        >
           <ResizablePanel>
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 
-                  <Button variant='ghost' size='icon' onClick={() => setInputText('')}>
+                  <Button variant='ghost' size='icon' onClick={handleReset}>
                     <CircleXIcon className='size-4' />
                   </Button>
                 </div>
@@ -68,7 +78,7 @@ export default function Page() {
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 
-                  <Button variant='ghost' size='icon' onClick={() => setInputText('')}>
+                  <Button variant='ghost' size='icon' onClick={handleReset}>
                     <CircleXIcon className='size-4' />
                   </Button>
                 </div>

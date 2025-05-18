@@ -32,7 +32,7 @@
     "@lingui/core": "^5.3.1",
     "@lingui/react": "^5.3.1",
     "@monaco-editor/react": "^4.7.0",
-    "@react-three/drei": "^10.0.7",
+    "@react-three/drei": "^10.0.8",
     "@react-three/fiber": "9.0.0-rc.1",
     "@react-three/rapier": "^2.1.0",
     "@serwist/next": "^9.0.14",
@@ -60,7 +60,8 @@
     "tailwind-merge": "^3.3.0",
     "three": "^0.176.0",
     "ts-pattern": "^5.7.0",
-    "twl": "0.0.0"
+    "twl": "0.0.0",
+    "use-is-match-media": "^0.0.2"
   },
   "devDependencies": {
     "@debbl/eslint-config": "^3.11.0",

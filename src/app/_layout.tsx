@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: 'Magic Tools',
   },
+  metadataBase: new URL('https://tools.aiwan.run'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/en',
+      zh: '/zh',
+    },
+  },
   icons: [
     {
       rel: 'shortcut icon',

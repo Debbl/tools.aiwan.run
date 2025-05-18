@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks-extra/no-direct-set-state-in-use-effect */
 'use client'
 import { useEffectEvent } from '@debbl/ahooks'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { imageMeta } from 'image-meta'
 import { CircleXIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { match } from 'ts-pattern'
+import { useIsMatchMedia } from 'use-is-match-media'
 import { CopyButton } from '~/components/copy-button'
 import { Button } from '~/components/ui/button'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
@@ -16,6 +18,9 @@ export default function Base64ToPngPage() {
   const [img, setImg] = useState('')
   const [status, setStatus] = useState<'ready' | 'loading' | 'success' | 'error'>('ready')
   const [meta, setMeta] = useState<ImageMeta | null>(null)
+
+  const { t } = useLingui()
+  const isMobile = useIsMatchMedia('(max-width: 768px)')
 
   const handleBase64Change = useEffectEvent((base64: string) => {
     if (!base64) {
@@ -62,8 +67,18 @@ export default function Base64ToPngPage() {
       </header>
 
       <div className='border-border mb-2 flex size-full flex-col gap-1 overflow-hidden'>
-        <ResizablePanelGroup direction='horizontal'>
-          <ResizablePanel className='border-border rounded-l-md border border-r-0' defaultSize={50} minSize={10}>
+        <ResizablePanelGroup
+          className='border-border rounded-md border'
+          direction={isMobile ? 'vertical' : 'horizontal'}
+        >
+          <ResizablePanel
+            // className={cn('border-border rounded-md border', {
+            //   'rounded-b-none border-b-0': isMobile,
+            //   'rounded-r-none border-r-0': !isMobile,
+            // })}
+            defaultSize={50}
+            minSize={10}
+          >
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
@@ -77,7 +92,7 @@ export default function Base64ToPngPage() {
                 <Textarea
                   className='h-full resize-none border-none focus-visible:border-none focus-visible:ring-0'
                   value={base64}
-                  placeholder='Paste base64 here...'
+                  placeholder={t`Paste base64 here...`}
                   onChange={(e) => setBase64(e.target.value)}
                 />
               </ResizablePanel>
@@ -86,7 +101,13 @@ export default function Base64ToPngPage() {
 
           <ResizableHandle withHandle />
 
-          <ResizablePanel className='rounded-r-md border border-l-0' defaultSize={50}>
+          <ResizablePanel
+            // className={cn('border-border rounded-md border', {
+            //   'rounded-t-none border-t-0': isMobile,
+            //   'rounded-l-none border-l-0': !isMobile,
+            // })}
+            defaultSize={50}
+          >
             <ResizablePanelGroup direction='vertical'>
               <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
                 {status === 'success' && (
@@ -100,11 +121,23 @@ export default function Base64ToPngPage() {
               <ResizablePanel>
                 <div className='flex size-full items-center justify-center'>
                   {match(status)
-                    .with('ready', () => <div className='text-muted-foreground'>Ready</div>)
-                    .with('loading', () => <div className='text-muted-foreground'>Loading...</div>)
+                    .with('ready', () => (
+                      <div className='text-muted-foreground'>
+                        <Trans>Ready</Trans>
+                      </div>
+                    ))
+                    .with('loading', () => (
+                      <div className='text-muted-foreground'>
+                        <Trans>Loading...</Trans>
+                      </div>
+                    ))
                     // eslint-disable-next-line @next/next/no-img-element
                     .with('success', () => <img src={img} className='size-full object-contain' />)
-                    .with('error', () => <div className='text-destructive'>Error</div>)
+                    .with('error', () => (
+                      <div className='text-destructive'>
+                        <Trans>Error</Trans>
+                      </div>
+                    ))
                     .exhaustive()}
                 </div>
               </ResizablePanel>
