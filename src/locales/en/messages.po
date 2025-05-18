@@ -41,7 +41,7 @@ msgstr "Enter your input text"
 #~ msgid "Enter your pinyin text"
 #~ msgstr "Enter your pinyin text"
 
-#: src/app/(main)/base64-to-png/page.tsx:125
+#: src/app/(main)/base64-to-png/page.tsx:141
 msgid "Error"
 msgstr "Error"
 
@@ -53,7 +53,7 @@ msgstr "Generate Query"
 msgid "Get battery information"
 msgstr "Get battery information"
 
-#: src/app/(main)/keep-screen-on/page.tsx:120
+#: src/app/(main)/keep-screen-on/page.tsx:122
 msgid "inspired by"
 msgstr "inspired by"
 
@@ -61,15 +61,19 @@ msgstr "inspired by"
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: src/app/(main)/keep-screen-on/page.tsx:112
+#: src/app/(main)/keep-screen-on/page.tsx:114
 msgid "Keep Screen On"
 msgstr "Keep Screen On"
 
-#: src/app/(main)/keep-screen-on/page.tsx:135
+#: src/components/show-case.tsx:67
+msgid "Keep your device screen always on"
+msgstr "Keep your device screen always on"
+
+#: src/app/(main)/keep-screen-on/page.tsx:137
 msgid "Keep your device screen always on."
 msgstr "Keep your device screen always on."
 
-#: src/app/(main)/base64-to-png/page.tsx:118
+#: src/app/(main)/base64-to-png/page.tsx:134
 msgid "Loading..."
 msgstr "Loading..."
 
@@ -85,11 +89,11 @@ msgstr "MiWiFi SSH Password Calculator"
 msgid "No input"
 msgstr "No input"
 
-#: src/app/(main)/base64-to-png/page.tsx:88
+#: src/app/(main)/base64-to-png/page.tsx:103
 msgid "Paste base64 here..."
 msgstr "Paste base64 here..."
 
-#: src/app/(main)/keep-screen-on/page.tsx:189
+#: src/app/(main)/keep-screen-on/page.tsx:204
 msgid "Pause"
 msgstr "Pause"
 
@@ -102,7 +106,7 @@ msgstr "Pinyin"
 msgid "Promote"
 msgstr "Promote"
 
-#: src/app/(main)/base64-to-png/page.tsx:113
+#: src/app/(main)/base64-to-png/page.tsx:129
 msgid "Ready"
 msgstr "Ready"
 
@@ -122,11 +126,11 @@ msgstr "Short Break"
 msgid "Side By Side"
 msgstr "Side By Side"
 
-#: src/app/(main)/keep-screen-on/page.tsx:186
+#: src/app/(main)/keep-screen-on/page.tsx:197
 msgid "Start"
 msgstr "Start"
 
-#: src/app/(main)/keep-screen-on/page.tsx:192
+#: src/app/(main)/keep-screen-on/page.tsx:207
 msgid "Stop"
 msgstr "Stop"
 

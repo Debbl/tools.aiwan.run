@@ -135,5 +135,6 @@ export {
   type TooltipProviderProps,
   TooltipTrigger,
   type TooltipTriggerProps,
+  // eslint-disable-next-line react-refresh/only-export-components
   useTooltip,
 }
