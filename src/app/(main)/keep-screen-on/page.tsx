@@ -132,7 +132,7 @@ export default function Page() {
 
       <main className='flex flex-col items-center justify-center gap-y-2'>
         <div className='flex items-center gap-x-2'>
-          <Switch checked={isEnabled} onCheckedChange={setIsEnabled} />
+          <Switch checked={isEnabled} disabled={isInPromote} onCheckedChange={setIsEnabled} />
           <p className='text-muted-foreground text-sm'>
             <Trans>Keep your device screen always on.</Trans>
           </p>
@@ -192,11 +192,9 @@ export default function Page() {
             </div>
 
             <div className='flex items-center gap-x-2'>
-              {!isEnabled && (
-                <RippleButton variant='default' onClick={handleStart}>
-                  <Trans>Start</Trans>
-                </RippleButton>
-              )}
+              <RippleButton disabled={isEnabled} variant='default' onClick={handleStart}>
+                <Trans>Start</Trans>
+              </RippleButton>
 
               {isInPromote && (
                 <>
