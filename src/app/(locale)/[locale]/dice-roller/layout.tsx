@@ -1,3 +1,4 @@
+import { msg } from '@lingui/core/macro'
 import Provider from './provider'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'

@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:10
+msgid "a code-diff tool for comparing code"
+msgstr "a code-diff tool for comparing code"
+
 #: src/components/show-case.tsx:31
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "A tool that transforms text to base64 and vice versa"
@@ -25,15 +29,33 @@ msgstr "auto detect language"
 msgid "base64"
 msgstr "base64"
 
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:9
+msgid "base64 to png"
+msgstr "base64 to png"
+
+#: src/app/(locale)/[locale]/battery/layout.tsx:9
+msgid "battery"
+msgstr "battery"
+
 #: src/components/show-case.tsx:19
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:9
+msgid "code-diff"
+msgstr "code-diff"
+
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:10
+msgid "convert base64 to png"
+msgstr "convert base64 to png"
+
 #: src/components/show-case.tsx:55
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:10
 msgid "Convert chinese to pinyin"
 msgstr "Convert chinese to pinyin"
 
 #: src/components/show-case.tsx:49
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:10
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
@@ -58,9 +80,18 @@ msgstr "Enter your input text"
 msgid "Error"
 msgstr "Error"
 
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:9
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:10
+msgid "generate query"
+msgstr "generate query"
+
 #: src/components/show-case.tsx:43
 msgid "Generate Query"
 msgstr "Generate Query"
+
+#: src/app/(locale)/[locale]/battery/layout.tsx:10
+msgid "get battery information"
+msgstr "get battery information"
 
 #: src/components/show-case.tsx:25
 msgid "Get battery information"
@@ -78,9 +109,17 @@ msgstr "Invalid input"
 msgid "Keep Screen On"
 msgstr "Keep Screen On"
 
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:8
+msgid "Keep Screen On - A page to prevent your device from sleeping"
+msgstr "Keep Screen On - A page to prevent your device from sleeping"
+
 #: src/components/show-case.tsx:67
 msgid "Keep your device screen always on"
 msgstr "Keep your device screen always on"
+
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:10
+msgid "Keep your device screen always on with a simple click. Say goodbye to interruptions caused by screen timeouts. Keep Screen On offers an easy solution to keep your device alert, ensuring uninterrupted usage while reading, watching, or multitasking. Experience a hassle-free browsing experience with our convenient tool. Keep your screen on and your device engaged with Keep Screen On - the perfect companion for extended screen time."
+msgstr "Keep your device screen always on with a simple click. Say goodbye to interruptions caused by screen timeouts. Keep Screen On offers an easy solution to keep your device alert, ensuring uninterrupted usage while reading, watching, or multitasking. Experience a hassle-free browsing experience with our convenient tool. Keep your screen on and your device engaged with Keep Screen On - the perfect companion for extended screen time."
 
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:137
 msgid "Keep your device screen always on."
@@ -93,6 +132,11 @@ msgstr "Loading..."
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:30
 msgid "Long Break"
 msgstr "Long Break"
+
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:9
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:10
+msgid "MiWiFi SN"
+msgstr "MiWiFi SN"
 
 #: src/components/show-case.tsx:37
 msgid "MiWiFi SSH Password Calculator"
@@ -112,6 +156,7 @@ msgstr "Pause"
 
 #: src/app/(locale)/[locale]/pinyin/page.tsx:35
 #: src/app/(locale)/[locale]/pinyin/page.tsx:70
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:9
 msgid "Pinyin"
 msgstr "Pinyin"
 
@@ -122,6 +167,10 @@ msgstr "Promote"
 #: src/app/(locale)/[locale]/base64-to-png/page.tsx:129
 msgid "Ready"
 msgstr "Ready"
+
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:11
+msgid "roll a dice"
+msgstr "roll a dice"
 
 #: src/app/(locale)/[locale]/code-diff/components/operator.tsx:54
 msgid "Select Language"

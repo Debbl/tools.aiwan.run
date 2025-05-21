@@ -41,10 +41,6 @@ const nextConfig: NextConfig = {
             imports: [['*', 'motion']],
           },
           {
-            from: '@lingui/core/macro',
-            imports: ['msg'],
-          },
-          {
             from: '~/i18n',
             imports: ['generateMetadataWithI18n'],
           },

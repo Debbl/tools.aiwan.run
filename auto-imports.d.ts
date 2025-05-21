@@ -13,7 +13,6 @@ declare global {
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const motion: typeof import('motion/react-m')
-  const msg: typeof import('@lingui/core/macro')['msg']
   const startTransition: typeof import('react')['startTransition']
   const useCallback: typeof import('react')['useCallback']
   const useContext: typeof import('react')['useContext']

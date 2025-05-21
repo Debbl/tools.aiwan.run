@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:10
+msgid "a code-diff tool for comparing code"
+msgstr "一个用于比较代码的代码对比工具"
+
 #: src/components/show-case.tsx:31
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "一个将文本转换为base64的工具"
@@ -25,15 +29,33 @@ msgstr "自动检测语言"
 msgid "base64"
 msgstr "base64"
 
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:9
+msgid "base64 to png"
+msgstr "将 base64 转换为 png"
+
+#: src/app/(locale)/[locale]/battery/layout.tsx:9
+msgid "battery"
+msgstr "电池"
+
 #: src/components/show-case.tsx:19
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "代码对比是一个工具，允许您将两个代码片段并排进行比较。"
 
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:9
+msgid "code-diff"
+msgstr "代码对比"
+
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:10
+msgid "convert base64 to png"
+msgstr "将 base64 转换为 png"
+
 #: src/components/show-case.tsx:55
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:10
 msgid "Convert chinese to pinyin"
 msgstr "汉字拼音转换"
 
 #: src/components/show-case.tsx:49
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:10
 msgid "Dice Roller"
 msgstr "掷骰子"
 
@@ -54,9 +76,18 @@ msgstr "输入文本"
 msgid "Error"
 msgstr "错误"
 
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:9
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:10
+msgid "generate query"
+msgstr "生成查询"
+
 #: src/components/show-case.tsx:43
 msgid "Generate Query"
 msgstr "生成查询"
+
+#: src/app/(locale)/[locale]/battery/layout.tsx:10
+msgid "get battery information"
+msgstr "获取电池信息"
 
 #: src/components/show-case.tsx:25
 msgid "Get battery information"
@@ -74,9 +105,17 @@ msgstr "非法输入"
 msgid "Keep Screen On"
 msgstr "保持屏幕常亮"
 
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:8
+msgid "Keep Screen On - A page to prevent your device from sleeping"
+msgstr "保持屏幕常亮 - 一个防止你的设备睡眠的页面"
+
 #: src/components/show-case.tsx:67
 msgid "Keep your device screen always on"
 msgstr "保持你的设备屏幕常亮"
+
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:10
+msgid "Keep your device screen always on with a simple click. Say goodbye to interruptions caused by screen timeouts. Keep Screen On offers an easy solution to keep your device alert, ensuring uninterrupted usage while reading, watching, or multitasking. Experience a hassle-free browsing experience with our convenient tool. Keep your screen on and your device engaged with Keep Screen On - the perfect companion for extended screen time."
+msgstr "保持你的设备屏幕常亮只需简单点击。告别因屏幕超时导致的干扰。Keep Screen On 提供了一种简单易行的解决方案，确保你在阅读、观看或进行多任务处理时不会被打断。使用我们的便捷工具，享受无烦恼的浏览体验。保持屏幕常亮，让你的设备时刻保持警觉，与 Keep Screen On 成为你延长屏幕时间的完美伴侣。"
 
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:137
 msgid "Keep your device screen always on."
@@ -89,6 +128,11 @@ msgstr "加载中..."
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:30
 msgid "Long Break"
 msgstr "长休息"
+
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:9
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:10
+msgid "MiWiFi SN"
+msgstr "小米路由器序列号"
 
 #: src/components/show-case.tsx:37
 msgid "MiWiFi SSH Password Calculator"
@@ -108,6 +152,7 @@ msgstr "暂停"
 
 #: src/app/(locale)/[locale]/pinyin/page.tsx:35
 #: src/app/(locale)/[locale]/pinyin/page.tsx:70
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:9
 msgid "Pinyin"
 msgstr "拼音"
 
@@ -118,6 +163,10 @@ msgstr "专注"
 #: src/app/(locale)/[locale]/base64-to-png/page.tsx:129
 msgid "Ready"
 msgstr "已准备"
+
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:11
+msgid "roll a dice"
+msgstr "掷骰子"
 
 #: src/app/(locale)/[locale]/code-diff/components/operator.tsx:54
 msgid "Select Language"
