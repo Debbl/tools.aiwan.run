@@ -40,6 +40,7 @@ export function AnimatedBackground({
     }
   }, [defaultValue])
 
+  // eslint-disable-next-line react/no-children-map
   return Children.map(children, (child: any, index) => {
     const id = child.props['data-id']
 
