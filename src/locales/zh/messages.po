@@ -17,9 +17,13 @@ msgstr ""
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "一个将文本转换为base64的工具"
 
-#: src/app/(main)/code-diff/components/diff-editor-container.tsx:50
+#: src/app/(locale)/[locale]/code-diff/components/diff-editor-container.tsx:50
 msgid "auto detect language"
 msgstr "自动检测语言"
+
+#: src/app/(locale)/[locale]/base64/layout.tsx:10
+msgid "base64"
+msgstr "base64"
 
 #: src/components/show-case.tsx:19
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
@@ -33,11 +37,20 @@ msgstr "汉字拼音转换"
 msgid "Dice Roller"
 msgstr "掷骰子"
 
-#: src/app/(main)/pinyin/page.tsx:53
+#: src/app/(locale)/[locale]/base64/layout.tsx:11
+msgid "encode and decode base64"
+msgstr "编码和解码 base64"
+
+#: src/app/(locale)/[locale]/base64/page.tsx:91
+msgid "Enter your base64 text"
+msgstr "输入 base64 文本"
+
+#: src/app/(locale)/[locale]/pinyin/page.tsx:53
+#: src/app/(locale)/[locale]/base64/page.tsx:69
 msgid "Enter your input text"
 msgstr "输入文本"
 
-#: src/app/(main)/base64-to-png/page.tsx:141
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:141
 msgid "Error"
 msgstr "错误"
 
@@ -49,15 +62,15 @@ msgstr "生成查询"
 msgid "Get battery information"
 msgstr "获取电池信息"
 
-#: src/app/(main)/keep-screen-on/page.tsx:122
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:122
 msgid "inspired by"
 msgstr "灵感"
 
-#: src/app/(main)/pinyin/page.tsx:26
+#: src/app/(locale)/[locale]/pinyin/page.tsx:26
 msgid "Invalid input"
 msgstr "非法输入"
 
-#: src/app/(main)/keep-screen-on/page.tsx:114
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:114
 msgid "Keep Screen On"
 msgstr "保持屏幕常亮"
 
@@ -65,15 +78,15 @@ msgstr "保持屏幕常亮"
 msgid "Keep your device screen always on"
 msgstr "保持你的设备屏幕常亮"
 
-#: src/app/(main)/keep-screen-on/page.tsx:137
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:137
 msgid "Keep your device screen always on."
 msgstr "保持设备屏幕常亮。"
 
-#: src/app/(main)/base64-to-png/page.tsx:134
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:134
 msgid "Loading..."
 msgstr "加载中..."
 
-#: src/app/(main)/keep-screen-on/page.tsx:30
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:30
 msgid "Long Break"
 msgstr "长休息"
 
@@ -81,60 +94,60 @@ msgstr "长休息"
 msgid "MiWiFi SSH Password Calculator"
 msgstr "小米路由器SSH密码计算器"
 
-#: src/app/(main)/pinyin/page.tsx:72
+#: src/app/(locale)/[locale]/pinyin/page.tsx:72
 msgid "No input"
 msgstr "未输入"
 
-#: src/app/(main)/base64-to-png/page.tsx:103
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:103
 msgid "Paste base64 here..."
 msgstr "粘贴 Base64"
 
-#: src/app/(main)/keep-screen-on/page.tsx:204
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:202
 msgid "Pause"
 msgstr "暂停"
 
-#: src/app/(main)/pinyin/page.tsx:35
-#: src/app/(main)/pinyin/page.tsx:70
+#: src/app/(locale)/[locale]/pinyin/page.tsx:35
+#: src/app/(locale)/[locale]/pinyin/page.tsx:70
 msgid "Pinyin"
 msgstr "拼音"
 
-#: src/app/(main)/keep-screen-on/page.tsx:22
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:22
 msgid "Promote"
 msgstr "专注"
 
-#: src/app/(main)/base64-to-png/page.tsx:129
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:129
 msgid "Ready"
 msgstr "已准备"
 
-#: src/app/(main)/code-diff/components/operator.tsx:54
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:54
 msgid "Select Language"
 msgstr "选择语言"
 
-#: src/app/(main)/code-diff/components/operator.tsx:70
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:70
 msgid "Select Theme"
 msgstr "选择主题"
 
-#: src/app/(main)/keep-screen-on/page.tsx:26
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:26
 msgid "Short Break"
 msgstr "短休息"
 
-#: src/app/(main)/code-diff/components/operator.tsx:83
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:83
 msgid "Side By Side"
 msgstr "并排显示"
 
-#: src/app/(main)/keep-screen-on/page.tsx:197
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:196
 msgid "Start"
 msgstr "开始"
 
-#: src/app/(main)/keep-screen-on/page.tsx:207
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:205
 msgid "Stop"
 msgstr "停止"
 
-#: src/app/(main)/pinyin/page.tsx:52
+#: src/app/(locale)/[locale]/pinyin/page.tsx:52
 msgid "Text"
 msgstr "文本"
 
-#: src/app/(main)/pinyin/page.tsx:40
+#: src/app/(locale)/[locale]/pinyin/page.tsx:40
 msgid "Tone"
 msgstr "声调"
 

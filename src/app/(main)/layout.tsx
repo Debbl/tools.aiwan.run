@@ -1,6 +1,10 @@
 import { getRootLayout } from '../_layout'
+import type { ReactNode } from 'react'
 
 export { metadata } from '../_layout'
 
-const RootLayout = getRootLayout('en')
-export default RootLayout
+export default async function Layout({ children }: { children: ReactNode }) {
+  const RootLayout = await getRootLayout('en')
+
+  return <RootLayout>{children}</RootLayout>
+}

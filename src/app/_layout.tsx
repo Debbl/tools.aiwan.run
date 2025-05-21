@@ -3,7 +3,7 @@ import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
 import { getI18nInstance } from '~/i18n'
-import { LinguiClientProvider } from '~/providers/lingui-clien-provider'
+import { LinguiClientProvider } from '~/providers/lingui-client-provider'
 import { Providers } from '../providers'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   ],
 }
 
-export function getRootLayout(lang: string) {
-  function RootLayout({ children }: { children: ReactNode }) {
-    const i18n = getI18nInstance(lang)
+export async function getRootLayout(lang: string) {
+  async function RootLayout({ children }: { children: ReactNode }) {
+    const i18n = await getI18nInstance(lang)
     setI18n(i18n)
 
     return (
@@ -75,5 +75,6 @@ export function getRootLayout(lang: string) {
       </html>
     )
   }
+
   return RootLayout
 }

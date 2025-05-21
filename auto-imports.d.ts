@@ -9,9 +9,11 @@ declare global {
   const cn: typeof import('twl')['cn']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
+  const generateMetadataWithI18n: typeof import('~/i18n')['generateMetadataWithI18n']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const motion: typeof import('motion/react-m')
+  const msg: typeof import('@lingui/core/macro')['msg']
   const startTransition: typeof import('react')['startTransition']
   const useCallback: typeof import('react')['useCallback']
   const useContext: typeof import('react')['useContext']
