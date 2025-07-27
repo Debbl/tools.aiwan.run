@@ -1,5 +1,7 @@
 import { msg } from '@lingui/core/macro'
+import { generateMetadataWithI18n } from '~/i18n'
 import { getLangUrl } from '~/i18n/get-lang-url'
+import { SEO } from './seo'
 import type { Metadata } from 'next'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -23,5 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <SEO className='mx-auto mt-10 max-w-2xl px-4' />
+    </>
+  )
 }

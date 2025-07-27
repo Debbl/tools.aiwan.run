@@ -6,8 +6,8 @@ const ClientStage = dynamic(() => import('./components/stage'), { ssr: false })
 
 export default function Page() {
   return (
-    <div className='h-full'>
-      <Suspense fallback={<div>loading</div>}>
+    <div className='h-screen'>
+      <Suspense fallback={<div className='h-full'>loading</div>}>
         <ClientStage />
       </Suspense>
     </div>

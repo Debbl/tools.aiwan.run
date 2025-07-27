@@ -6,8 +6,8 @@ import { Scene } from './scene'
 
 export default function Stage() {
   return (
-    <div className='h-full'>
-      <Canvas shadows>
+    <div className='h-screen'>
+      <Canvas shadows className='min-h-screen'>
         <Physics gravity={[0, -9.8, 0]} debug>
           <color attach='background' args={['#171720']} />
           <ambientLight intensity={0.2 * Math.PI} />

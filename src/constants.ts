@@ -7,9 +7,13 @@ export function getWebsite(lang?: string) {
   const isZh = lang === 'zh'
 
   return {
-    title: isZh ? 'Magic Tools - 魔法工具' : 'Magic Tools - Magic Tools',
+    title: isZh
+      ? '魔法工具 - 本地隐私保护，浏览器端运行，在线工具箱'
+      : 'Magic Tools - Local Privacy Protection, Browser-First Online Tools',
     authors: [{ name: 'Brendan Dash', url: 'https://aiwan.run/' }],
-    description: isZh ? 'Magic Tools - 魔法工具' : 'Magic Tools - Magic Tools',
+    description: isZh
+      ? '魔法工具提供本地隐私保护的在线工具箱，所有工具全在浏览器端运行，无需上传数据，保护您的隐私安全。包含base64转换、代码对比、骰子模拟器等实用工具。'
+      : 'Magic Tools offers local privacy protection online tools that run entirely in your browser. No data upload required, protecting your privacy. Includes base64 converter, code diff, dice roller, and more practical utilities.',
     keywords: isZh
       ? [
           'base64',
@@ -47,7 +51,9 @@ export function getWebsite(lang?: string) {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       'name': 'Magic Tools',
-      'description': isZh ? '魔法工具' : 'Magic Tools',
+      'description': isZh
+        ? '魔法工具提供本地隐私保护的在线工具箱，所有工具全在浏览器端运行，无需上传数据，保护您的隐私安全。包含base64转换、代码对比、骰子模拟器等实用工具。'
+        : 'Magic Tools offers local privacy protection online tools that run entirely in your browser. No data upload required, protecting your privacy. Includes base64 converter, code diff, dice roller, and more practical utilities.',
       'url': 'https://tools.aiwan.run',
       'applicationCategory': isZh ? '工具' : 'Tools',
       'operatingSystem': 'Web Browser',
