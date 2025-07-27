@@ -2,6 +2,7 @@ import { setI18n } from '@lingui/react/server'
 import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
+import { getWebsite } from '~/constants'
 import { getI18nInstance } from '~/i18n'
 import { LinguiClientProvider } from '~/providers/lingui-client-provider'
 import { Providers } from '../providers'
@@ -9,49 +10,82 @@ import './globals.css'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
-export const metadata: Metadata = {
-  title: 'Magic tools',
-  description: 'a magic tools for developers',
-  appleWebApp: {
-    title: 'Magic Tools',
-  },
-  metadataBase: new URL('https://tools.aiwan.run'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      en: '/en',
-      zh: '/zh',
+export async function generateMetadataWithLang({ lang = 'en' }: { lang: string }): Promise<Metadata> {
+  const website = getWebsite(lang)
+  const baseUrl = website.domain + (lang === 'zh' ? '/zh' : '')
+
+  const metadata: Metadata = {
+    title: website.title,
+    description: website.description,
+    keywords: website.keywords,
+    appleWebApp: {
+      title: website.title,
     },
-  },
-  icons: [
-    {
-      rel: 'shortcut icon',
-      type: 'image/x-icon',
-      url: '/favicon.ico',
+    metadataBase: new URL(website.domain),
+    alternates: {
+      canonical: baseUrl,
+      languages: {
+        en: '/',
+        zh: '/zh',
+      },
     },
-    {
-      rel: 'icon',
-      sizes: '96x96',
-      type: 'image/png',
-      url: '/favicon-96x96.png',
+    icons: [
+      {
+        rel: 'shortcut icon',
+        type: 'image/x-icon',
+        url: '/favicon.ico',
+      },
+      {
+        rel: 'icon',
+        sizes: '96x96',
+        type: 'image/png',
+        url: '/favicon-96x96.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        url: '/favicon.svg',
+      },
+      {
+        rel: 'apple-touch-icon',
+        type: 'image/png',
+        url: '/apple-icon.png',
+      },
+    ],
+    category: website.category,
+    creator: website.authors[0].name,
+    publisher: website.authors[0].name,
+    twitter: {
+      creator: 'Debbl66',
     },
-    {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      url: '/favicon.svg',
+    openGraph: {
+      url: website.domain,
+      title: website.title,
+      description: website.description,
+      siteName: website.title,
+      type: 'website',
+      emails: [website.email],
+      images: [
+        {
+          alt: website.title,
+          url: '/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          type: 'image/png',
+        },
+      ],
     },
-    {
-      rel: 'apple-touch-icon',
-      type: 'image/png',
-      url: '/apple-icon.png',
-    },
-  ],
+  }
+
+  return metadata
 }
 
 export async function getRootLayout(lang: string) {
   async function RootLayout({ children }: { children: ReactNode }) {
     const i18n = await getI18nInstance(lang)
     setI18n(i18n)
+
+    const website = getWebsite(lang)
 
     return (
       <html lang={lang} suppressHydrationWarning>
@@ -61,6 +95,11 @@ export async function getRootLayout(lang: string) {
             src='https://umami.aiwan.run/script.js'
             data-website-id='5797cc0c-aef5-451e-b650-bd96e54f49c9'
             data-domains='tools.aiwan.run'
+          />
+          <script
+            type='application/ld+json'
+            // eslint-disable-next-line react-dom/no-dangerously-set-innerhtml
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(website.structuredData) }}
           />
         </head>
         <body>

@@ -1,14 +1,23 @@
 import { msg } from '@lingui/core/macro'
+import { getLangUrl } from '~/i18n/get-lang-url'
 import type { Metadata } from 'next/types'
 import type { ReactNode } from 'react'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const i18n = await generateMetadataWithI18n(params)
+  const locale = getLangUrl(i18n.locale)
 
   return {
     title: i18n._(msg`Pinyin`),
     description: i18n._(msg`Convert chinese to pinyin`),
     icons: '/pinyin/icon.svg',
+    alternates: {
+      canonical: `${locale}/pinyin`,
+      languages: {
+        en: `/pinyin`,
+        zh: `/zh/pinyin`,
+      },
+    },
   }
 }
 
