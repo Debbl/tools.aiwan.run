@@ -27,7 +27,9 @@ export async function getAllI18nInstances(): Promise<AllI18nInstances> {
   }, {})
 }
 
-export async function getI18nInstance(locale?: SupportedLocales): Promise<I18n> {
+export async function getI18nInstance(
+  locale?: SupportedLocales,
+): Promise<I18n> {
   const allI18nInstances = await getAllI18nInstances()
 
   const realLocale = (locale ?? sourceLocale) as SupportedLocales
@@ -38,7 +40,9 @@ export async function getI18nInstance(locale?: SupportedLocales): Promise<I18n> 
   return allI18nInstances[realLocale]!
 }
 
-export async function generateMetadataWithI18n(params: Promise<{ locale: string }>) {
+export async function generateMetadataWithI18n(
+  params: Promise<{ locale: string }>,
+) {
   const { locale } = await params
 
   const i18n = await getI18nInstance(locale)

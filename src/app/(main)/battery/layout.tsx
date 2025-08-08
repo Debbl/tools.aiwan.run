@@ -1,1 +1,4 @@
-export { default, generateMetadata } from '~/app/(locale)/[locale]/battery/layout'
+export {
+  default,
+  generateMetadata,
+} from '~/app/(locale)/[locale]/battery/layout'

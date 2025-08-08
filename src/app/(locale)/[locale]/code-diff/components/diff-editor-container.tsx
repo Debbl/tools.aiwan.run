@@ -46,7 +46,11 @@ export function DiffEditorContainer() {
       const guessLanguage = hljs.highlightAuto(ov).language
       const languagesId = languages.map((v) => v.id)
 
-      if (guessLanguage && guessLanguage !== languageRef.current && languagesId.includes(guessLanguage)) {
+      if (
+        guessLanguage &&
+        guessLanguage !== languageRef.current &&
+        languagesId.includes(guessLanguage)
+      ) {
         toast.success(`${t`auto detect language`}: ${guessLanguage}`, {
           position: 'top-right',
           ...(themeRef.current === 'vs-dark' && {

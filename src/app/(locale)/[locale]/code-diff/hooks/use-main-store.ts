@@ -8,7 +8,9 @@ export interface MainStoreActions {
   setLanguage: (language: MainStoreState['language']) => void
   setLanguages: (languages: MainStoreState['languages']) => void
   setTheme: (theme: MainStoreState['theme']) => void
-  setRenderSideBySide: (renderSideBySide: MainStoreState['renderSideBySide']) => void
+  setRenderSideBySide: (
+    renderSideBySide: MainStoreState['renderSideBySide'],
+  ) => void
 }
 
 export function useMainStore() {
@@ -21,6 +23,7 @@ export function useMainStore() {
     setLanguage: (language) => set((s) => ({ ...s, language })),
     setLanguages: (languages) => set((s) => ({ ...s, languages })),
     setTheme: (theme) => set((s) => ({ ...s, theme })),
-    setRenderSideBySide: (renderSideBySide) => set((s) => ({ ...s, renderSideBySide })),
+    setRenderSideBySide: (renderSideBySide) =>
+      set((s) => ({ ...s, renderSideBySide })),
   } as MainStoreActions & MainStoreState
 }

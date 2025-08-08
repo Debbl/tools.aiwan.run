@@ -9,7 +9,11 @@ import { match } from 'ts-pattern'
 import { useIsMatchMedia } from 'use-is-match-media'
 import { CopyButton } from '~/components/copy-button'
 import { Button } from '~/components/ui/button'
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from '~/components/ui/resizable'
 import { Textarea } from '~/components/ui/textarea'
 import type { ImageMeta } from 'image-meta'
 
@@ -29,7 +33,9 @@ function formatFileSize(size: number) {
 export default function Base64ToPngPage() {
   const [base64, setBase64] = useState('')
   const [img, setImg] = useState('')
-  const [status, setStatus] = useState<'ready' | 'loading' | 'success' | 'error'>('ready')
+  const [status, setStatus] = useState<
+    'ready' | 'loading' | 'success' | 'error'
+  >('ready')
   const [meta, setMeta] = useState<ImageMeta | null>(null)
   const [fileSize, setFileSize] = useState(0)
 
@@ -46,7 +52,9 @@ export default function Base64ToPngPage() {
 
     const image = document.createElement('img')
 
-    const parsedBase64 = base64.startsWith('data:') ? base64 : `data:image/png;base64,${base64}`
+    const parsedBase64 = base64.startsWith('data:')
+      ? base64
+      : `data:image/png;base64,${base64}`
 
     setStatus('loading')
     image.src = parsedBase64
@@ -88,10 +96,17 @@ export default function Base64ToPngPage() {
         >
           <ResizablePanel defaultSize={50} minSize={10}>
             <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+              <ResizablePanel
+                className='border-b'
+                style={{ minHeight: 42, maxHeight: 42 }}
+              >
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={base64} />
-                  <Button variant='ghost' size='icon' onClick={() => setBase64('')}>
+                  <Button
+                    variant='ghost'
+                    size='icon'
+                    onClick={() => setBase64('')}
+                  >
                     <CircleXIcon className='size-4' />
                   </Button>
                 </div>
@@ -111,7 +126,10 @@ export default function Base64ToPngPage() {
 
           <ResizablePanel defaultSize={50}>
             <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+              <ResizablePanel
+                className='border-b'
+                style={{ minHeight: 42, maxHeight: 42 }}
+              >
                 {status === 'success' && (
                   <div className='text-muted-foreground flex h-full items-center justify-end gap-2 px-2 text-sm'>
                     <p>W: {meta?.width}</p>
@@ -134,8 +152,11 @@ export default function Base64ToPngPage() {
                         <Trans>Loading...</Trans>
                       </div>
                     ))
-                    // eslint-disable-next-line @next/next/no-img-element
-                    .with('success', () => <img src={img} className='size-full object-contain' />)
+
+                    .with('success', () => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={img} className='size-full object-contain' />
+                    ))
                     .with('error', () => (
                       <div className='text-destructive'>
                         <Trans>Error</Trans>

@@ -274,5 +274,11 @@ The Keep Screen On Tool is a professional online tool that helps you prevent you
 `
 
 export function SEO({ className }: { className?: string }) {
-  return <SEOLayout className={className} markdownEn={markdownEn} markdownZh={markdownZh} />
+  return (
+    <SEOLayout
+      className={className}
+      markdownEn={markdownEn}
+      markdownZh={markdownZh}
+    />
+  )
 }

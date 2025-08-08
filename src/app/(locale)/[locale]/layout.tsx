@@ -2,7 +2,11 @@ import { locales, sourceLocale } from '~/i18n'
 import { generateMetadataWithLang, getRootLayout } from '../../_layout'
 import type { Metadata } from 'next'
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
   const locale = (await params).locale
 
   return generateMetadataWithLang({ lang: locale })

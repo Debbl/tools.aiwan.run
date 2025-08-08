@@ -4,7 +4,13 @@ import { useState } from 'react'
 import { cn } from 'twl'
 import { Icon } from '~/icons'
 
-export function CopyButton({ text, className }: { text: string; className?: string }) {
+export function CopyButton({
+  text,
+  className,
+}: {
+  text: string
+  className?: string
+}) {
   const [isCopied, setIsCopied] = useState(false)
 
   const handleCopy = () => {
@@ -25,7 +31,10 @@ export function CopyButton({ text, className }: { text: string; className?: stri
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      <Icon icon={isCopied ? 'CarbonCheckmark' : 'Copy'} className={cn(isCopied && 'text-green-500')} />
+      <Icon
+        icon={isCopied ? 'CarbonCheckmark' : 'Copy'}
+        className={cn(isCopied && 'text-green-500')}
+      />
     </motion.button>
   )
 }

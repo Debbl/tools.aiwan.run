@@ -1,7 +1,9 @@
 /* eslint-disable n/prefer-global/process */
 export const CWD = process.cwd()
 export const isDev = process.env.NODE_ENV === 'development'
-export const baseUrl = isDev ? process.env.__NEXT_PRIVATE_ORIGIN! : 'https://aiwan.run'
+export const baseUrl = isDev
+  ? process.env.__NEXT_PRIVATE_ORIGIN!
+  : 'https://aiwan.run'
 
 export function getWebsite(lang?: string) {
   const isZh = lang === 'zh'
@@ -41,7 +43,9 @@ export function getWebsite(lang?: string) {
     language: isZh ? 'zh' : 'en',
     creator: 'Brendan Dash',
     publisher: 'Brendan Dash',
-    domain: isDev ? process.env.__NEXT_PRIVATE_ORIGIN! : 'https://tools.aiwan.run',
+    domain: isDev
+      ? process.env.__NEXT_PRIVATE_ORIGIN!
+      : 'https://tools.aiwan.run',
     email: 'me@aiwan.run',
     social: {
       twitter: '@Debbl66',

@@ -272,5 +272,11 @@ The Battery Information Detector is a professional online tool that helps you mo
 `
 
 export function SEO({ className }: { className?: string }) {
-  return <SEOLayout className={className} markdownEn={markdownEn} markdownZh={markdownZh} />
+  return (
+    <SEOLayout
+      className={className}
+      markdownEn={markdownEn}
+      markdownZh={markdownZh}
+    />
+  )
 }

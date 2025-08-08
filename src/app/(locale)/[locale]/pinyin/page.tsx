@@ -70,7 +70,9 @@ export default function Page() {
           label={t`Pinyin`}
           minRows={8}
           placeholder={t`No input`}
-          endContent={<CopyButton className='absolute top-2 right-3' text={pingyinText} />}
+          endContent={
+            <CopyButton className='absolute top-2 right-3' text={pingyinText} />
+          }
         />
       </div>
     </div>

@@ -5,7 +5,11 @@ import { useState } from 'react'
 import { useIsMatchMedia } from 'use-is-match-media'
 import { CopyButton } from '~/components/copy-button'
 import { Button } from '~/components/ui/button'
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '~/components/ui/resizable'
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from '~/components/ui/resizable'
 import { Textarea } from '~/components/ui/textarea'
 
 export default function Page() {
@@ -55,7 +59,10 @@ export default function Page() {
         >
           <ResizablePanel>
             <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+              <ResizablePanel
+                className='border-b'
+                style={{ minHeight: 42, maxHeight: 42 }}
+              >
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 
@@ -77,7 +84,10 @@ export default function Page() {
           <ResizableHandle withHandle />
           <ResizablePanel>
             <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel className='border-b' style={{ minHeight: 42, maxHeight: 42 }}>
+              <ResizablePanel
+                className='border-b'
+                style={{ minHeight: 42, maxHeight: 42 }}
+              >
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 

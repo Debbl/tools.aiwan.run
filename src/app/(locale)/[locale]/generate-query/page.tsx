@@ -21,13 +21,17 @@ export default function Page() {
 
   const handleQueryKeyChange = (index: number, newKey: string) => {
     setQueries((queries) =>
-      queries.map(([currentKey, value], i) => (i === index ? [newKey, value] : [currentKey, value])),
+      queries.map(([currentKey, value], i) =>
+        i === index ? [newKey, value] : [currentKey, value],
+      ),
     )
   }
 
   const handleQueryValueChange = (index: number, value: string) => {
     setQueries((queries) =>
-      queries.map(([currentKey, currentValue], i) => (i === index ? [currentKey, value] : [currentKey, currentValue])),
+      queries.map(([currentKey, currentValue], i) =>
+        i === index ? [currentKey, value] : [currentKey, currentValue],
+      ),
     )
   }
 
@@ -68,11 +72,17 @@ export default function Page() {
             key={index}
             className='grid grid-cols-[1fr_4fr_40px] items-center gap-x-4'
           >
-            <Input variant='underlined' value={key} onValueChange={(newKey) => handleQueryKeyChange(index, newKey)} />
+            <Input
+              variant='underlined'
+              value={key}
+              onValueChange={(newKey) => handleQueryKeyChange(index, newKey)}
+            />
             <Input
               variant='underlined'
               value={value}
-              onValueChange={(newValue) => handleQueryValueChange(index, newValue)}
+              onValueChange={(newValue) =>
+                handleQueryValueChange(index, newValue)
+              }
             />
             <div>
               <Button isIconOnly onPress={() => handleQueryAdd(index)}>

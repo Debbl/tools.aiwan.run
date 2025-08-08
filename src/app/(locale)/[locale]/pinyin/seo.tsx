@@ -270,5 +270,11 @@ The Chinese to Pinyin Converter is a professional online tool that helps you qui
 `
 
 export function SEO({ className }: { className?: string }) {
-  return <SEOLayout className={className} markdownEn={markdownEn} markdownZh={markdownZh} />
+  return (
+    <SEOLayout
+      className={className}
+      markdownEn={markdownEn}
+      markdownZh={markdownZh}
+    />
+  )
 }

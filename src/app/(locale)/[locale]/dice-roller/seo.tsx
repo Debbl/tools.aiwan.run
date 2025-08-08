@@ -272,5 +272,11 @@ The 3D Dice Simulator is a professional online tool that provides realistic 3D d
 `
 
 export function SEO({ className }: { className?: string }) {
-  return <SEOLayout className={className} markdownEn={markdownEn} markdownZh={markdownZh} />
+  return (
+    <SEOLayout
+      className={className}
+      markdownEn={markdownEn}
+      markdownZh={markdownZh}
+    />
+  )
 }

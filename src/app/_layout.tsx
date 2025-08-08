@@ -10,7 +10,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
-export async function generateMetadataWithLang({ lang = 'en' }: { lang: string }): Promise<Metadata> {
+export async function generateMetadataWithLang({
+  lang = 'en',
+}: {
+  lang: string
+}): Promise<Metadata> {
   const website = getWebsite(lang)
   const baseUrl = website.domain + (lang === 'zh' ? '/zh' : '')
 
@@ -99,12 +103,17 @@ export async function getRootLayout(lang: string) {
           <script
             type='application/ld+json'
             // eslint-disable-next-line react-dom/no-dangerously-set-innerhtml
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(website.structuredData) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(website.structuredData),
+            }}
           />
         </head>
         <body>
           <ThemeProvider attribute='class' defaultTheme='light'>
-            <LinguiClientProvider initialLocale={lang} initialMessages={i18n.messages}>
+            <LinguiClientProvider
+              initialLocale={lang}
+              initialMessages={i18n.messages}
+            >
               <Toaster richColors />
               <Providers>{children}</Providers>
               <Footer />

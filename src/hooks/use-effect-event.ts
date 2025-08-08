@@ -3,7 +3,9 @@ import * as React from 'react'
 const context = React.createContext(true)
 
 function forbiddenInRender() {
-  throw new Error("A function wrapped in useEffectEvent can't be called during rendering.")
+  throw new Error(
+    "A function wrapped in useEffectEvent can't be called during rendering.",
+  )
 }
 
 // We can only check if we're in a render phase, beyond initial render, in React 19, with its `React.use` hook.
@@ -26,7 +28,9 @@ const isInvalidExecutionContextForEventFunction =
  * To learn more about the ponyfill itself, see: https://blog.bitsrc.io/a-look-inside-the-useevent-polyfill-from-the-new-react-docs-d1c4739e8072
  * @public
  */
-export function useEffectEvent<const T extends (...args: any[]) => void>(fn: T): T {
+export function useEffectEvent<const T extends (...args: any[]) => void>(
+  fn: T,
+): T {
   /**
    * For both React 18 and 19 we set the ref to the forbiddenInRender function, to catch illegal calls to the function during render.
    * Once the insertion effect runs, we set the ref to the actual function.

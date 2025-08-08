@@ -6,7 +6,9 @@ import type { Transition } from 'motion/react'
 import type { ReactElement } from 'react'
 
 export interface AnimatedBackgroundProps {
-  children: ReactElement<{ 'data-id': string }>[] | ReactElement<{ 'data-id': string }>
+  children:
+    | ReactElement<{ 'data-id': string }>[]
+    | ReactElement<{ 'data-id': string }>
   defaultValue?: string
   onValueChange?: (newActiveId: string | null) => void
   className?: string

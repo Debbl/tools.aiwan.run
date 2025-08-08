@@ -57,4 +57,7 @@ const nextConfig: NextConfig = {
   transpilePackages: ['three'],
 }
 
-export default [withSerwist, withBundleAnalyzer].reduce((config, fn) => fn(config), nextConfig)
+export default [withSerwist, withBundleAnalyzer].reduce(
+  (config, fn) => fn(config),
+  nextConfig,
+)

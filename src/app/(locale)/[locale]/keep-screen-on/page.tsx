@@ -7,7 +7,12 @@ import { useEffect, useRef } from 'react'
 import { match } from 'ts-pattern'
 import { RippleButton } from '~/components/animate-ui/buttons/ripple'
 import { Switch } from '~/components/animate-ui/radix/switch'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/animate-ui/radix/tooltip'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '~/components/animate-ui/radix/tooltip'
 import { AnimatedBackground } from '~/components/motion-primitives/animated-background'
 
 export default function Page() {
@@ -33,7 +38,9 @@ export default function Page() {
     ] as const
   }, [])
 
-  const [promote, setPromote] = useState<(typeof Promote)[number]['value']>(Promote[0].value)
+  const [promote, setPromote] = useState<(typeof Promote)[number]['value']>(
+    Promote[0].value,
+  )
   const timer = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
@@ -120,7 +127,11 @@ export default function Page() {
               <TooltipContent>
                 <div className='flex items-center gap-x-2'>
                   <Trans>inspired by</Trans>
-                  <a href='https://www.keepscreenon.com/' target='_blank' rel='noopener noreferrer'>
+                  <a
+                    href='https://www.keepscreenon.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
                     https://www.keepscreenon.com/
                   </a>
                 </div>
@@ -132,7 +143,11 @@ export default function Page() {
 
       <main className='flex flex-col items-center justify-center gap-y-2'>
         <div className='flex items-center gap-x-2'>
-          <Switch checked={isEnabled} disabled={isInPromote} onCheckedChange={setIsEnabled} />
+          <Switch
+            checked={isEnabled}
+            disabled={isInPromote}
+            onCheckedChange={setIsEnabled}
+          />
           <p className='text-muted-foreground text-sm'>
             <Trans>Keep your device screen always on.</Trans>
           </p>
@@ -149,7 +164,9 @@ export default function Page() {
                     ease: 'easeInOut',
                     duration: 0.2,
                   }}
-                  onValueChange={(value) => setPromote(value as (typeof Promote)[number]['value'])}
+                  onValueChange={(value) =>
+                    setPromote(value as (typeof Promote)[number]['value'])
+                  }
                 >
                   {Promote.map(({ label, value }) => {
                     return (
@@ -192,7 +209,11 @@ export default function Page() {
             </div>
 
             <div className='flex items-center gap-x-2'>
-              <RippleButton disabled={isEnabled} variant='default' onClick={handleStart}>
+              <RippleButton
+                disabled={isEnabled}
+                variant='default'
+                onClick={handleStart}
+              >
                 <Trans>Start</Trans>
               </RippleButton>
 

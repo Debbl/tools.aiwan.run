@@ -15,7 +15,11 @@ export function Footer() {
         <Image src='/favicon.ico' alt='logo' width={16} height={16} />
       </Link>
 
-      <a href='https://github.com/Debbl/tools.aiwan.run' target='_blank' rel='noreferrer noopener'>
+      <a
+        href='https://github.com/Debbl/tools.aiwan.run'
+        target='_blank'
+        rel='noreferrer noopener'
+      >
         GitHub
       </a>
 

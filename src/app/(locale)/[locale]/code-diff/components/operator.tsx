@@ -79,7 +79,12 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
         <SelectItem key='vs-dark'>vs-dark</SelectItem>
       </Select>
 
-      <Checkbox isSelected={renderSideBySide} onValueChange={setRenderSideBySide} size='md' defaultSelected>
+      <Checkbox
+        isSelected={renderSideBySide}
+        onValueChange={setRenderSideBySide}
+        size='md'
+        defaultSelected
+      >
         {t`Side By Side`}
       </Checkbox>
 

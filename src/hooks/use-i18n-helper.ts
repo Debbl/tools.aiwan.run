@@ -10,7 +10,8 @@ export function useI18nHelper() {
   const locales = ['en', 'zh']
 
   const switchLocale = () => {
-    const newLocale = locales.find((locale) => locale !== i18n.locale) || sourceLocale
+    const newLocale =
+      locales.find((locale) => locale !== i18n.locale) || sourceLocale
 
     const realPathname = pathname.split('/').filter((i, index) => {
       if (index === 1 && i === i18n.locale) return false
@@ -18,7 +19,9 @@ export function useI18nHelper() {
     })
 
     const newPathname =
-      newLocale === sourceLocale ? `/${realPathname.join('/')}` : `/${newLocale}/${realPathname.join('/')}`
+      newLocale === sourceLocale
+        ? `/${realPathname.join('/')}`
+        : `/${newLocale}/${realPathname.join('/')}`
 
     router.push(newPathname)
   }
@@ -26,7 +29,9 @@ export function useI18nHelper() {
   const getRealPathname = (path: string) => {
     const isLocalePath = locales.includes(pathname.split('/')[1])
 
-    return isLocalePath ? [i18n.locale, ...path.split('/').filter(Boolean)].join('/') : path
+    return isLocalePath
+      ? [i18n.locale, ...path.split('/').filter(Boolean)].join('/')
+      : path
   }
 
   return {

@@ -10,8 +10,17 @@ type SwitchProps = React.ComponentProps<typeof SwitchPrimitives.Root> &
     thumbIcon?: React.ReactNode
   }
 
-function Switch({ className, leftIcon, rightIcon, thumbIcon, onCheckedChange, ...props }: SwitchProps) {
-  const [isChecked, setIsChecked] = React.useState(props?.checked ?? props?.defaultChecked ?? false)
+function Switch({
+  className,
+  leftIcon,
+  rightIcon,
+  thumbIcon,
+  onCheckedChange,
+  ...props
+}: SwitchProps) {
+  const [isChecked, setIsChecked] = React.useState(
+    props?.checked ?? props?.defaultChecked ?? false,
+  )
   const [isTapped, setIsTapped] = React.useState(false)
 
   React.useEffect(() => {
@@ -28,7 +37,11 @@ function Switch({ className, leftIcon, rightIcon, thumbIcon, onCheckedChange, ..
   )
 
   return (
-    <SwitchPrimitives.Root {...props} onCheckedChange={handleCheckedChange} asChild>
+    <SwitchPrimitives.Root
+      {...props}
+      onCheckedChange={handleCheckedChange}
+      asChild
+    >
       <motion.button
         data-slot='switch'
         className={cn(
@@ -45,7 +58,9 @@ function Switch({ className, leftIcon, rightIcon, thumbIcon, onCheckedChange, ..
         {leftIcon && (
           <motion.div
             data-slot='switch-left-icon'
-            animate={isChecked ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+            animate={
+              isChecked ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }
+            }
             transition={{ type: 'spring', bounce: 0 }}
             className='absolute top-1/2 left-1 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 [&_svg]:size-3'
           >
@@ -56,7 +71,9 @@ function Switch({ className, leftIcon, rightIcon, thumbIcon, onCheckedChange, ..
         {rightIcon && (
           <motion.div
             data-slot='switch-right-icon'
-            animate={isChecked ? { scale: 0, opacity: 0 } : { scale: 1, opacity: 1 }}
+            animate={
+              isChecked ? { scale: 0, opacity: 0 } : { scale: 1, opacity: 1 }
+            }
             transition={{ type: 'spring', bounce: 0 }}
             className='absolute top-1/2 right-1 -translate-y-1/2 text-neutral-500 dark:text-neutral-400 [&_svg]:size-3'
           >
@@ -78,7 +95,9 @@ function Switch({ className, leftIcon, rightIcon, thumbIcon, onCheckedChange, ..
               height: 18,
             }}
             animate={
-              isTapped ? { width: 21, transition: { duration: 0.1 } } : { width: 18, transition: { duration: 0.1 } }
+              isTapped
+                ? { width: 21, transition: { duration: 0.1 } }
+                : { width: 18, transition: { duration: 0.1 } }
             }
           >
             {thumbIcon && typeof thumbIcon !== 'string' ? thumbIcon : null}

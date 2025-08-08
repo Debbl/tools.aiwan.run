@@ -270,5 +270,11 @@ The Base64 to PNG Converter is a professional online tool that helps you quickly
 `
 
 export function SEO({ className }: { className?: string }) {
-  return <SEOLayout className={className} markdownEn={markdownEn} markdownZh={markdownZh} />
+  return (
+    <SEOLayout
+      className={className}
+      markdownEn={markdownEn}
+      markdownZh={markdownZh}
+    />
+  )
 }

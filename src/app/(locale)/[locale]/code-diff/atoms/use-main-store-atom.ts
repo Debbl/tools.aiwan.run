@@ -11,15 +11,18 @@ export interface MainStoreState {
   renderSideBySide: boolean
 }
 
-export const useMainStoreAtom = atomWithStorage<MainStoreState>('code-diff-main-store', {
-  originalValue: '',
-  modifiedValue: '',
-  language: 'plaintext',
-  languages: [
-    {
-      id: 'plaintext',
-    },
-  ],
-  theme: 'light',
-  renderSideBySide: true,
-})
+export const useMainStoreAtom = atomWithStorage<MainStoreState>(
+  'code-diff-main-store',
+  {
+    originalValue: '',
+    modifiedValue: '',
+    language: 'plaintext',
+    languages: [
+      {
+        id: 'plaintext',
+      },
+    ],
+    theme: 'light',
+    renderSideBySide: true,
+  },
+)

@@ -32,7 +32,11 @@ function getServerBatterySnapshot() {
 }
 
 export function useBattery() {
-  const batteryManager = useSyncExternalStore(subscribeBattery, getBatterySnapshot, getServerBatterySnapshot)
+  const batteryManager = useSyncExternalStore(
+    subscribeBattery,
+    getBatterySnapshot,
+    getServerBatterySnapshot,
+  )
 
   if (!batteryManager) return null
   return {

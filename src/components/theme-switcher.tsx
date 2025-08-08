@@ -19,7 +19,12 @@ export function ThemeSwitcher() {
   }
 
   return (
-    <Popover placement='right' isOpen={isOpen} onOpenChange={setIsOpen} shouldCloseOnBlur>
+    <Popover
+      placement='right'
+      isOpen={isOpen}
+      onOpenChange={setIsOpen}
+      shouldCloseOnBlur
+    >
       <PopoverTrigger>
         <Button size='sm' variant='light' isIconOnly>
           <Icon icon={theme === 'dark' ? 'Sun' : 'Moon'} />

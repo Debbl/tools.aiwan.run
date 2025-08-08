@@ -9,7 +9,9 @@ interface TooltipContextType {
   isOpen: boolean
 }
 
-const TooltipContext = React.createContext<TooltipContextType | undefined>(undefined)
+const TooltipContext = React.createContext<TooltipContextType | undefined>(
+  undefined,
+)
 
 const useTooltip = (): TooltipContextType => {
   const context = React.use(TooltipContext)
@@ -34,7 +36,9 @@ const getInitialPosition = (side: Side) => {
   }
 }
 
-type TooltipProviderProps = React.ComponentProps<typeof TooltipPrimitive.Provider>
+type TooltipProviderProps = React.ComponentProps<
+  typeof TooltipPrimitive.Provider
+>
 
 function TooltipProvider(props: TooltipProviderProps) {
   // eslint-disable-next-line react/no-context-provider
@@ -44,7 +48,9 @@ function TooltipProvider(props: TooltipProviderProps) {
 type TooltipProps = React.ComponentProps<typeof TooltipPrimitive.Root>
 
 function Tooltip(props: TooltipProps) {
-  const [isOpen, setIsOpen] = React.useState(props?.open ?? props?.defaultOpen ?? false)
+  const [isOpen, setIsOpen] = React.useState(
+    props?.open ?? props?.defaultOpen ?? false,
+  )
 
   React.useEffect(() => {
     // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
@@ -62,7 +68,11 @@ function Tooltip(props: TooltipProps) {
   return (
     // eslint-disable-next-line react/no-unstable-context-value
     <TooltipContext value={{ isOpen }}>
-      <TooltipPrimitive.Root data-slot='tooltip' {...props} onOpenChange={handleOpenChange} />
+      <TooltipPrimitive.Root
+        data-slot='tooltip'
+        {...props}
+        onOpenChange={handleOpenChange}
+      />
     </TooltipContext>
   )
 }
@@ -73,12 +83,18 @@ function TooltipTrigger(props: TooltipTriggerProps) {
   return <TooltipPrimitive.Trigger data-slot='tooltip-trigger' {...props} />
 }
 
-type TooltipContentProps = React.ComponentProps<typeof TooltipPrimitive.Content> & {
+type TooltipContentProps = React.ComponentProps<
+  typeof TooltipPrimitive.Content
+> & {
   transition?: Transition
   arrow?: boolean
 }
 
-const defaultTransition: Transition = { type: 'spring', stiffness: 300, damping: 25 }
+const defaultTransition: Transition = {
+  type: 'spring',
+  stiffness: 300,
+  damping: 25,
+}
 
 function TooltipContent({
   className,
@@ -96,7 +112,12 @@ function TooltipContent({
     <AnimatePresence>
       {isOpen && (
         <TooltipPrimitive.Portal forceMount data-slot='tooltip-portal'>
-          <TooltipPrimitive.Content forceMount sideOffset={sideOffset} className='z-50' {...props}>
+          <TooltipPrimitive.Content
+            forceMount
+            sideOffset={sideOffset}
+            className='z-50'
+            {...props}
+          >
             <motion.div
               key='tooltip-content'
               data-slot='tooltip-content'
