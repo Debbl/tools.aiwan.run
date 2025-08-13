@@ -69,22 +69,33 @@ export function DiffEditorContainer() {
   }
 
   return (
-    <>
-      {}
+    <div className='flex h-full flex-1 flex-col'>
       <Operator monaco={monacoRef.current} />
 
       {isHydrated && (
-        <DiffEditor
-          options={{
-            originalEditable: true,
-            renderSideBySide,
-          }}
-          onMount={handleOnMount}
-          height='100%'
-          theme={theme}
-          language={language}
-        />
+        <div className='flex h-full flex-1 flex-col'>
+          <DiffEditor
+            className='flex-1'
+            options={{
+              originalEditable: true,
+              renderSideBySide,
+            }}
+            onMount={handleOnMount}
+            wrapperProps={{
+              style: {
+                display: 'flex',
+                position: 'relative',
+                textAlign: 'initial',
+                width: '100%',
+                height: '100%',
+                flex: 1,
+              },
+            }}
+            theme={theme}
+            language={language}
+          />
+        </div>
       )}
-    </>
+    </div>
   )
 }

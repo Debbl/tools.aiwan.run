@@ -13,61 +13,61 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/(locale)/[locale]/code-diff/layout.tsx:14
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:18
 msgid "a code-diff tool for comparing code"
 msgstr "a code-diff tool for comparing code"
 
-#: src/components/show-case.tsx:31
+#: src/components/show-case.tsx:39
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "A tool that transforms text to base64 and vice versa"
 
-#: src/app/(locale)/[locale]/code-diff/components/diff-editor-container.tsx:50
+#: src/app/(locale)/[locale]/code-diff/components/diff-editor-container.tsx:54
 msgid "auto detect language"
 msgstr "auto detect language"
 
-#: src/app/(locale)/[locale]/base64/layout.tsx:13
+#: src/app/(locale)/[locale]/base64/layout.tsx:17
 msgid "base64"
 msgstr "base64"
 
-#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:13
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:17
 msgid "base64 to png"
 msgstr "base64 to png"
 
-#: src/app/(locale)/[locale]/battery/layout.tsx:13
+#: src/app/(locale)/[locale]/battery/layout.tsx:17
 msgid "battery"
 msgstr "battery"
 
-#: src/components/show-case.tsx:19
+#: src/components/show-case.tsx:27
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
-#: src/app/(locale)/[locale]/code-diff/layout.tsx:13
+#: src/app/(locale)/[locale]/code-diff/layout.tsx:17
 msgid "code-diff"
 msgstr "code-diff"
 
-#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:14
+#: src/app/(locale)/[locale]/base64-to-png/layout.tsx:18
 msgid "convert base64 to png"
 msgstr "convert base64 to png"
 
-#: src/app/(locale)/[locale]/pinyin/layout.tsx:13
-#: src/components/show-case.tsx:55
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:17
+#: src/components/show-case.tsx:63
 msgid "Convert chinese to pinyin"
 msgstr "Convert chinese to pinyin"
 
-#: src/app/(locale)/[locale]/dice-roller/layout.tsx:14
-#: src/components/show-case.tsx:49
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:18
+#: src/components/show-case.tsx:57
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
-#: src/app/(locale)/[locale]/base64/layout.tsx:14
+#: src/app/(locale)/[locale]/base64/layout.tsx:18
 msgid "encode and decode base64"
 msgstr "encode and decode base64"
 
-#: src/app/(locale)/[locale]/base64/page.tsx:91
+#: src/app/(locale)/[locale]/base64/page.tsx:101
 msgid "Enter your base64 text"
 msgstr "Enter your base64 text"
 
-#: src/app/(locale)/[locale]/base64/page.tsx:69
+#: src/app/(locale)/[locale]/base64/page.tsx:76
 #: src/app/(locale)/[locale]/pinyin/page.tsx:53
 msgid "Enter your input text"
 msgstr "Enter your input text"
@@ -76,28 +76,28 @@ msgstr "Enter your input text"
 #~ msgid "Enter your pinyin text"
 #~ msgstr "Enter your pinyin text"
 
-#: src/app/(locale)/[locale]/base64-to-png/page.tsx:141
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:162
 msgid "Error"
 msgstr "Error"
 
-#: src/app/(locale)/[locale]/generate-query/layout.tsx:13
-#: src/app/(locale)/[locale]/generate-query/layout.tsx:14
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:17
+#: src/app/(locale)/[locale]/generate-query/layout.tsx:18
 msgid "generate query"
 msgstr "generate query"
 
-#: src/components/show-case.tsx:43
+#: src/components/show-case.tsx:51
 msgid "Generate Query"
 msgstr "Generate Query"
 
-#: src/app/(locale)/[locale]/battery/layout.tsx:14
+#: src/app/(locale)/[locale]/battery/layout.tsx:18
 msgid "get battery information"
 msgstr "get battery information"
 
-#: src/components/show-case.tsx:25
+#: src/components/show-case.tsx:33
 msgid "Get battery information"
 msgstr "Get battery information"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:122
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:129
 msgid "inspired by"
 msgstr "inspired by"
 
@@ -105,40 +105,40 @@ msgstr "inspired by"
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:114
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:121
 msgid "Keep Screen On"
 msgstr "Keep Screen On"
 
-#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:12
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:17
 msgid "Keep Screen On - A page to prevent your device from sleeping"
 msgstr "Keep Screen On - A page to prevent your device from sleeping"
 
-#: src/components/show-case.tsx:67
+#: src/components/show-case.tsx:75
 msgid "Keep your device screen always on"
 msgstr "Keep your device screen always on"
 
-#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:14
+#: src/app/(locale)/[locale]/keep-screen-on/layout.tsx:20
 msgid "Keep your device screen always on with a simple click. Say goodbye to interruptions caused by screen timeouts. Keep Screen On offers an easy solution to keep your device alert, ensuring uninterrupted usage while reading, watching, or multitasking. Experience a hassle-free browsing experience with our convenient tool. Keep your screen on and your device engaged with Keep Screen On - the perfect companion for extended screen time."
 msgstr "Keep your device screen always on with a simple click. Say goodbye to interruptions caused by screen timeouts. Keep Screen On offers an easy solution to keep your device alert, ensuring uninterrupted usage while reading, watching, or multitasking. Experience a hassle-free browsing experience with our convenient tool. Keep your screen on and your device engaged with Keep Screen On - the perfect companion for extended screen time."
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:137
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:152
 msgid "Keep your device screen always on."
 msgstr "Keep your device screen always on."
 
-#: src/app/(locale)/[locale]/base64-to-png/page.tsx:134
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:152
 msgid "Loading..."
 msgstr "Loading..."
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:30
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:35
 msgid "Long Break"
 msgstr "Long Break"
 
-#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:13
-#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:14
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:17
+#: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:18
 msgid "MiWiFi SN"
 msgstr "MiWiFi SN"
 
-#: src/components/show-case.tsx:37
+#: src/components/show-case.tsx:45
 msgid "MiWiFi SSH Password Calculator"
 msgstr "MiWiFi SSH Password Calculator"
 
@@ -146,29 +146,29 @@ msgstr "MiWiFi SSH Password Calculator"
 msgid "No input"
 msgstr "No input"
 
-#: src/app/(locale)/[locale]/base64-to-png/page.tsx:103
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:118
 msgid "Paste base64 here..."
 msgstr "Paste base64 here..."
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:202
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:223
 msgid "Pause"
 msgstr "Pause"
 
-#: src/app/(locale)/[locale]/pinyin/layout.tsx:12
+#: src/app/(locale)/[locale]/pinyin/layout.tsx:16
 #: src/app/(locale)/[locale]/pinyin/page.tsx:35
 #: src/app/(locale)/[locale]/pinyin/page.tsx:70
 msgid "Pinyin"
 msgstr "Pinyin"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:22
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:27
 msgid "Promote"
 msgstr "Promote"
 
-#: src/app/(locale)/[locale]/base64-to-png/page.tsx:129
+#: src/app/(locale)/[locale]/base64-to-png/page.tsx:147
 msgid "Ready"
 msgstr "Ready"
 
-#: src/app/(locale)/[locale]/dice-roller/layout.tsx:15
+#: src/app/(locale)/[locale]/dice-roller/layout.tsx:19
 msgid "roll a dice"
 msgstr "roll a dice"
 
@@ -180,19 +180,19 @@ msgstr "Select Language"
 msgid "Select Theme"
 msgstr "Select Theme"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:26
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:31
 msgid "Short Break"
 msgstr "Short Break"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:83
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:88
 msgid "Side By Side"
 msgstr "Side By Side"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:196
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:217
 msgid "Start"
 msgstr "Start"
 
-#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:205
+#: src/app/(locale)/[locale]/keep-screen-on/page.tsx:226
 msgid "Stop"
 msgstr "Stop"
 
@@ -204,6 +204,6 @@ msgstr "Text"
 msgid "Tone"
 msgstr "Tone"
 
-#: src/components/show-case.tsx:61
+#: src/components/show-case.tsx:69
 msgid "transform base64 data to png"
 msgstr "transform base64 data to png"

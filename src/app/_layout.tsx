@@ -1,4 +1,5 @@
 import { setI18n } from '@lingui/react/server'
+import { Provider } from 'jotai'
 import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
@@ -114,9 +115,11 @@ export async function getRootLayout(lang: string) {
               initialLocale={lang}
               initialMessages={i18n.messages}
             >
-              <Toaster richColors />
-              <Providers>{children}</Providers>
-              <Footer />
+              <Provider>
+                <Toaster richColors />
+                <Providers>{children}</Providers>
+                <Footer />
+              </Provider>
             </LinguiClientProvider>
           </ThemeProvider>
         </body>
