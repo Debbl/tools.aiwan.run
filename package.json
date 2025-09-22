@@ -80,7 +80,7 @@
     "@types/pinyin": "^2.10.2",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
-    "@types/three": "^0.179.0",
+    "@types/three": "^0.180.0",
     "eslint": "^9.33.0",
     "lint-staged": "^16.1.5",
     "new-javascript": "^0.4.7",
