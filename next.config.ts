@@ -15,9 +15,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.po$/,

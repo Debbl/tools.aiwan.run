@@ -2,7 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "target": "ESNext",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
     "module": "ESNext",
     "moduleResolution": "bundler",
