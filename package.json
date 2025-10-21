@@ -71,7 +71,7 @@
     "@lingui/cli": "^5.5.1",
     "@lingui/loader": "^5.5.1",
     "@lingui/swc-plugin": "^5.6.1",
-    "@next/bundle-analyzer": "16.0.0-beta.0",
+    "@next/bundle-analyzer": "16.0.0-canary.16",
     "@react-three/eslint-plugin": "^0.1.2",
     "@tailwindcss/postcss": "^4.1.14",
     "@tailwindcss/typography": "^0.5.19",
