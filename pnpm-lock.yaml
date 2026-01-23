@@ -125,7 +125,7 @@ importers:
         version: 0.180.0
       ts-pattern:
         specifier: ^5.8.0
-        version: 5.8.0
+        version: 5.9.0
       twl:
         specifier: ^0.0.0
         version: 0.0.0
@@ -6015,8 +6015,8 @@ packages:
     peerDependencies:
       typescript: '>=4.0.0'
 
-  ts-pattern@5.8.0:
-    resolution: {integrity: sha512-kIjN2qmWiHnhgr5DAkAafF9fwb0T5OhMVSWrm8XEdTFnX6+wfXwYOFjeF86UZ54vduqiR7BfqScFmXSzSaH8oA==}
+  ts-pattern@5.9.0:
+    resolution: {integrity: sha512-6s5V71mX8qBUmlgbrfL33xDUwO0fq48rxAu2LBE11WBeGdpCPOsXksQbZJHvHwhrd3QjUusd3mAOM5Gg0mFBLg==}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -6840,7 +6840,7 @@ snapshots:
       '@typescript-eslint/types': 8.46.0
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       birecord: 0.1.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -6883,7 +6883,7 @@ snapshots:
       '@eslint-react/eff': 2.1.1
       '@eslint-react/kit': 2.1.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       zod: 4.3.5
     transitivePeerDependencies:
       - eslint
@@ -6897,7 +6897,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 8.46.0
       '@typescript-eslint/types': 8.46.0
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -11273,7 +11273,7 @@ snapshots:
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
       string-ts: 2.2.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -11292,7 +11292,7 @@ snapshots:
       compare-versions: 6.1.1
       eslint: 9.39.1(jiti@2.6.1)
       string-ts: 2.2.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -11311,7 +11311,7 @@ snapshots:
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
       string-ts: 2.2.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -11340,7 +11340,7 @@ snapshots:
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
       string-ts: 2.2.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -11362,7 +11362,7 @@ snapshots:
       '@typescript-eslint/utils': 8.46.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
       string-ts: 2.2.1
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -11384,7 +11384,7 @@ snapshots:
       is-immutable-type: 5.0.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       string-ts: 2.2.1
       ts-api-utils: 2.1.0(typescript@5.9.3)
-      ts-pattern: 5.8.0
+      ts-pattern: 5.9.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -13477,7 +13477,7 @@ snapshots:
       picomatch: 4.0.3
       typescript: 5.9.3
 
-  ts-pattern@5.8.0: {}
+  ts-pattern@5.9.0: {}
 
   tslib@2.8.1: {}
 
