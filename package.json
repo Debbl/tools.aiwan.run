@@ -33,7 +33,7 @@
     "@lingui/react": "^5.5.1",
     "@monaco-editor/react": "^4.7.0",
     "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "9.0.0-rc.1",
+    "@react-three/fiber": "9.5.0",
     "@react-three/rapier": "^2.1.0",
     "@serwist/next": "^9.2.1",
     "class-variance-authority": "^0.7.1",
