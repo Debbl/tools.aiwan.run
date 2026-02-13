@@ -27,7 +27,7 @@
   "dependencies": {
     "@debbl/ahooks": "^0.4.1",
     "@heroui/react": "^2.8.5",
-    "@heroui/system": "2.4.19",
+    "@heroui/system": "2.4.27",
     "@heroui/theme": "^2.4.23",
     "@lingui/core": "^5.5.1",
     "@lingui/react": "^5.5.1",
