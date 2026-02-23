@@ -59,6 +59,22 @@ msgstr "Convert chinese to pinyin"
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:124
+msgid "Download Extension"
+msgstr "Download Extension"
+
+#: src/components/show-case.tsx:81
+msgid "Download VSCode extensions from marketplace links"
+msgstr "Download VSCode extensions from marketplace links"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/layout.tsx:19
+msgid "download vscode extensions from marketplace links or itemName"
+msgstr "download vscode extensions from marketplace links or itemName"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:122
+msgid "Downloading..."
+msgstr "Downloading..."
+
 #: src/app/(locale)/[locale]/base64/layout.tsx:18
 msgid "encode and decode base64"
 msgstr "encode and decode base64"
@@ -105,6 +121,10 @@ msgstr "inspired by"
 msgid "Invalid input"
 msgstr "Invalid input"
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:135
+msgid "itemName"
+msgstr "itemName"
+
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:121
 msgid "Keep Screen On"
 msgstr "Keep Screen On"
@@ -133,6 +153,10 @@ msgstr "Loading..."
 msgid "Long Break"
 msgstr "Long Break"
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:94
+msgid "Marketplace URL or itemName"
+msgstr "Marketplace URL or itemName"
+
 #: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:17
 #: src/app/(locale)/[locale]/miwifi-sn/layout.tsx:18
 msgid "MiWiFi SN"
@@ -150,6 +174,10 @@ msgstr "No input"
 msgid "Paste base64 here..."
 msgstr "Paste base64 here..."
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:98
+msgid "Paste https://marketplace.visualstudio.com/items?itemName=vscodevim.vim or vscodevim.vim"
+msgstr "Paste https://marketplace.visualstudio.com/items?itemName=vscodevim.vim or vscodevim.vim"
+
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:223
 msgid "Pause"
 msgstr "Pause"
@@ -160,6 +188,10 @@ msgstr "Pause"
 msgid "Pinyin"
 msgstr "Pinyin"
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:109
+msgid "Please enter a valid Marketplace URL or itemName."
+msgstr "Please enter a valid Marketplace URL or itemName."
+
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:27
 msgid "Promote"
 msgstr "Promote"
@@ -167,6 +199,10 @@ msgstr "Promote"
 #: src/app/(locale)/[locale]/base64-to-png/page.tsx:147
 msgid "Ready"
 msgstr "Ready"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:131
+msgid "Resolved Data"
+msgstr "Resolved Data"
 
 #: src/app/(locale)/[locale]/dice-roller/layout.tsx:19
 msgid "roll a dice"
@@ -200,6 +236,10 @@ msgstr "Stop"
 msgid "Text"
 msgstr "Text"
 
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:79
+msgid "Thanks to this reference for the offline download approach:"
+msgstr "Thanks to this reference for the offline download approach:"
+
 #: src/app/(locale)/[locale]/pinyin/page.tsx:40
 msgid "Tone"
 msgstr "Tone"
@@ -207,3 +247,15 @@ msgstr "Tone"
 #: src/components/show-case.tsx:69
 msgid "transform base64 data to png"
 msgstr "transform base64 data to png"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/layout.tsx:17
+msgid "vscode extension download"
+msgstr "vscode extension download"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:73
+msgid "VSCode Extension Download"
+msgstr "VSCode Extension Download"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:141
+msgid "VSIX URL"
+msgstr "VSIX URL"
