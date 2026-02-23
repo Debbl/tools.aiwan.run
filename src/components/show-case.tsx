@@ -76,6 +76,12 @@ export function Showcase() {
       link: 'keep-screen-on',
       icon: './keep-screen-on/icon.svg',
     },
+    {
+      title: 'VSCode Extension Download',
+      description: t`Download VSCode extensions from marketplace links`,
+      link: 'vscode-extension-download',
+      icon: './vscode-extension-download/icon.svg',
+    },
   ].map((i) => ({
     ...i,
     href: getRealPathname(i.link),
