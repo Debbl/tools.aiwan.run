@@ -46,7 +46,7 @@ export default function Page() {
   useEffect(() => {
     if (!noSleep.current) {
       noSleep.current = new NoSleep()
-      // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
+      // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect, react-hooks/set-state-in-effect
       setIsEnabled(noSleep.current?.isEnabled ?? false)
     }
 

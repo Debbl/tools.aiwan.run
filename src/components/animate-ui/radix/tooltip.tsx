@@ -41,7 +41,6 @@ type TooltipProviderProps = React.ComponentProps<
 >
 
 function TooltipProvider(props: TooltipProviderProps) {
-  // eslint-disable-next-line react/no-context-provider
   return <TooltipPrimitive.Provider data-slot='tooltip-provider' {...props} />
 }
 
@@ -66,7 +65,6 @@ function Tooltip(props: TooltipProps) {
   )
 
   return (
-    // eslint-disable-next-line react/no-unstable-context-value
     <TooltipContext value={{ isOpen }}>
       <TooltipPrimitive.Root
         data-slot='tooltip'

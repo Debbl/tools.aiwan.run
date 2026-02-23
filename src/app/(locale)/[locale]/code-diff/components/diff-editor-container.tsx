@@ -70,6 +70,7 @@ export function DiffEditorContainer() {
 
   return (
     <div className='flex h-full flex-1 flex-col'>
+      {/* eslint-disable-next-line react-hooks/refs */}
       <Operator monaco={monacoRef.current} />
 
       {isHydrated && (

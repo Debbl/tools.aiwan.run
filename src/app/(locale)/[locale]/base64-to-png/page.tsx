@@ -81,7 +81,7 @@ export default function Base64ToPngPage() {
 
   useEffect(() => {
     handleBase64Change(base64)
-  }, [base64, handleBase64Change])
+  }, [base64])
 
   return (
     <div className='flex min-h-screen flex-col items-center px-6'>
