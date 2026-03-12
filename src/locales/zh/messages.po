@@ -50,20 +50,32 @@ msgid "convert base64 to png"
 msgstr "将 base64 转换为 png"
 
 #: src/app/(locale)/[locale]/pinyin/layout.tsx:17
-#: src/components/show-case.tsx:63
+#: src/components/show-case.tsx:69
 msgid "Convert chinese to pinyin"
 msgstr "汉字拼音转换"
 
+#: src/app/(locale)/[locale]/random-name/page.tsx:114
+msgid "Copy All"
+msgstr "复制全部"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:82
+msgid "Count"
+msgstr "数量"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:87
+msgid "Count is limited to 1-20"
+msgstr "数量限制为 1 到 20"
+
 #: src/app/(locale)/[locale]/dice-roller/layout.tsx:18
-#: src/components/show-case.tsx:57
+#: src/components/show-case.tsx:63
 msgid "Dice Roller"
 msgstr "掷骰子"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:124
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:111
 msgid "Download Extension"
 msgstr "下载扩展"
 
-#: src/components/show-case.tsx:81
+#: src/components/show-case.tsx:87
 msgid "Download VSCode extensions from marketplace links"
 msgstr "通过 Marketplace 链接下载 VSCode 扩展"
 
@@ -71,9 +83,13 @@ msgstr "通过 Marketplace 链接下载 VSCode 扩展"
 msgid "download vscode extensions from marketplace links or itemName"
 msgstr "通过 marketplace 链接或 itemName 下载 vscode 扩展"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:122
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:109
 msgid "Downloading..."
 msgstr "下载中..."
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:125
+msgid "Each click combines one adjective and one hero-style word."
+msgstr "每次点击都会组合一个形容词和一个角色风格单词。"
 
 #: src/app/(locale)/[locale]/base64/layout.tsx:18
 msgid "encode and decode base64"
@@ -92,6 +108,10 @@ msgstr "输入文本"
 msgid "Error"
 msgstr "错误"
 
+#: src/app/(locale)/[locale]/random-name/page.tsx:108
+msgid "Generate"
+msgstr "生成"
+
 #: src/app/(locale)/[locale]/generate-query/layout.tsx:17
 #: src/app/(locale)/[locale]/generate-query/layout.tsx:18
 msgid "generate query"
@@ -101,6 +121,15 @@ msgstr "生成查询"
 msgid "Generate Query"
 msgstr "生成查询"
 
+#: src/app/(locale)/[locale]/random-name/page.tsx:64
+msgid "Generate random names inspired by Drizzle word lists"
+msgstr "基于 Drizzle 词表风格生成随机名称"
+
+#: src/app/(locale)/[locale]/random-name/layout.tsx:18
+#: src/components/show-case.tsx:57
+msgid "Generate random readable names from word lists"
+msgstr "从词表中生成易读的随机名称"
+
 #: src/app/(locale)/[locale]/battery/layout.tsx:18
 msgid "get battery information"
 msgstr "获取电池信息"
@@ -108,6 +137,10 @@ msgstr "获取电池信息"
 #: src/components/show-case.tsx:33
 msgid "Get battery information"
 msgstr "获取电池信息"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:99
+msgid "Hyphen"
+msgstr "连字符"
 
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:129
 msgid "inspired by"
@@ -117,7 +150,7 @@ msgstr "灵感"
 msgid "Invalid input"
 msgstr "非法输入"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:135
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:123
 msgid "itemName"
 msgstr "扩展标识"
 
@@ -129,7 +162,7 @@ msgstr "保持屏幕常亮"
 msgid "Keep Screen On - A page to prevent your device from sleeping"
 msgstr "保持屏幕常亮 - 一个防止你的设备睡眠的页面"
 
-#: src/components/show-case.tsx:75
+#: src/components/show-case.tsx:81
 msgid "Keep your device screen always on"
 msgstr "保持你的设备屏幕常亮"
 
@@ -149,7 +182,7 @@ msgstr "加载中..."
 msgid "Long Break"
 msgstr "长休息"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:94
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:80
 msgid "Marketplace URL or itemName"
 msgstr "Marketplace 链接或 itemName"
 
@@ -162,15 +195,23 @@ msgstr "小米路由器序列号"
 msgid "MiWiFi SSH Password Calculator"
 msgstr "小米路由器SSH密码计算器"
 
+#: src/app/(locale)/[locale]/random-name/page.tsx:146
+msgid "Names are generated locally in your browser."
+msgstr "名称会在你的浏览器本地生成。"
+
 #: src/app/(locale)/[locale]/pinyin/page.tsx:72
 msgid "No input"
 msgstr "未输入"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:75
+msgid "Optional prefix"
+msgstr "可选前缀"
 
 #: src/app/(locale)/[locale]/base64-to-png/page.tsx:118
 msgid "Paste base64 here..."
 msgstr "粘贴 Base64"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:98
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:84
 msgid "Paste https://marketplace.visualstudio.com/items?itemName=vscodevim.vim or vscodevim.vim"
 msgstr "粘贴 https://marketplace.visualstudio.com/items?itemName=vscodevim.vim 或 vscodevim.vim"
 
@@ -184,19 +225,36 @@ msgstr "暂停"
 msgid "Pinyin"
 msgstr "拼音"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:109
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:95
 msgid "Please enter a valid Marketplace URL or itemName."
 msgstr "请输入有效的 Marketplace 链接或 itemName。"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:74
+msgid "Prefix"
+msgstr "前缀"
 
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:27
 msgid "Promote"
 msgstr "专注"
 
+#: src/app/(locale)/[locale]/random-name/layout.tsx:17
+#: src/app/(locale)/[locale]/random-name/page.tsx:61
+msgid "Random Name"
+msgstr "随机名称"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:122
+msgid "Random name results"
+msgstr "随机名称结果"
+
 #: src/app/(locale)/[locale]/base64-to-png/page.tsx:147
 msgid "Ready"
 msgstr "已准备"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:131
+#: src/app/(locale)/[locale]/random-name/page.tsx:111
+msgid "Reset"
+msgstr "重置"
+
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:119
 msgid "Resolved Data"
 msgstr "解析结果"
 
@@ -212,6 +270,10 @@ msgstr "选择语言"
 msgid "Select Theme"
 msgstr "选择主题"
 
+#: src/app/(locale)/[locale]/random-name/page.tsx:95
+msgid "Separator"
+msgstr "分隔符"
+
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:31
 msgid "Short Break"
 msgstr "短休息"
@@ -219,6 +281,10 @@ msgstr "短休息"
 #: src/app/(locale)/[locale]/code-diff/components/operator.tsx:88
 msgid "Side By Side"
 msgstr "并排显示"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:100
+msgid "Space"
+msgstr "空格"
 
 #: src/app/(locale)/[locale]/keep-screen-on/page.tsx:217
 msgid "Start"
@@ -233,16 +299,20 @@ msgid "Text"
 msgstr "文本"
 
 #: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:79
-msgid "Thanks to this reference for the offline download approach:"
-msgstr "离线下载方案参考并感谢："
+#~ msgid "Thanks to this reference for the offline download approach:"
+#~ msgstr "离线下载方案参考并感谢："
 
 #: src/app/(locale)/[locale]/pinyin/page.tsx:40
 msgid "Tone"
 msgstr "声调"
 
-#: src/components/show-case.tsx:69
+#: src/components/show-case.tsx:75
 msgid "transform base64 data to png"
 msgstr "base64 数据转化成 png 图片"
+
+#: src/app/(locale)/[locale]/random-name/page.tsx:98
+msgid "Underscore"
+msgstr "下划线"
 
 #: src/app/(locale)/[locale]/vscode-extension-download/layout.tsx:17
 msgid "vscode extension download"
@@ -252,6 +322,6 @@ msgstr "vscode 扩展下载"
 msgid "VSCode Extension Download"
 msgstr "VSCode 扩展下载"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:141
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:129
 msgid "VSIX URL"
 msgstr "VSIX 下载地址"

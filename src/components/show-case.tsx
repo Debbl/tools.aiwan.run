@@ -53,6 +53,12 @@ export function Showcase() {
       icon: './generate-query/icon.svg',
     },
     {
+      title: 'Random Name',
+      description: t`Generate random readable names from word lists`,
+      link: 'random-name',
+      icon: './random-name/icon.svg',
+    },
+    {
       title: 'Dice Roller',
       description: t`Dice Roller`,
       link: 'dice-roller',
