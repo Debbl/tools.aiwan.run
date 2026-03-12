@@ -35,6 +35,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "9.0.0-rc.1",
     "@react-three/rapier": "^2.2.0",
+    "@scure/bip39": "^2.0.1",
     "@serwist/next": "^9.5.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

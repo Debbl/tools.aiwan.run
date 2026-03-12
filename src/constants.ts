@@ -26,6 +26,7 @@ export function getWebsite(lang?: string) {
           'generate query',
           'keep screen on',
           'miwifi sn',
+          'mnemonic generator',
           'pinyin',
         ]
       : [
@@ -37,6 +38,7 @@ export function getWebsite(lang?: string) {
           'generate query',
           'keep screen on',
           'miwifi sn',
+          'mnemonic generator',
           'pinyin',
         ],
     category: isZh ? '工具' : 'Tools',
@@ -91,6 +93,7 @@ export function getWebsite(lang?: string) {
             'generate query',
             'keep screen on',
             'miwifi sn',
+            'mnemonic generator',
             'pinyin',
           ]
         : [
@@ -102,6 +105,7 @@ export function getWebsite(lang?: string) {
             'generate query',
             'keep screen on',
             'miwifi sn',
+            'mnemonic generator',
             'pinyin',
           ],
       'screenshot': 'https://tools.aiwan.run/opengraph-image.png',
