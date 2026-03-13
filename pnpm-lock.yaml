@@ -22,10 +22,10 @@ importers:
         version: 2.4.26(tailwindcss@4.2.0)
       '@lingui/core':
         specifier: ^5.9.1
-        version: 5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
+        version: 5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
       '@lingui/react':
         specifier: ^5.9.1
-        version: 5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.4)
+        version: 5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.4)
       '@monaco-editor/react':
         specifier: ^4.7.0
         version: 4.7.0(monaco-editor@0.54.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -140,7 +140,7 @@ importers:
         version: 5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3)(webpack@5.96.1)
       '@lingui/swc-plugin':
         specifier: ^5.11.0
-        version: 5.11.0(@lingui/core@5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0))(next@16.1.6(@babel/core@7.29.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
+        version: 5.11.0(@lingui/core@5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0))(next@16.1.6(@babel/core@7.29.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@next/bundle-analyzer':
         specifier: 16.0.1
         version: 16.0.1
@@ -311,10 +311,6 @@ packages:
 
   '@babel/runtime@7.27.1':
     resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/runtime@7.28.4':
-    resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.28.6':
@@ -1515,6 +1511,18 @@ packages:
       babel-plugin-macros:
         optional: true
 
+  '@lingui/core@5.9.3':
+    resolution: {integrity: sha512-3b8LnDjx8POdQ6q6UKBe2DHynyQFCO66vm8/UPQnvlQowUk4Xdu5bK6oet11D9/vrSznrDDS+Qb5JVcNBUImgg==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@lingui/babel-plugin-lingui-macro': 5.9.3
+      babel-plugin-macros: 2 || 3
+    peerDependenciesMeta:
+      '@lingui/babel-plugin-lingui-macro':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+
   '@lingui/format-po@5.9.1':
     resolution: {integrity: sha512-UrjFoRuhv5Yj7Tx2OsoxXDmKSEJ8m7xNJUO965WZ1XoI/Y3UHyv3FL+FK1rCP+kuwmjWnvUx+HNsQusvbK7glA==}
     engines: {node: '>=20.0.0'}
@@ -1529,11 +1537,15 @@ packages:
     resolution: {integrity: sha512-2hj2PqHQU7hI+2+JiViOPmeTmms/8Xl1i/AWd59hwaf+lbqDFKc8CmeZNeAvrM+D7FeYgX1/mDoQvWAkLZNYjQ==}
     engines: {node: '>=20.0.0'}
 
-  '@lingui/react@5.9.1':
-    resolution: {integrity: sha512-wpQ3HjAteTv2hO3749yL8uNL7GQk8pXnylbi0xuZ/QSp6FWXb52glWFadSphqW3LB6voAVsW6mFvkiXUuuiGEg==}
+  '@lingui/message-utils@5.9.3':
+    resolution: {integrity: sha512-oAK7HA7lcQrzaEaM6G1T5RwwxJxaSKfG/IFIxpZIl49TSFQv+s9YPNgHnVi+d4DmterpXNxy9ZZ+NtckJx6u7g==}
+    engines: {node: '>=20.0.0'}
+
+  '@lingui/react@5.9.3':
+    resolution: {integrity: sha512-aje78l3zGGZ3C75fiGhDVKyVALHfiKlYFjcOlZpgXY/JAVfFuZX+6wUGG9x1A8k7BfxrDy/ofHIBahPvNAqoKw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      '@lingui/babel-plugin-lingui-macro': 5.9.1
+      '@lingui/babel-plugin-lingui-macro': 5.9.3
       babel-plugin-macros: 2 || 3
       react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
@@ -3271,6 +3283,9 @@ packages:
   '@types/node@24.10.13':
     resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
 
+  '@types/node@24.12.0':
+    resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
+
   '@types/offscreencanvas@2019.7.3':
     resolution: {integrity: sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==}
 
@@ -4067,6 +4082,10 @@ packages:
 
   enhanced-resolve@5.19.0:
     resolution: {integrity: sha512-phv3E1Xl4tQOShqSte26C7Fl84EwUdZsyOuSSk9qtAGyyQs2s3jJzComh+Abf4g187lUUAvH+H26omrqia2aGg==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.20.0:
+    resolution: {integrity: sha512-/ce7+jQ1PQ6rVXwe+jKEg5hW5ciicHwIQUagZkp6IufBoY3YDgdTTY1azVs0qoRgVmvsNB+rbjLJxDAeHHtwsQ==}
     engines: {node: '>=10.13.0'}
 
   environment@1.1.0:
@@ -5289,8 +5308,8 @@ packages:
   monaco-editor@0.54.0:
     resolution: {integrity: sha512-hx45SEUoLatgWxHKCmlLJH81xBo0uXP4sRkESUpmDQevfi+e7K1VuiSprK6UpQ8u4zOcKNiH0pMvHvlMWA/4cw==}
 
-  moo@0.5.2:
-    resolution: {integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==}
+  moo@0.5.3:
+    resolution: {integrity: sha512-m2fmM2dDm7GZQsY7KK2cme8agi+AAljILjQnof7p1ZMDe6dQ4bdnSMx0cPppudoeNv5hEFQirN6u+O4fDE0IWA==}
 
   motion-dom@12.10.1:
     resolution: {integrity: sha512-rY8DNqgKh4LeFSQBkuXpe/7sycYS9RM+4luukjHpHogF1liSvIp0Hedx0q2QsWNz+AHuZ5bZQ9j9QZSUCA8bbw==}
@@ -5656,9 +5675,6 @@ packages:
       '@types/react-dom':
         optional: true
 
-  randombytes@2.1.0:
-    resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
-
   react-dom@19.2.4:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
@@ -5844,9 +5860,6 @@ packages:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
     engines: {node: '>=10'}
     hasBin: true
-
-  serialize-javascript@6.0.2:
-    resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
 
   serwist@9.5.6:
     resolution: {integrity: sha512-WoseghF1DUevNGnEqsmyXzVyk1KT18S3CJoFZmzav4vEqGWit+I7ErFav+ocrYq2IUoDhJpbTg15a68UdZy0Vw==}
@@ -6070,8 +6083,8 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
-  terser-webpack-plugin@5.3.16:
-    resolution: {integrity: sha512-h9oBFCWrq78NyWWVcSwZarJkZ01c2AyGrzs1crmHZO3QUg9D61Wu4NPjBy69n7JqylFF5y+CsUZYmYEIZ3mR+Q==}
+  terser-webpack-plugin@5.4.0:
+    resolution: {integrity: sha512-Bn5vxm48flOIfkdl5CaD2+1CiUVbonWQ3KQPyP7/EuIl9Gbzq/gQFOzaMFUEgVjB1396tcK0SG8XcNJ/2kDH8g==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       '@swc/core': '*'
@@ -6676,8 +6689,6 @@ snapshots:
       - supports-color
 
   '@babel/runtime@7.27.1': {}
-
-  '@babel/runtime@7.28.4': {}
 
   '@babel/runtime@7.28.6': {}
 
@@ -8410,6 +8421,14 @@ snapshots:
       '@lingui/babel-plugin-lingui-macro': 5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3)
       babel-plugin-macros: 3.1.0
 
+  '@lingui/core@5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)':
+    dependencies:
+      '@babel/runtime': 7.28.6
+      '@lingui/message-utils': 5.9.3
+    optionalDependencies:
+      '@lingui/babel-plugin-lingui-macro': 5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3)
+      babel-plugin-macros: 3.1.0
+
   '@lingui/format-po@5.9.1(typescript@5.9.3)':
     dependencies:
       '@lingui/conf': 5.9.1(typescript@5.9.3)
@@ -8435,18 +8454,23 @@ snapshots:
       '@messageformat/parser': 5.1.1
       js-sha256: 0.10.1
 
-  '@lingui/react@5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.4)':
+  '@lingui/message-utils@5.9.3':
+    dependencies:
+      '@messageformat/parser': 5.1.1
+      js-sha256: 0.10.1
+
+  '@lingui/react@5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@lingui/core': 5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
+      '@lingui/core': 5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
       react: 19.2.4
     optionalDependencies:
       '@lingui/babel-plugin-lingui-macro': 5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3)
       babel-plugin-macros: 3.1.0
 
-  '@lingui/swc-plugin@5.11.0(@lingui/core@5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0))(next@16.1.6(@babel/core@7.29.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
+  '@lingui/swc-plugin@5.11.0(@lingui/core@5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0))(next@16.1.6(@babel/core@7.29.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
     dependencies:
-      '@lingui/core': 5.9.1(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
+      '@lingui/core': 5.9.3(@lingui/babel-plugin-lingui-macro@5.9.1(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
     optionalDependencies:
       next: 16.1.6(@babel/core@7.29.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
@@ -8454,7 +8478,7 @@ snapshots:
 
   '@messageformat/parser@5.1.1':
     dependencies:
-      moo: 0.5.2
+      moo: 0.5.3
 
   '@monaco-editor/loader@1.5.0':
     dependencies:
@@ -10660,6 +10684,10 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
+  '@types/node@24.12.0':
+    dependencies:
+      undici-types: 7.16.0
+
   '@types/offscreencanvas@2019.7.3': {}
 
   '@types/parse-json@4.0.2': {}
@@ -11094,7 +11122,7 @@ snapshots:
 
   babel-plugin-macros@2.8.0:
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.28.6
       cosmiconfig: 6.0.0
       resolve: 1.22.10
 
@@ -11107,7 +11135,7 @@ snapshots:
 
   babel-plugin-preval@4.0.0:
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.28.6
       babel-plugin-macros: 2.8.0
       require-from-string: 2.0.2
 
@@ -11422,6 +11450,11 @@ snapshots:
   emoji-regex@9.2.2: {}
 
   enhanced-resolve@5.19.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.3.0
+
+  enhanced-resolve@5.20.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.0
@@ -12382,7 +12415,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 24.10.13
+      '@types/node': 24.12.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -12994,7 +13027,7 @@ snapshots:
       dompurify: 3.1.7
       marked: 14.0.0
 
-  moo@0.5.2: {}
+  moo@0.5.3: {}
 
   motion-dom@12.10.1:
     dependencies:
@@ -13329,10 +13362,6 @@ snapshots:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  randombytes@2.1.0:
-    dependencies:
-      safe-buffer: 5.2.1
-
   react-dom@19.2.4(react@19.2.4):
     dependencies:
       react: 19.2.4
@@ -13525,10 +13554,6 @@ snapshots:
   semver@7.7.3: {}
 
   semver@7.7.4: {}
-
-  serialize-javascript@6.0.2:
-    dependencies:
-      randombytes: 2.1.0
 
   serwist@9.5.6(browserslist@4.28.1)(typescript@5.9.3):
     dependencies:
@@ -13752,12 +13777,11 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  terser-webpack-plugin@5.3.16(webpack@5.96.1):
+  terser-webpack-plugin@5.4.0(webpack@5.96.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.3
-      serialize-javascript: 6.0.2
       terser: 5.46.0
       webpack: 5.96.1
 
@@ -14139,7 +14163,7 @@ snapshots:
       acorn: 8.16.0
       browserslist: 4.28.1
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.19.0
+      enhanced-resolve: 5.20.0
       es-module-lexer: 1.7.0
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -14151,7 +14175,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.16(webpack@5.96.1)
+      terser-webpack-plugin: 5.4.0(webpack@5.96.1)
       watchpack: 2.5.1
       webpack-sources: 3.3.4
     transitivePeerDependencies:
