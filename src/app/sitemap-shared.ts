@@ -10,6 +10,7 @@ export const TOOL_SITEMAP_PATHS = [
   'keep-screen-on',
   'miwifi-sn',
   'mnemonic',
+  'random-name',
   'pinyin',
   'vscode-extension-download',
 ] as const
