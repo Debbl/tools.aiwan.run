@@ -88,6 +88,12 @@ export function Showcase() {
       link: 'vscode-extension-download',
       icon: './vscode-extension-download/icon.svg',
     },
+    {
+      title: 'Mnemonic Generator',
+      description: t`Generate and validate BIP-39 mnemonic phrases locally in your browser`,
+      link: 'mnemonic',
+      icon: './mnemonic/icon.svg',
+    },
   ].map((i) => ({
     ...i,
     href: getRealPathname(i.link),
@@ -111,7 +117,7 @@ export function Showcase() {
             y: 0,
           }}
           whileHover={{ scale: 1.05 }}
-          className='max-w-[380px]'
+          className='max-w-95'
         >
           <Skeleton isLoaded={isHydrated}>
             <CardHeader className='flex gap-3'>
