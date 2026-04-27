@@ -5,14 +5,14 @@ import { LucideInfo } from 'lucide-react'
 import NoSleep from 'nosleep.js'
 import { useEffect, useRef } from 'react'
 import { match } from 'ts-pattern'
-import { RippleButton } from '~/components/animate-ui/buttons/ripple'
-import { Switch } from '~/components/animate-ui/radix/switch'
+import { Switch } from '~/components/animate-ui/components/base/switch'
 import {
   Tooltip,
-  TooltipContent,
-  TooltipProvider,
+  TooltipPanel,
   TooltipTrigger,
-} from '~/components/animate-ui/radix/tooltip'
+} from '~/components/animate-ui/components/base/tooltip'
+import { RippleButton } from '~/components/animate-ui/components/buttons/ripple'
+import { TooltipProvider } from '~/components/animate-ui/primitives/base/tooltip'
 import { AnimatedBackground } from '~/components/motion-primitives/animated-background'
 
 export default function Page() {
@@ -124,7 +124,7 @@ export default function Page() {
               <TooltipTrigger>
                 <LucideInfo className='size-4' />
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipPanel>
                 <div className='flex items-center gap-x-2'>
                   <Trans>inspired by</Trans>
                   <a
@@ -135,7 +135,7 @@ export default function Page() {
                     https://www.keepscreenon.com/
                   </a>
                 </div>
-              </TooltipContent>
+              </TooltipPanel>
             </Tooltip>
           </TooltipProvider>
         </h1>
@@ -156,7 +156,7 @@ export default function Page() {
         <div className='bg-accent flex min-w-80 flex-col items-center justify-center gap-y-2 rounded-lg p-4'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='flex items-center gap-x-2'>
-              <div className='flex gap-2 rounded-[8px] bg-gray-100 p-[2px] dark:bg-zinc-800'>
+              <div className='flex gap-2 rounded-xl bg-gray-100 p-0.5 dark:bg-zinc-800'>
                 <AnimatedBackground
                   defaultValue={Promote[0].value}
                   className='bg-foreground/10 flex rounded-lg dark:bg-zinc-700'

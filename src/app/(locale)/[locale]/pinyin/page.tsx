@@ -1,10 +1,12 @@
 'use client'
-import { Button, Checkbox, Textarea } from '@heroui/react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { CircleX } from 'lucide-react'
 import pinyin from 'pinyin'
 import { useMemo, useState } from 'react'
 import { CopyButton } from '~/components/copy-button'
+import { Button } from '~/components/ui/button'
+import { Checkbox } from '~/components/ui/checkbox'
+import { Textarea } from '~/components/ui/textarea'
 
 export default function Page() {
   const { t } = useLingui()
@@ -36,44 +38,47 @@ export default function Page() {
         </h1>
       </div>
       <div className='flex justify-center gap-x-4'>
-        <Checkbox isSelected={isShowTone} onValueChange={setIsShowTone}>
-          <Trans>Tone</Trans>
-        </Checkbox>
+        <label className='flex items-center gap-2 text-sm'>
+          <Checkbox checked={isShowTone} onCheckedChange={setIsShowTone} />
+          <span>
+            <Trans>Tone</Trans>
+          </span>
+        </label>
       </div>
       <div className='grid gap-2 gap-y-4 px-2 sm:grid-cols-2'>
-        <Textarea
-          isInvalid={inputText === 'Invalid input'}
-          value={inputText}
-          onValueChange={handleInputTextChange}
-          classNames={{
-            inputWrapper: 'relative',
-          }}
-          minRows={8}
-          label={t`Text`}
-          placeholder={t`Enter your input text`}
-          endContent={
+        <label className='space-y-2'>
+          <span className='text-sm font-medium'>{t`Text`}</span>
+          <div className='relative'>
+            <Textarea
+              aria-invalid={inputText === 'Invalid input'}
+              value={inputText}
+              onChange={(event) => handleInputTextChange(event.target.value)}
+              rows={8}
+              placeholder={t`Enter your input text`}
+            />
             <Button
               className='absolute top-2 right-3'
-              size='sm'
-              isIconOnly
-              variant='light'
-              onPress={() => setInputText('')}
+              size='icon-sm'
+              variant='ghost'
+              onClick={() => setInputText('')}
             >
               <CircleX size={16} className='hover:text-red-500' />
             </Button>
-          }
-        />
-        <Textarea
-          isInvalid={pingyinText === 'Invalid input'}
-          value={pingyinText}
-          disabled
-          label={t`Pinyin`}
-          minRows={8}
-          placeholder={t`No input`}
-          endContent={
+          </div>
+        </label>
+        <label className='space-y-2'>
+          <span className='text-sm font-medium'>{t`Pinyin`}</span>
+          <div className='relative'>
+            <Textarea
+              aria-invalid={pingyinText === 'Invalid input'}
+              value={pingyinText}
+              readOnly
+              rows={8}
+              placeholder={t`No input`}
+            />
             <CopyButton className='absolute top-2 right-3' text={pingyinText} />
-          }
-        />
+          </div>
+        </label>
       </div>
     </div>
   )
