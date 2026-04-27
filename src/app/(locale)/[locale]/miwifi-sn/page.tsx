@@ -1,7 +1,7 @@
 'use client'
-import { Input, Link } from '@heroui/react'
 import { useMemo, useState } from 'react'
 import { CopyButton } from '~/components/copy-button'
+import { Input } from '~/components/ui/input'
 import { getPasswd } from './utils'
 
 export default function Page() {
@@ -12,9 +12,14 @@ export default function Page() {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center'>
       <h1>
-        <Link href='https://miwifi.dev/ssh' target='_blank' rel='noreferrer'>
+        <a
+          className='text-primary underline-offset-4 hover:underline'
+          href='https://miwifi.dev/ssh'
+          target='_blank'
+          rel='noreferrer'
+        >
           MiWiFi SSH Password Calculator
-        </Link>
+        </a>
       </h1>
       <div className='mt-10 flex flex-col gap-y-8'>
         <div className='flex items-center gap-x-4'>

@@ -1,6 +1,7 @@
 'use client'
-import { Button, Input } from '@heroui/react'
 import { useMemo, useState } from 'react'
+import { Button } from '~/components/ui/button'
+import { Input } from '~/components/ui/input'
 import { Icon } from '~/icons'
 
 export default function Page() {
@@ -61,7 +62,7 @@ export default function Page() {
             onChange={(event) => setRawUrl(event.target.value)}
           />
         </label>
-        <Button onPress={handleParse}>parse</Button>
+        <Button onClick={handleParse}>parse</Button>
       </div>
       <div className='mt-6 grid gap-y-2'>
         {queries.map(([key, value], index) => (
@@ -83,7 +84,7 @@ export default function Page() {
               }
             />
             <div>
-              <Button isIconOnly onPress={() => handleQueryAdd(index)}>
+              <Button size='icon' onClick={() => handleQueryAdd(index)}>
                 <Icon icon='MaterialSymbolsAdd' />
               </Button>
             </div>
@@ -92,7 +93,7 @@ export default function Page() {
       </div>
 
       <div className='m-8 flex justify-center'>
-        <Button onPress={handleOpen}>Get</Button>
+        <Button onClick={handleOpen}>Get</Button>
       </div>
     </div>
   )

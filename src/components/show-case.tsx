@@ -1,8 +1,12 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import { Card, Link, Separator, Skeleton } from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
+import { ExternalLinkIcon } from 'lucide-react'
 import { motion } from 'motion/react'
+import Link from 'next/link'
+import { Card, CardContent, CardHeader } from '~/components/ui/card'
+import { Separator } from '~/components/ui/separator'
+import { Skeleton } from '~/components/ui/skeleton'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 
 const MotionCard = motion.create(Card)
@@ -105,7 +109,7 @@ export function Showcase() {
         >
           {isHydrated ? (
             <>
-              <Card.Header className='flex grid-cols-none flex-row gap-3'>
+              <CardHeader className='flex grid-cols-none flex-row gap-3'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt={`${item.title} logo`}
@@ -115,24 +119,26 @@ export function Showcase() {
                 <div className='flex flex-col'>
                   <p className='text-xl'>{item.title}</p>
                   <Link
-                    className='text-primary text-sm underline-offset-4 hover:underline'
+                    target='_blank'
+                    className='text-primary inline-flex items-center gap-1 text-sm underline-offset-4 hover:underline'
                     href={item.href}
                   >
                     {item.link}
+                    <ExternalLinkIcon className='size-3.5' />
                   </Link>
                 </div>
-              </Card.Header>
+              </CardHeader>
               <Separator />
-              <Card.Content>
+              <CardContent>
                 <p>{item.description}</p>
-              </Card.Content>
+              </CardContent>
             </>
           ) : (
-            <Card.Content className='space-y-3'>
+            <CardContent className='space-y-3'>
               <Skeleton className='h-10 w-3/4' />
               <Skeleton className='h-4 w-full' />
               <Skeleton className='h-4 w-2/3' />
-            </Card.Content>
+            </CardContent>
           )}
         </MotionCard>
       ))}

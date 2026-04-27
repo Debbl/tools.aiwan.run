@@ -1,6 +1,6 @@
 'use client'
-import { Button } from '@heroui/react'
 import { motion } from 'motion/react'
+import { Button } from '~/components/ui/button'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { Icon } from '~/icons'
 
@@ -17,7 +17,7 @@ export function Header() {
       <h1>Magic Tools</h1>
 
       <div className='absolute right-4 flex items-center gap-x-2'>
-        <Button size='sm' variant='ghost' isIconOnly onPress={switchLocale}>
+        <Button size='icon-sm' variant='ghost' onClick={switchLocale}>
           <Icon icon='FlowbiteLanguageOutline' />
         </Button>
       </div>

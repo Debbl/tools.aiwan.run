@@ -1,10 +1,12 @@
 'use client'
-import { Button, Checkbox, TextArea } from '@heroui/react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { CircleX } from 'lucide-react'
 import pinyin from 'pinyin'
 import { useMemo, useState } from 'react'
 import { CopyButton } from '~/components/copy-button'
+import { Button } from '~/components/ui/button'
+import { Checkbox } from '~/components/ui/checkbox'
+import { Textarea } from '~/components/ui/textarea'
 
 export default function Page() {
   const { t } = useLingui()
@@ -37,7 +39,7 @@ export default function Page() {
       </div>
       <div className='flex justify-center gap-x-4'>
         <label className='flex items-center gap-2 text-sm'>
-          <Checkbox isSelected={isShowTone} onChange={setIsShowTone} />
+          <Checkbox checked={isShowTone} onCheckedChange={setIsShowTone} />
           <span>
             <Trans>Tone</Trans>
           </span>
@@ -47,7 +49,7 @@ export default function Page() {
         <label className='space-y-2'>
           <span className='text-sm font-medium'>{t`Text`}</span>
           <div className='relative'>
-            <TextArea
+            <Textarea
               aria-invalid={inputText === 'Invalid input'}
               value={inputText}
               onChange={(event) => handleInputTextChange(event.target.value)}
@@ -56,10 +58,9 @@ export default function Page() {
             />
             <Button
               className='absolute top-2 right-3'
-              size='sm'
-              isIconOnly
+              size='icon-sm'
               variant='ghost'
-              onPress={() => setInputText('')}
+              onClick={() => setInputText('')}
             >
               <CircleX size={16} className='hover:text-red-500' />
             </Button>
@@ -68,7 +69,7 @@ export default function Page() {
         <label className='space-y-2'>
           <span className='text-sm font-medium'>{t`Pinyin`}</span>
           <div className='relative'>
-            <TextArea
+            <Textarea
               aria-invalid={pingyinText === 'Invalid input'}
               value={pingyinText}
               readOnly

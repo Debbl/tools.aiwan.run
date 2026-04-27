@@ -59,10 +59,7 @@ export default function Page() {
         >
           <ResizablePanel>
             <ResizablePanelGroup orientation='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+              <ResizablePanel className='border-b' maxSize={42} minSize={42}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 
@@ -84,10 +81,7 @@ export default function Page() {
           <ResizableHandle withHandle />
           <ResizablePanel>
             <ResizablePanelGroup orientation='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+              <ResizablePanel className='border-b' maxSize={42} minSize={42}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 

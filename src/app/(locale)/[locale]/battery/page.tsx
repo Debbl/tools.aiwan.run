@@ -1,5 +1,5 @@
 'use client'
-import { ProgressBar } from '@heroui/react'
+import { Progress } from '~/components/ui/progress'
 import { useBattery } from './hooks/use-battery'
 
 export default function BatteryPage() {
@@ -17,9 +17,8 @@ export default function BatteryPage() {
       <div className=''>
         <h1 className='mt-6 text-center text-lg font-bold'>Battery</h1>
         <p className='mt-2 text-center'>{JSON.stringify(battery)}</p>
-        <ProgressBar
+        <Progress
           className='mt-4'
-          color='success'
           aria-label='charging'
           value={battery.level * 100}
         />

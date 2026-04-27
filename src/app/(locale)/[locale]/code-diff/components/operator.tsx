@@ -1,14 +1,21 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import { Button, Checkbox, ListBox, Select } from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
+import { Button } from '~/components/ui/button'
+import { Checkbox } from '~/components/ui/checkbox'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '~/components/ui/select'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { useMainStore } from '../hooks/use-main-store'
 import { FlowbiteLanguageOutline, RiResetRightFill } from '../icons'
 import type { Monaco, Theme } from '@monaco-editor/react'
-import type { Key } from 'react'
 
 interface MonacoModel {
   setValue: (value: string) => void
@@ -44,9 +51,9 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   const { t } = useLingui()
   const { switchLocale } = useI18nHelper()
 
-  const handleSetTheme = (key: Key | null) => {
-    if (!key) return
-    const theme = String(key) as Theme
+  const handleSetTheme = (value: string | null) => {
+    if (!value) return
+    const theme = value as Theme
 
     setEditorTheme(theme)
   }
@@ -58,67 +65,49 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
       <label className='flex max-w-xs items-center gap-2 text-sm'>
         <span>{t`Select Language`}</span>
         <Select
-          aria-label={t`Select Language`}
-          selectedKey={language}
-          onChange={(key) => {
-            if (key) setLanguage(String(key))
+          value={language}
+          onValueChange={(value) => {
+            if (value) setLanguage(value)
           }}
         >
-          <Select.Trigger className='min-w-36'>
-            <Select.Value />
-            <Select.Indicator />
-          </Select.Trigger>
-          <Select.Popover>
-            <ListBox>
-              {languages.map((lang) => (
-                <ListBox.Item key={lang.id} id={lang.id} textValue={lang.id}>
-                  {lang.id}
-                  <ListBox.ItemIndicator />
-                </ListBox.Item>
-              ))}
-            </ListBox>
-          </Select.Popover>
+          <SelectTrigger size='sm' className='min-w-36'>
+            <SelectValue placeholder={t`Select Language`} />
+          </SelectTrigger>
+          <SelectContent>
+            {languages.map((lang) => (
+              <SelectItem key={lang.id} value={lang.id}>
+                {lang.id}
+              </SelectItem>
+            ))}
+          </SelectContent>
         </Select>
       </label>
 
       <label className='flex max-w-52 items-center gap-2 text-sm'>
-        <span>{t`Select Theme`}</span>
-        <Select
-          aria-label={t`Select Theme`}
-          selectedKey={editorTheme}
-          onChange={handleSetTheme}
-        >
-          <Select.Trigger className='min-w-28'>
-            <Select.Value />
-            <Select.Indicator />
-          </Select.Trigger>
-          <Select.Popover>
-            <ListBox>
-              <ListBox.Item id='light' textValue='light'>
-                light
-                <ListBox.ItemIndicator />
-              </ListBox.Item>
-              <ListBox.Item id='vs-dark' textValue='vs-dark'>
-                vs-dark
-                <ListBox.ItemIndicator />
-              </ListBox.Item>
-            </ListBox>
-          </Select.Popover>
+        <span className='text-nowrap'>{t`Select Theme`}</span>
+        <Select value={editorTheme} onValueChange={handleSetTheme}>
+          <SelectTrigger size='sm' className='min-w-28'>
+            <SelectValue placeholder={t`Select Theme`} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value='light'>light</SelectItem>
+            <SelectItem value='vs-dark'>vs-dark</SelectItem>
+          </SelectContent>
         </Select>
       </label>
 
       <label className='flex items-center gap-2 text-sm'>
         <Checkbox
-          isSelected={renderSideBySide}
-          onChange={setRenderSideBySide}
+          checked={renderSideBySide}
+          onCheckedChange={setRenderSideBySide}
         />
         <span>{t`Side By Side`}</span>
       </label>
 
-      <Button size='sm' isIconOnly onPress={resetMonacoValue}>
+      <Button size='icon-sm' onClick={resetMonacoValue}>
         <RiResetRightFill />
       </Button>
-      <Button size='sm' isIconOnly variant='ghost' onPress={switchLocale}>
+      <Button size='icon-sm' variant='ghost' onClick={switchLocale}>
         <FlowbiteLanguageOutline />
       </Button>
     </div>

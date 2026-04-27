@@ -1,8 +1,10 @@
 'use client'
-import { Button, Card, Input } from '@heroui/react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { AlertCircleIcon, DownloadIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import { Button } from '~/components/ui/button'
+import { Card, CardContent } from '~/components/ui/card'
+import { Input } from '~/components/ui/input'
 
 interface ParseResult {
   itemName: string
@@ -98,8 +100,8 @@ export default function Page() {
         <div className='flex justify-center sm:justify-start'>
           <Button
             className='w-full sm:w-auto'
-            isDisabled={!parsed || isDownloading}
-            onPress={handleDownload}
+            disabled={!parsed || isDownloading}
+            onClick={handleDownload}
           >
             <DownloadIcon className='size-4' />
             {isDownloading ? (
@@ -111,7 +113,7 @@ export default function Page() {
         </div>
 
         <Card>
-          <Card.Content className='space-y-2 text-sm'>
+          <CardContent className='space-y-2 text-sm'>
             <h2 className='font-medium'>
               <Trans>Resolved Data</Trans>
             </h2>
@@ -127,7 +129,7 @@ export default function Page() {
               </span>
               <code>{parsed?.downloadUrl ?? '-'}</code>
             </p>
-          </Card.Content>
+          </CardContent>
         </Card>
       </main>
     </div>

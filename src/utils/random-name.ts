@@ -5,6 +5,11 @@ export interface GenerateRandomNameOptions {
   separator?: RandomNameSeparator
 }
 
+export interface RandomNameParts {
+  adjective: string
+  hero: string
+}
+
 const DEFAULT_COUNT = 6
 const MIN_COUNT = 1
 const MAX_COUNT = 20
@@ -234,30 +239,60 @@ function normalizeAffix(value?: string): string | null {
   return normalized || null
 }
 
-export function generateRandomName(
+function pickRandomNameParts(): RandomNameParts {
+  return {
+    adjective: pickRandomWord(adjectives),
+    hero: pickRandomWord(heroes),
+  }
+}
+
+function getRandomNamePartsKey(parts: RandomNameParts): string {
+  return `${parts.adjective}\u0000${parts.hero}`
+}
+
+function formatNameWord(value: string, separator: RandomNameSeparator): string {
+  return value.replaceAll('_', separator)
+}
+
+export function formatRandomName(
+  parts: RandomNameParts,
   options: GenerateRandomNameOptions = {},
 ): string {
   const separator = options.separator ?? '_'
   const prefix = normalizeAffix(options.prefix)
-  const adjective = pickRandomWord(adjectives)
-  const hero = pickRandomWord(heroes)
 
-  return [prefix, adjective, hero].filter(Boolean).join(separator)
+  return [prefix, parts.adjective, formatNameWord(parts.hero, separator)]
+    .filter(Boolean)
+    .join(separator)
+}
+
+export function generateRandomName(
+  options: GenerateRandomNameOptions = {},
+): string {
+  return formatRandomName(pickRandomNameParts(), options)
+}
+
+export function generateRandomNameParts(count: number): RandomNameParts[] {
+  const targetCount = normalizeRandomNameCount(count)
+  const results = new Map<string, RandomNameParts>()
+  const maxAttempts = targetCount * 8
+  let attempts = 0
+
+  while (results.size < targetCount && attempts < maxAttempts) {
+    const parts = pickRandomNameParts()
+
+    results.set(getRandomNamePartsKey(parts), parts)
+    attempts += 1
+  }
+
+  return Array.from(results.values())
 }
 
 export function generateRandomNames(
   count: number,
   options: GenerateRandomNameOptions = {},
 ): string[] {
-  const targetCount = normalizeRandomNameCount(count)
-  const results = new Set<string>()
-  const maxAttempts = targetCount * 8
-  let attempts = 0
-
-  while (results.size < targetCount && attempts < maxAttempts) {
-    results.add(generateRandomName(options))
-    attempts += 1
-  }
-
-  return Array.from(results)
+  return generateRandomNameParts(count).map((parts) =>
+    formatRandomName(parts, options),
+  )
 }
