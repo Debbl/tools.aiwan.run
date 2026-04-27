@@ -1,6 +1,7 @@
 import { setI18n } from '@lingui/react/server'
 import { Provider } from 'jotai'
 import { ThemeProvider } from 'next-themes'
+import Script from 'next/script'
 import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
 import { getWebsite } from '~/constants'
@@ -96,12 +97,6 @@ export async function getRootLayout(lang: string) {
       <html lang={lang} suppressHydrationWarning>
         <head>
           <script
-            defer
-            src='https://umami.aiwan.run/script.js'
-            data-website-id='5797cc0c-aef5-451e-b650-bd96e54f49c9'
-            data-domains='tools.aiwan.run'
-          />
-          <script
             type='application/ld+json'
             // eslint-disable-next-line react-dom/no-dangerously-set-innerhtml
             dangerouslySetInnerHTML={{
@@ -123,6 +118,12 @@ export async function getRootLayout(lang: string) {
             </LinguiClientProvider>
           </ThemeProvider>
         </body>
+        <Script
+          src='https://umami.aiwan.run/script.js'
+          data-website-id='5797cc0c-aef5-451e-b650-bd96e54f49c9'
+          data-domains='tools.aiwan.run'
+          strategy='afterInteractive'
+        />
       </html>
     )
   }
