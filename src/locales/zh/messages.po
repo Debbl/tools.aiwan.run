@@ -17,7 +17,7 @@ msgstr ""
 msgid "a code-diff tool for comparing code"
 msgstr "一个用于比较代码的代码对比工具"
 
-#: src/components/show-case.tsx:39
+#: src/components/show-case.tsx:29
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "一个将文本转换为base64的工具"
 
@@ -37,7 +37,7 @@ msgstr "将 base64 转换为 png"
 msgid "battery"
 msgstr "电池"
 
-#: src/components/show-case.tsx:27
+#: src/components/show-case.tsx:17
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "代码对比是一个工具，允许您将两个代码片段并排进行比较。"
 
@@ -50,32 +50,32 @@ msgid "convert base64 to png"
 msgstr "将 base64 转换为 png"
 
 #: src/app/(locale)/[locale]/pinyin/layout.tsx:17
-#: src/components/show-case.tsx:69
+#: src/components/show-case.tsx:59
 msgid "Convert chinese to pinyin"
 msgstr "汉字拼音转换"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:114
+#: src/app/(locale)/[locale]/random-name/page.tsx:130
 msgid "Copy All"
 msgstr "复制全部"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:82
+#: src/app/(locale)/[locale]/random-name/page.tsx:74
 msgid "Count"
 msgstr "数量"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:87
+#: src/app/(locale)/[locale]/random-name/page.tsx:83
 msgid "Count is limited to 1-20"
 msgstr "数量限制为 1 到 20"
 
 #: src/app/(locale)/[locale]/dice-roller/layout.tsx:18
-#: src/components/show-case.tsx:63
+#: src/components/show-case.tsx:53
 msgid "Dice Roller"
 msgstr "掷骰子"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:111
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:108
 msgid "Download Extension"
 msgstr "下载扩展"
 
-#: src/components/show-case.tsx:87
+#: src/components/show-case.tsx:77
 msgid "Download VSCode extensions from marketplace links"
 msgstr "通过 Marketplace 链接下载 VSCode 扩展"
 
@@ -83,11 +83,11 @@ msgstr "通过 Marketplace 链接下载 VSCode 扩展"
 msgid "download vscode extensions from marketplace links or itemName"
 msgstr "通过 marketplace 链接或 itemName 下载 vscode 扩展"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:109
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:106
 msgid "Downloading..."
 msgstr "下载中..."
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:125
+#: src/app/(locale)/[locale]/random-name/page.tsx:141
 msgid "Each click combines one adjective and one hero-style word."
 msgstr "每次点击都会组合一个形容词和一个角色风格单词。"
 
@@ -100,7 +100,7 @@ msgid "Enter your base64 text"
 msgstr "输入 base64 文本"
 
 #: src/app/(locale)/[locale]/base64/page.tsx:76
-#: src/app/(locale)/[locale]/pinyin/page.tsx:53
+#: src/app/(locale)/[locale]/pinyin/page.tsx:55
 msgid "Enter your input text"
 msgstr "输入文本"
 
@@ -108,7 +108,7 @@ msgstr "输入文本"
 msgid "Error"
 msgstr "错误"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:108
+#: src/app/(locale)/[locale]/random-name/page.tsx:124
 msgid "Generate"
 msgstr "生成"
 
@@ -117,16 +117,16 @@ msgstr "生成"
 msgid "generate query"
 msgstr "生成查询"
 
-#: src/components/show-case.tsx:51
+#: src/components/show-case.tsx:41
 msgid "Generate Query"
 msgstr "生成查询"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:64
+#: src/app/(locale)/[locale]/random-name/page.tsx:57
 msgid "Generate random names inspired by Drizzle word lists"
 msgstr "基于 Drizzle 词表风格生成随机名称"
 
 #: src/app/(locale)/[locale]/random-name/layout.tsx:18
-#: src/components/show-case.tsx:57
+#: src/components/show-case.tsx:47
 msgid "Generate random readable names from word lists"
 msgstr "从词表中生成易读的随机名称"
 
@@ -134,11 +134,12 @@ msgstr "从词表中生成易读的随机名称"
 msgid "get battery information"
 msgstr "获取电池信息"
 
-#: src/components/show-case.tsx:33
+#: src/components/show-case.tsx:23
 msgid "Get battery information"
 msgstr "获取电池信息"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:99
+#: src/app/(locale)/[locale]/random-name/page.tsx:106
+#: src/app/(locale)/[locale]/random-name/page.tsx:107
 msgid "Hyphen"
 msgstr "连字符"
 
@@ -150,7 +151,7 @@ msgstr "灵感"
 msgid "Invalid input"
 msgstr "非法输入"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:123
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:120
 msgid "itemName"
 msgstr "扩展标识"
 
@@ -162,7 +163,7 @@ msgstr "保持屏幕常亮"
 msgid "Keep Screen On - A page to prevent your device from sleeping"
 msgstr "保持屏幕常亮 - 一个防止你的设备睡眠的页面"
 
-#: src/components/show-case.tsx:81
+#: src/components/show-case.tsx:71
 msgid "Keep your device screen always on"
 msgstr "保持你的设备屏幕常亮"
 
@@ -191,19 +192,19 @@ msgstr "Marketplace 链接或 itemName"
 msgid "MiWiFi SN"
 msgstr "小米路由器序列号"
 
-#: src/components/show-case.tsx:45
+#: src/components/show-case.tsx:35
 msgid "MiWiFi SSH Password Calculator"
 msgstr "小米路由器SSH密码计算器"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:146
+#: src/app/(locale)/[locale]/random-name/page.tsx:162
 msgid "Names are generated locally in your browser."
 msgstr "名称会在你的浏览器本地生成。"
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:72
+#: src/app/(locale)/[locale]/pinyin/page.tsx:76
 msgid "No input"
 msgstr "未输入"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:75
+#: src/app/(locale)/[locale]/random-name/page.tsx:69
 msgid "Optional prefix"
 msgstr "可选前缀"
 
@@ -221,15 +222,15 @@ msgstr "暂停"
 
 #: src/app/(locale)/[locale]/pinyin/layout.tsx:16
 #: src/app/(locale)/[locale]/pinyin/page.tsx:35
-#: src/app/(locale)/[locale]/pinyin/page.tsx:70
+#: src/app/(locale)/[locale]/pinyin/page.tsx:69
 msgid "Pinyin"
 msgstr "拼音"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:95
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:93
 msgid "Please enter a valid Marketplace URL or itemName."
 msgstr "请输入有效的 Marketplace 链接或 itemName。"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:74
+#: src/app/(locale)/[locale]/random-name/page.tsx:65
 msgid "Prefix"
 msgstr "前缀"
 
@@ -238,11 +239,11 @@ msgid "Promote"
 msgstr "专注"
 
 #: src/app/(locale)/[locale]/random-name/layout.tsx:17
-#: src/app/(locale)/[locale]/random-name/page.tsx:61
+#: src/app/(locale)/[locale]/random-name/page.tsx:54
 msgid "Random Name"
 msgstr "随机名称"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:122
+#: src/app/(locale)/[locale]/random-name/page.tsx:138
 msgid "Random name results"
 msgstr "随机名称结果"
 
@@ -250,11 +251,11 @@ msgstr "随机名称结果"
 msgid "Ready"
 msgstr "已准备"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:111
+#: src/app/(locale)/[locale]/random-name/page.tsx:127
 msgid "Reset"
 msgstr "重置"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:119
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:116
 msgid "Resolved Data"
 msgstr "解析结果"
 
@@ -262,15 +263,18 @@ msgstr "解析结果"
 msgid "roll a dice"
 msgstr "掷骰子"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:54
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:59
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:61
 msgid "Select Language"
 msgstr "选择语言"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:70
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:85
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:87
 msgid "Select Theme"
 msgstr "选择主题"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:95
+#: src/app/(locale)/[locale]/random-name/page.tsx:88
+#: src/app/(locale)/[locale]/random-name/page.tsx:90
 msgid "Separator"
 msgstr "分隔符"
 
@@ -278,11 +282,12 @@ msgstr "分隔符"
 msgid "Short Break"
 msgstr "短休息"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:88
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:115
 msgid "Side By Side"
 msgstr "并排显示"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:100
+#: src/app/(locale)/[locale]/random-name/page.tsx:110
+#: src/app/(locale)/[locale]/random-name/page.tsx:111
 msgid "Space"
 msgstr "空格"
 
@@ -294,7 +299,7 @@ msgstr "开始"
 msgid "Stop"
 msgstr "停止"
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:52
+#: src/app/(locale)/[locale]/pinyin/page.tsx:48
 msgid "Text"
 msgstr "文本"
 
@@ -302,15 +307,16 @@ msgstr "文本"
 #~ msgid "Thanks to this reference for the offline download approach:"
 #~ msgstr "离线下载方案参考并感谢："
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:40
+#: src/app/(locale)/[locale]/pinyin/page.tsx:42
 msgid "Tone"
 msgstr "声调"
 
-#: src/components/show-case.tsx:75
+#: src/components/show-case.tsx:65
 msgid "transform base64 data to png"
 msgstr "base64 数据转化成 png 图片"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:98
+#: src/app/(locale)/[locale]/random-name/page.tsx:102
+#: src/app/(locale)/[locale]/random-name/page.tsx:103
 msgid "Underscore"
 msgstr "下划线"
 
@@ -322,6 +328,6 @@ msgstr "vscode 扩展下载"
 msgid "VSCode Extension Download"
 msgstr "VSCode 扩展下载"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:129
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:126
 msgid "VSIX URL"
 msgstr "VSIX 下载地址"

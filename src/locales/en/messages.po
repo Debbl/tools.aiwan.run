@@ -17,7 +17,7 @@ msgstr ""
 msgid "a code-diff tool for comparing code"
 msgstr "a code-diff tool for comparing code"
 
-#: src/components/show-case.tsx:39
+#: src/components/show-case.tsx:29
 msgid "A tool that transforms text to base64 and vice versa"
 msgstr "A tool that transforms text to base64 and vice versa"
 
@@ -37,7 +37,7 @@ msgstr "base64 to png"
 msgid "battery"
 msgstr "battery"
 
-#: src/components/show-case.tsx:27
+#: src/components/show-case.tsx:17
 msgid "Code Diff is a tool that allows you to compare two code snippets side by side."
 msgstr "Code Diff is a tool that allows you to compare two code snippets side by side."
 
@@ -50,32 +50,32 @@ msgid "convert base64 to png"
 msgstr "convert base64 to png"
 
 #: src/app/(locale)/[locale]/pinyin/layout.tsx:17
-#: src/components/show-case.tsx:69
+#: src/components/show-case.tsx:59
 msgid "Convert chinese to pinyin"
 msgstr "Convert chinese to pinyin"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:114
+#: src/app/(locale)/[locale]/random-name/page.tsx:130
 msgid "Copy All"
 msgstr "Copy All"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:82
+#: src/app/(locale)/[locale]/random-name/page.tsx:74
 msgid "Count"
 msgstr "Count"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:87
+#: src/app/(locale)/[locale]/random-name/page.tsx:83
 msgid "Count is limited to 1-20"
 msgstr "Count is limited to 1-20"
 
 #: src/app/(locale)/[locale]/dice-roller/layout.tsx:18
-#: src/components/show-case.tsx:63
+#: src/components/show-case.tsx:53
 msgid "Dice Roller"
 msgstr "Dice Roller"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:111
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:108
 msgid "Download Extension"
 msgstr "Download Extension"
 
-#: src/components/show-case.tsx:87
+#: src/components/show-case.tsx:77
 msgid "Download VSCode extensions from marketplace links"
 msgstr "Download VSCode extensions from marketplace links"
 
@@ -83,11 +83,11 @@ msgstr "Download VSCode extensions from marketplace links"
 msgid "download vscode extensions from marketplace links or itemName"
 msgstr "download vscode extensions from marketplace links or itemName"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:109
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:106
 msgid "Downloading..."
 msgstr "Downloading..."
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:125
+#: src/app/(locale)/[locale]/random-name/page.tsx:141
 msgid "Each click combines one adjective and one hero-style word."
 msgstr "Each click combines one adjective and one hero-style word."
 
@@ -100,7 +100,7 @@ msgid "Enter your base64 text"
 msgstr "Enter your base64 text"
 
 #: src/app/(locale)/[locale]/base64/page.tsx:76
-#: src/app/(locale)/[locale]/pinyin/page.tsx:53
+#: src/app/(locale)/[locale]/pinyin/page.tsx:55
 msgid "Enter your input text"
 msgstr "Enter your input text"
 
@@ -112,7 +112,7 @@ msgstr "Enter your input text"
 msgid "Error"
 msgstr "Error"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:108
+#: src/app/(locale)/[locale]/random-name/page.tsx:124
 msgid "Generate"
 msgstr "Generate"
 
@@ -121,16 +121,16 @@ msgstr "Generate"
 msgid "generate query"
 msgstr "generate query"
 
-#: src/components/show-case.tsx:51
+#: src/components/show-case.tsx:41
 msgid "Generate Query"
 msgstr "Generate Query"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:64
+#: src/app/(locale)/[locale]/random-name/page.tsx:57
 msgid "Generate random names inspired by Drizzle word lists"
 msgstr "Generate random names inspired by Drizzle word lists"
 
 #: src/app/(locale)/[locale]/random-name/layout.tsx:18
-#: src/components/show-case.tsx:57
+#: src/components/show-case.tsx:47
 msgid "Generate random readable names from word lists"
 msgstr "Generate random readable names from word lists"
 
@@ -138,11 +138,12 @@ msgstr "Generate random readable names from word lists"
 msgid "get battery information"
 msgstr "get battery information"
 
-#: src/components/show-case.tsx:33
+#: src/components/show-case.tsx:23
 msgid "Get battery information"
 msgstr "Get battery information"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:99
+#: src/app/(locale)/[locale]/random-name/page.tsx:106
+#: src/app/(locale)/[locale]/random-name/page.tsx:107
 msgid "Hyphen"
 msgstr "Hyphen"
 
@@ -154,7 +155,7 @@ msgstr "inspired by"
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:123
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:120
 msgid "itemName"
 msgstr "itemName"
 
@@ -166,7 +167,7 @@ msgstr "Keep Screen On"
 msgid "Keep Screen On - A page to prevent your device from sleeping"
 msgstr "Keep Screen On - A page to prevent your device from sleeping"
 
-#: src/components/show-case.tsx:81
+#: src/components/show-case.tsx:71
 msgid "Keep your device screen always on"
 msgstr "Keep your device screen always on"
 
@@ -195,19 +196,19 @@ msgstr "Marketplace URL or itemName"
 msgid "MiWiFi SN"
 msgstr "MiWiFi SN"
 
-#: src/components/show-case.tsx:45
+#: src/components/show-case.tsx:35
 msgid "MiWiFi SSH Password Calculator"
 msgstr "MiWiFi SSH Password Calculator"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:146
+#: src/app/(locale)/[locale]/random-name/page.tsx:162
 msgid "Names are generated locally in your browser."
 msgstr "Names are generated locally in your browser."
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:72
+#: src/app/(locale)/[locale]/pinyin/page.tsx:76
 msgid "No input"
 msgstr "No input"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:75
+#: src/app/(locale)/[locale]/random-name/page.tsx:69
 msgid "Optional prefix"
 msgstr "Optional prefix"
 
@@ -225,15 +226,15 @@ msgstr "Pause"
 
 #: src/app/(locale)/[locale]/pinyin/layout.tsx:16
 #: src/app/(locale)/[locale]/pinyin/page.tsx:35
-#: src/app/(locale)/[locale]/pinyin/page.tsx:70
+#: src/app/(locale)/[locale]/pinyin/page.tsx:69
 msgid "Pinyin"
 msgstr "Pinyin"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:95
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:93
 msgid "Please enter a valid Marketplace URL or itemName."
 msgstr "Please enter a valid Marketplace URL or itemName."
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:74
+#: src/app/(locale)/[locale]/random-name/page.tsx:65
 msgid "Prefix"
 msgstr "Prefix"
 
@@ -242,11 +243,11 @@ msgid "Promote"
 msgstr "Promote"
 
 #: src/app/(locale)/[locale]/random-name/layout.tsx:17
-#: src/app/(locale)/[locale]/random-name/page.tsx:61
+#: src/app/(locale)/[locale]/random-name/page.tsx:54
 msgid "Random Name"
 msgstr "Random Name"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:122
+#: src/app/(locale)/[locale]/random-name/page.tsx:138
 msgid "Random name results"
 msgstr "Random name results"
 
@@ -254,11 +255,11 @@ msgstr "Random name results"
 msgid "Ready"
 msgstr "Ready"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:111
+#: src/app/(locale)/[locale]/random-name/page.tsx:127
 msgid "Reset"
 msgstr "Reset"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:119
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:116
 msgid "Resolved Data"
 msgstr "Resolved Data"
 
@@ -266,15 +267,18 @@ msgstr "Resolved Data"
 msgid "roll a dice"
 msgstr "roll a dice"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:54
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:59
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:61
 msgid "Select Language"
 msgstr "Select Language"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:70
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:85
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:87
 msgid "Select Theme"
 msgstr "Select Theme"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:95
+#: src/app/(locale)/[locale]/random-name/page.tsx:88
+#: src/app/(locale)/[locale]/random-name/page.tsx:90
 msgid "Separator"
 msgstr "Separator"
 
@@ -282,11 +286,12 @@ msgstr "Separator"
 msgid "Short Break"
 msgstr "Short Break"
 
-#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:88
+#: src/app/(locale)/[locale]/code-diff/components/operator.tsx:115
 msgid "Side By Side"
 msgstr "Side By Side"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:100
+#: src/app/(locale)/[locale]/random-name/page.tsx:110
+#: src/app/(locale)/[locale]/random-name/page.tsx:111
 msgid "Space"
 msgstr "Space"
 
@@ -298,7 +303,7 @@ msgstr "Start"
 msgid "Stop"
 msgstr "Stop"
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:52
+#: src/app/(locale)/[locale]/pinyin/page.tsx:48
 msgid "Text"
 msgstr "Text"
 
@@ -306,15 +311,16 @@ msgstr "Text"
 #~ msgid "Thanks to this reference for the offline download approach:"
 #~ msgstr "Thanks to this reference for the offline download approach:"
 
-#: src/app/(locale)/[locale]/pinyin/page.tsx:40
+#: src/app/(locale)/[locale]/pinyin/page.tsx:42
 msgid "Tone"
 msgstr "Tone"
 
-#: src/components/show-case.tsx:75
+#: src/components/show-case.tsx:65
 msgid "transform base64 data to png"
 msgstr "transform base64 data to png"
 
-#: src/app/(locale)/[locale]/random-name/page.tsx:98
+#: src/app/(locale)/[locale]/random-name/page.tsx:102
+#: src/app/(locale)/[locale]/random-name/page.tsx:103
 msgid "Underscore"
 msgstr "VSIX URL"
 
@@ -326,6 +332,6 @@ msgstr "vscode extension download"
 msgid "VSCode Extension Download"
 msgstr "VSCode Extension Download"
 
-#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:129
+#: src/app/(locale)/[locale]/vscode-extension-download/page.tsx:126
 msgid "VSIX URL"
 msgstr "VSIX URL"
