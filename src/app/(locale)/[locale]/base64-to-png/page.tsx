@@ -92,10 +92,10 @@ export default function Base64ToPngPage() {
       <div className='border-border mb-2 flex size-full flex-1 flex-col gap-1 overflow-hidden'>
         <ResizablePanelGroup
           className='border-border flex-1 rounded-md border'
-          direction={isMobile ? 'vertical' : 'horizontal'}
+          orientation={isMobile ? 'vertical' : 'horizontal'}
         >
           <ResizablePanel defaultSize={50} minSize={10}>
-            <ResizablePanelGroup direction='vertical'>
+            <ResizablePanelGroup orientation='vertical'>
               <ResizablePanel
                 className='border-b'
                 style={{ minHeight: 42, maxHeight: 42 }}
@@ -125,7 +125,7 @@ export default function Base64ToPngPage() {
           <ResizableHandle withHandle />
 
           <ResizablePanel defaultSize={50}>
-            <ResizablePanelGroup direction='vertical'>
+            <ResizablePanelGroup orientation='vertical'>
               <ResizablePanel
                 className='border-b'
                 style={{ minHeight: 42, maxHeight: 42 }}

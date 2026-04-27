@@ -1,6 +1,6 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import { Button, Popover, PopoverContent, PopoverTrigger } from '@heroui/react'
+import { Button, Popover } from '@heroui/react'
 import { useTheme } from 'next-themes'
 import { useState } from 'react'
 import { Icon } from '~/icons'
@@ -19,48 +19,43 @@ export function ThemeSwitcher() {
   }
 
   return (
-    <Popover
-      placement='right'
-      isOpen={isOpen}
-      onOpenChange={setIsOpen}
-      shouldCloseOnBlur
-    >
-      <PopoverTrigger>
-        <Button size='sm' variant='light' isIconOnly>
+    <Popover isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>
+      <Popover.Trigger>
+        <Button size='sm' variant='ghost' isIconOnly>
           <Icon icon={theme === 'dark' ? 'Sun' : 'Moon'} />
         </Button>
-      </PopoverTrigger>
-      <PopoverContent>
+      </Popover.Trigger>
+      <Popover.Content placement='right'>
         <div className='flex flex-col px-1 py-2'>
           <Button
             size='sm'
-            variant='light'
+            variant='ghost'
             className='justify-start'
             onPress={() => handleThemeChange('system')}
-            startContent={<Icon icon='MajesticonsDesktopComputerLine' />}
           >
+            <Icon icon='MajesticonsDesktopComputerLine' />
             System
           </Button>
           <Button
             size='sm'
-            variant='light'
+            variant='ghost'
             className='justify-start'
             onPress={() => handleThemeChange('light')}
-            startContent={<Icon icon='Sun' />}
           >
+            <Icon icon='Sun' />
             Light
           </Button>
           <Button
             size='sm'
-            variant='light'
+            variant='ghost'
             className='justify-start'
             onPress={() => handleThemeChange('dark')}
-            startContent={<Icon icon='Moon' />}
           >
+            <Icon icon='Moon' />
             Dark
           </Button>
         </div>
-      </PopoverContent>
+      </Popover.Content>
     </Popover>
   )
 }

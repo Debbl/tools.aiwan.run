@@ -1,5 +1,5 @@
 'use client'
-import { Button, Card, CardBody, Input } from '@heroui/react'
+import { Button, Card, Input } from '@heroui/react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { AlertCircleIcon, DownloadIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
@@ -83,8 +83,6 @@ export default function Page() {
             value={rawInput}
             placeholder={t`Paste https://marketplace.visualstudio.com/items?itemName=vscodevim.vim or vscodevim.vim`}
             onChange={(event) => setRawInput(event.target.value)}
-            size='lg'
-            variant='bordered'
           />
         </div>
 
@@ -100,9 +98,8 @@ export default function Page() {
         <div className='flex justify-center sm:justify-start'>
           <Button
             className='w-full sm:w-auto'
-            disabled={!parsed || isDownloading}
+            isDisabled={!parsed || isDownloading}
             onPress={handleDownload}
-            color='primary'
           >
             <DownloadIcon className='size-4' />
             {isDownloading ? (
@@ -114,7 +111,7 @@ export default function Page() {
         </div>
 
         <Card>
-          <CardBody className='space-y-2 text-sm'>
+          <Card.Content className='space-y-2 text-sm'>
             <h2 className='font-medium'>
               <Trans>Resolved Data</Trans>
             </h2>
@@ -130,7 +127,7 @@ export default function Page() {
               </span>
               <code>{parsed?.downloadUrl ?? '-'}</code>
             </p>
-          </CardBody>
+          </Card.Content>
         </Card>
       </main>
     </div>

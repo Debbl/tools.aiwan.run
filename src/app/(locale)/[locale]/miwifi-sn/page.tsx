@@ -17,32 +17,23 @@ export default function Page() {
         </Link>
       </h1>
       <div className='mt-10 flex flex-col gap-y-8'>
-        <div className='flex gap-x-4'>
+        <div className='flex items-center gap-x-4'>
+          <label className='w-20 text-sm font-medium' htmlFor='sn'>
+            SN
+          </label>
           <Input
-            label='SN'
-            classNames={{
-              base: 'w-auto',
-              label: 'w-20',
-              mainWrapper: 'w-60',
-            }}
-            labelPlacement='outside-left'
+            id='sn'
+            className='w-60'
             placeholder='Enter SN'
             value={sn}
-            onValueChange={setSn}
+            onChange={(event) => setSn(event.target.value)}
           />
         </div>
         <div className='flex items-center justify-start gap-x-4'>
-          <Input
-            classNames={{
-              base: 'w-auto',
-              label: 'w-20',
-              mainWrapper: 'w-60',
-            }}
-            label='Password'
-            labelPlacement='outside-left'
-            value={password}
-            disabled
-          />
+          <label className='w-20 text-sm font-medium' htmlFor='password'>
+            Password
+          </label>
+          <Input id='password' className='w-60' value={password} disabled />
           <CopyButton text={password} />
         </div>
       </div>

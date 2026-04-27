@@ -1,12 +1,5 @@
 'use client'
-import {
-  Button,
-  Card,
-  CardBody,
-  Input,
-  Select,
-  SelectItem,
-} from '@heroui/react'
+import { Button, Card, Input, ListBox, Select } from '@heroui/react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { RefreshCwIcon } from 'lucide-react'
 import { useState } from 'react'
@@ -67,56 +60,79 @@ export default function Page() {
 
       <main className='mt-8 flex w-full max-w-4xl flex-col gap-4'>
         <Card>
-          <CardBody className='grid gap-4 md:grid-cols-[1.2fr_140px_160px]'>
-            <Input
-              value={prefix}
-              onValueChange={setPrefix}
-              label={t`Prefix`}
-              placeholder={t`Optional prefix`}
-              variant='bordered'
-            />
+          <Card.Content className='grid gap-4 md:grid-cols-[1.2fr_140px_160px]'>
+            <label className='space-y-2'>
+              <span className='text-sm font-medium'>{t`Prefix`}</span>
+              <Input
+                value={prefix}
+                onChange={(event) => setPrefix(event.target.value)}
+                placeholder={t`Optional prefix`}
+              />
+            </label>
 
-            <Input
-              value={countValue}
-              onValueChange={setCountValue}
-              label={t`Count`}
-              type='number'
-              min={1}
-              max={20}
-              variant='bordered'
-              description={t`Count is limited to 1-20`}
-            />
+            <label className='space-y-2'>
+              <span className='text-sm font-medium'>{t`Count`}</span>
+              <Input
+                value={countValue}
+                onChange={(event) => setCountValue(event.target.value)}
+                type='number'
+                min={1}
+                max={20}
+              />
+              <span className='text-muted-foreground block text-xs'>
+                {t`Count is limited to 1-20`}
+              </span>
+            </label>
 
-            <Select
-              selectedKeys={[separator]}
-              onChange={(event) =>
-                setSeparator(event.target.value as RandomNameSeparator)
-              }
-              label={t`Separator`}
-              variant='bordered'
-            >
-              <SelectItem key='_'>{t`Underscore`}</SelectItem>
-              <SelectItem key='-'>{t`Hyphen`}</SelectItem>
-              <SelectItem key=' '>{t`Space`}</SelectItem>
-            </Select>
-          </CardBody>
+            <label className='space-y-2'>
+              <span className='text-sm font-medium'>{t`Separator`}</span>
+              <Select
+                aria-label={t`Separator`}
+                selectedKey={separator}
+                onChange={(key) => {
+                  if (key) setSeparator(String(key) as RandomNameSeparator)
+                }}
+              >
+                <Select.Trigger className='w-full'>
+                  <Select.Value />
+                  <Select.Indicator />
+                </Select.Trigger>
+                <Select.Popover>
+                  <ListBox>
+                    <ListBox.Item id='_' textValue={t`Underscore`}>
+                      {t`Underscore`}
+                      <ListBox.ItemIndicator />
+                    </ListBox.Item>
+                    <ListBox.Item id='-' textValue={t`Hyphen`}>
+                      {t`Hyphen`}
+                      <ListBox.ItemIndicator />
+                    </ListBox.Item>
+                    <ListBox.Item id=' ' textValue={t`Space`}>
+                      {t`Space`}
+                      <ListBox.ItemIndicator />
+                    </ListBox.Item>
+                  </ListBox>
+                </Select.Popover>
+              </Select>
+            </label>
+          </Card.Content>
         </Card>
 
         <div className='flex flex-col gap-3 sm:flex-row'>
-          <Button color='primary' onPress={handleGenerate}>
+          <Button variant='primary' onPress={handleGenerate}>
             <RefreshCwIcon className='size-4' />
             <Trans>Generate</Trans>
           </Button>
-          <Button variant='flat' onPress={handleReset}>
+          <Button variant='outline' onPress={handleReset}>
             <Trans>Reset</Trans>
           </Button>
-          <Button variant='flat' onPress={handleCopyAll}>
+          <Button variant='outline' onPress={handleCopyAll}>
             <Trans>Copy All</Trans>
           </Button>
         </div>
 
         <Card>
-          <CardBody className='space-y-3'>
+          <Card.Content className='space-y-3'>
             <div className='space-y-1'>
               <h2 className='text-lg font-medium'>
                 <Trans>Random name results</Trans>
@@ -132,14 +148,14 @@ export default function Page() {
               {results.map((item) => (
                 <div
                   key={item}
-                  className='border-default-200 flex items-center justify-between gap-3 rounded-xl border px-4 py-3'
+                  className='border-border flex items-center justify-between gap-3 rounded-xl border px-4 py-3'
                 >
                   <code className='truncate text-sm'>{item}</code>
                   <CopyButton text={item} />
                 </div>
               ))}
             </div>
-          </CardBody>
+          </Card.Content>
         </Card>
 
         <p className='text-muted-foreground text-center text-xs'>

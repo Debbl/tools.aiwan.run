@@ -1,6 +1,6 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import { Button, Checkbox, Select, SelectItem } from '@heroui/react'
+import { Button, Checkbox, ListBox, Select } from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
@@ -8,7 +8,11 @@ import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { useMainStore } from '../hooks/use-main-store'
 import { FlowbiteLanguageOutline, RiResetRightFill } from '../icons'
 import type { Monaco, Theme } from '@monaco-editor/react'
-import type { ChangeEventHandler } from 'react'
+import type { Key } from 'react'
+
+interface MonacoModel {
+  setValue: (value: string) => void
+}
 
 export default function Operator({ monaco }: { monaco?: Monaco }) {
   const {
@@ -28,7 +32,9 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   }, [editorTheme, setTheme])
 
   const resetMonacoValue = () => {
-    monaco?.editor.getModels().forEach((model) => {
+    const models = monaco?.editor.getModels() as MonacoModel[] | undefined
+
+    models?.forEach((model) => {
       model.setValue('')
     })
   }
@@ -38,8 +44,9 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   const { t } = useLingui()
   const { switchLocale } = useI18nHelper()
 
-  const handleSetTheme: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    const theme = e.target.value as Theme
+  const handleSetTheme = (key: Key | null) => {
+    if (!key) return
+    const theme = String(key) as Theme
 
     setEditorTheme(theme)
   }
@@ -48,45 +55,65 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
 
   return (
     <div className='flex items-center justify-center gap-x-4 py-4'>
-      <Select
-        selectedKeys={[language]}
-        onChange={(e) => setLanguage(e.target.value)}
-        label={t`Select Language`}
-        size='sm'
-        classNames={{
-          base: 'max-w-xs items-center',
-          mainWrapper: 'flex-1',
-        }}
-        labelPlacement='outside-left'
-      >
-        {languages.map((lang) => (
-          <SelectItem key={lang.id}>{lang.id}</SelectItem>
-        ))}
-      </Select>
+      <label className='flex max-w-xs items-center gap-2 text-sm'>
+        <span>{t`Select Language`}</span>
+        <Select
+          aria-label={t`Select Language`}
+          selectedKey={language}
+          onChange={(key) => {
+            if (key) setLanguage(String(key))
+          }}
+        >
+          <Select.Trigger className='min-w-36'>
+            <Select.Value />
+            <Select.Indicator />
+          </Select.Trigger>
+          <Select.Popover>
+            <ListBox>
+              {languages.map((lang) => (
+                <ListBox.Item key={lang.id} id={lang.id} textValue={lang.id}>
+                  {lang.id}
+                  <ListBox.ItemIndicator />
+                </ListBox.Item>
+              ))}
+            </ListBox>
+          </Select.Popover>
+        </Select>
+      </label>
 
-      <Select
-        selectedKeys={[editorTheme]}
-        onChange={handleSetTheme}
-        label={t`Select Theme`}
-        size='sm'
-        classNames={{
-          base: 'max-w-52 items-center',
-          mainWrapper: 'flex-1',
-        }}
-        labelPlacement='outside-left'
-      >
-        <SelectItem key='light'>light</SelectItem>
-        <SelectItem key='vs-dark'>vs-dark</SelectItem>
-      </Select>
+      <label className='flex max-w-52 items-center gap-2 text-sm'>
+        <span>{t`Select Theme`}</span>
+        <Select
+          aria-label={t`Select Theme`}
+          selectedKey={editorTheme}
+          onChange={handleSetTheme}
+        >
+          <Select.Trigger className='min-w-28'>
+            <Select.Value />
+            <Select.Indicator />
+          </Select.Trigger>
+          <Select.Popover>
+            <ListBox>
+              <ListBox.Item id='light' textValue='light'>
+                light
+                <ListBox.ItemIndicator />
+              </ListBox.Item>
+              <ListBox.Item id='vs-dark' textValue='vs-dark'>
+                vs-dark
+                <ListBox.ItemIndicator />
+              </ListBox.Item>
+            </ListBox>
+          </Select.Popover>
+        </Select>
+      </label>
 
-      <Checkbox
-        isSelected={renderSideBySide}
-        onValueChange={setRenderSideBySide}
-        size='md'
-        defaultSelected
-      >
-        {t`Side By Side`}
-      </Checkbox>
+      <label className='flex items-center gap-2 text-sm'>
+        <Checkbox
+          isSelected={renderSideBySide}
+          onChange={setRenderSideBySide}
+        />
+        <span>{t`Side By Side`}</span>
+      </label>
 
       <Button size='sm' isIconOnly onPress={resetMonacoValue}>
         <RiResetRightFill />

@@ -55,10 +55,10 @@ export default function Page() {
       <div className='border-border flex size-full flex-1 flex-col overflow-hidden p-4'>
         <ResizablePanelGroup
           className='border-border flex-1 rounded-md border'
-          direction={isMobile ? 'vertical' : 'horizontal'}
+          orientation={isMobile ? 'vertical' : 'horizontal'}
         >
           <ResizablePanel>
-            <ResizablePanelGroup direction='vertical'>
+            <ResizablePanelGroup orientation='vertical'>
               <ResizablePanel
                 className='border-b'
                 style={{ minHeight: 42, maxHeight: 42 }}
@@ -83,7 +83,7 @@ export default function Page() {
           </ResizablePanel>
           <ResizableHandle withHandle />
           <ResizablePanel>
-            <ResizablePanelGroup direction='vertical'>
+            <ResizablePanelGroup orientation='vertical'>
               <ResizablePanel
                 className='border-b'
                 style={{ minHeight: 42, maxHeight: 42 }}

@@ -1,5 +1,5 @@
 'use client'
-import { Image } from '@heroui/react'
+import Image from 'next/image'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { Icon } from '~/icons'
 import { Link } from './link'

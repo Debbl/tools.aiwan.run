@@ -53,16 +53,14 @@ export default function Page() {
   return (
     <div className='grid min-h-screen place-content-center'>
       <div className='flex items-center gap-x-2'>
-        <Input
-          classNames={{
-            innerWrapper: 'w-[40rem]',
-          }}
-          value={rawUrl}
-          onValueChange={setRawUrl}
-          variant='underlined'
-          label='URL'
-          labelPlacement='outside-left'
-        />
+        <label className='flex items-center gap-2'>
+          <span className='text-sm font-medium'>URL</span>
+          <Input
+            className='w-160'
+            value={rawUrl}
+            onChange={(event) => setRawUrl(event.target.value)}
+          />
+        </label>
         <Button onPress={handleParse}>parse</Button>
       </div>
       <div className='mt-6 grid gap-y-2'>
@@ -73,15 +71,15 @@ export default function Page() {
             className='grid grid-cols-[1fr_4fr_40px] items-center gap-x-4'
           >
             <Input
-              variant='underlined'
               value={key}
-              onValueChange={(newKey) => handleQueryKeyChange(index, newKey)}
+              onChange={(event) =>
+                handleQueryKeyChange(index, event.target.value)
+              }
             />
             <Input
-              variant='underlined'
               value={value}
-              onValueChange={(newValue) =>
-                handleQueryValueChange(index, newValue)
+              onChange={(event) =>
+                handleQueryValueChange(index, event.target.value)
               }
             />
             <div>
