@@ -55,14 +55,11 @@ export default function Page() {
       <div className='border-border flex size-full flex-1 flex-col overflow-hidden p-4'>
         <ResizablePanelGroup
           className='border-border flex-1 rounded-md border'
-          direction={isMobile ? 'vertical' : 'horizontal'}
+          orientation={isMobile ? 'vertical' : 'horizontal'}
         >
           <ResizablePanel>
-            <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+            <ResizablePanelGroup orientation='vertical'>
+              <ResizablePanel className='border-b' maxSize={42} minSize={42}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 
@@ -83,11 +80,8 @@ export default function Page() {
           </ResizablePanel>
           <ResizableHandle withHandle />
           <ResizablePanel>
-            <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+            <ResizablePanelGroup orientation='vertical'>
+              <ResizablePanel className='border-b' maxSize={42} minSize={42}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={inputText} />
 

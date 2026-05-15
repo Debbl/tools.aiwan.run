@@ -92,14 +92,11 @@ export default function Base64ToPngPage() {
       <div className='border-border mb-2 flex size-full flex-1 flex-col gap-1 overflow-hidden'>
         <ResizablePanelGroup
           className='border-border flex-1 rounded-md border'
-          direction={isMobile ? 'vertical' : 'horizontal'}
+          orientation={isMobile ? 'vertical' : 'horizontal'}
         >
           <ResizablePanel defaultSize={50} minSize={10}>
-            <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+            <ResizablePanelGroup orientation='vertical'>
+              <ResizablePanel className='border-b' minSize={42} maxSize={42}>
                 <div className='flex h-full items-center justify-end gap-2 px-2'>
                   <CopyButton text={base64} />
                   <Button
@@ -125,11 +122,8 @@ export default function Base64ToPngPage() {
           <ResizableHandle withHandle />
 
           <ResizablePanel defaultSize={50}>
-            <ResizablePanelGroup direction='vertical'>
-              <ResizablePanel
-                className='border-b'
-                style={{ minHeight: 42, maxHeight: 42 }}
-              >
+            <ResizablePanelGroup orientation='vertical'>
+              <ResizablePanel className='border-b' minSize={42} maxSize={42}>
                 {status === 'success' && (
                   <div className='text-muted-foreground flex h-full items-center justify-end gap-2 px-2 text-sm'>
                     <p>W: {meta?.width}</p>

@@ -1,6 +1,7 @@
 'use client'
-import { Button, Input } from '@heroui/react'
 import { useMemo, useState } from 'react'
+import { Button } from '~/components/ui/button'
+import { Input } from '~/components/ui/input'
 import { Icon } from '~/icons'
 
 export default function Page() {
@@ -53,17 +54,15 @@ export default function Page() {
   return (
     <div className='grid min-h-screen place-content-center'>
       <div className='flex items-center gap-x-2'>
-        <Input
-          classNames={{
-            innerWrapper: 'w-[40rem]',
-          }}
-          value={rawUrl}
-          onValueChange={setRawUrl}
-          variant='underlined'
-          label='URL'
-          labelPlacement='outside-left'
-        />
-        <Button onPress={handleParse}>parse</Button>
+        <label className='flex items-center gap-2'>
+          <span className='text-sm font-medium'>URL</span>
+          <Input
+            className='w-160'
+            value={rawUrl}
+            onChange={(event) => setRawUrl(event.target.value)}
+          />
+        </label>
+        <Button onClick={handleParse}>parse</Button>
       </div>
       <div className='mt-6 grid gap-y-2'>
         {queries.map(([key, value], index) => (
@@ -73,19 +72,19 @@ export default function Page() {
             className='grid grid-cols-[1fr_4fr_40px] items-center gap-x-4'
           >
             <Input
-              variant='underlined'
               value={key}
-              onValueChange={(newKey) => handleQueryKeyChange(index, newKey)}
+              onChange={(event) =>
+                handleQueryKeyChange(index, event.target.value)
+              }
             />
             <Input
-              variant='underlined'
               value={value}
-              onValueChange={(newValue) =>
-                handleQueryValueChange(index, newValue)
+              onChange={(event) =>
+                handleQueryValueChange(index, event.target.value)
               }
             />
             <div>
-              <Button isIconOnly onPress={() => handleQueryAdd(index)}>
+              <Button size='icon' onClick={() => handleQueryAdd(index)}>
                 <Icon icon='MaterialSymbolsAdd' />
               </Button>
             </div>
@@ -94,7 +93,7 @@ export default function Page() {
       </div>
 
       <div className='m-8 flex justify-center'>
-        <Button onPress={handleOpen}>Get</Button>
+        <Button onClick={handleOpen}>Get</Button>
       </div>
     </div>
   )

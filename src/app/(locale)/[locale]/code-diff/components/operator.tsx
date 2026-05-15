@@ -1,14 +1,25 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import { Button, Checkbox, Select, SelectItem } from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
+import { Button } from '~/components/ui/button'
+import { Checkbox } from '~/components/ui/checkbox'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '~/components/ui/select'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 import { useMainStore } from '../hooks/use-main-store'
 import { FlowbiteLanguageOutline, RiResetRightFill } from '../icons'
 import type { Monaco, Theme } from '@monaco-editor/react'
-import type { ChangeEventHandler } from 'react'
+
+interface MonacoModel {
+  setValue: (value: string) => void
+}
 
 export default function Operator({ monaco }: { monaco?: Monaco }) {
   const {
@@ -28,7 +39,9 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   }, [editorTheme, setTheme])
 
   const resetMonacoValue = () => {
-    monaco?.editor.getModels().forEach((model) => {
+    const models = monaco?.editor.getModels() as MonacoModel[] | undefined
+
+    models?.forEach((model) => {
       model.setValue('')
     })
   }
@@ -38,8 +51,9 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
   const { t } = useLingui()
   const { switchLocale } = useI18nHelper()
 
-  const handleSetTheme: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    const theme = e.target.value as Theme
+  const handleSetTheme = (value: string | null) => {
+    if (!value) return
+    const theme = value as Theme
 
     setEditorTheme(theme)
   }
@@ -48,50 +62,52 @@ export default function Operator({ monaco }: { monaco?: Monaco }) {
 
   return (
     <div className='flex items-center justify-center gap-x-4 py-4'>
-      <Select
-        selectedKeys={[language]}
-        onChange={(e) => setLanguage(e.target.value)}
-        label={t`Select Language`}
-        size='sm'
-        classNames={{
-          base: 'max-w-xs items-center',
-          mainWrapper: 'flex-1',
-        }}
-        labelPlacement='outside-left'
-      >
-        {languages.map((lang) => (
-          <SelectItem key={lang.id}>{lang.id}</SelectItem>
-        ))}
-      </Select>
+      <label className='flex max-w-xs items-center gap-2 text-sm'>
+        <span>{t`Select Language`}</span>
+        <Select
+          value={language}
+          onValueChange={(value) => {
+            if (value) setLanguage(value)
+          }}
+        >
+          <SelectTrigger size='sm' className='min-w-36'>
+            <SelectValue placeholder={t`Select Language`} />
+          </SelectTrigger>
+          <SelectContent>
+            {languages.map((lang) => (
+              <SelectItem key={lang.id} value={lang.id}>
+                {lang.id}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </label>
 
-      <Select
-        selectedKeys={[editorTheme]}
-        onChange={handleSetTheme}
-        label={t`Select Theme`}
-        size='sm'
-        classNames={{
-          base: 'max-w-52 items-center',
-          mainWrapper: 'flex-1',
-        }}
-        labelPlacement='outside-left'
-      >
-        <SelectItem key='light'>light</SelectItem>
-        <SelectItem key='vs-dark'>vs-dark</SelectItem>
-      </Select>
+      <label className='flex max-w-52 items-center gap-2 text-sm'>
+        <span className='text-nowrap'>{t`Select Theme`}</span>
+        <Select value={editorTheme} onValueChange={handleSetTheme}>
+          <SelectTrigger size='sm' className='min-w-28'>
+            <SelectValue placeholder={t`Select Theme`} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value='light'>light</SelectItem>
+            <SelectItem value='vs-dark'>vs-dark</SelectItem>
+          </SelectContent>
+        </Select>
+      </label>
 
-      <Checkbox
-        isSelected={renderSideBySide}
-        onValueChange={setRenderSideBySide}
-        size='md'
-        defaultSelected
-      >
-        {t`Side By Side`}
-      </Checkbox>
+      <label className='flex items-center gap-2 text-sm'>
+        <Checkbox
+          checked={renderSideBySide}
+          onCheckedChange={setRenderSideBySide}
+        />
+        <span>{t`Side By Side`}</span>
+      </label>
 
-      <Button size='sm' isIconOnly onPress={resetMonacoValue}>
+      <Button size='icon-sm' onClick={resetMonacoValue}>
         <RiResetRightFill />
       </Button>
-      <Button size='sm' isIconOnly variant='ghost' onPress={switchLocale}>
+      <Button size='icon-sm' variant='ghost' onClick={switchLocale}>
         <FlowbiteLanguageOutline />
       </Button>
     </div>
