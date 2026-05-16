@@ -1,20 +1,14 @@
 'use client'
 import { useHydrated } from '@debbl/ahooks'
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Divider,
-  Image,
-  Link,
-  Skeleton,
-} from '@heroui/react'
 import { useLingui } from '@lingui/react/macro'
+import { ExternalLinkIcon } from 'lucide-react'
 import { motion } from 'motion/react'
+import Link from 'next/link'
+import { Card, CardContent, CardHeader } from '~/components/ui/card'
+import { Separator } from '~/components/ui/separator'
+import { Skeleton } from '~/components/ui/skeleton'
 import { useI18nHelper } from '~/hooks/use-i18n-helper'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 const MotionCard = motion.create(Card)
 
 export function Showcase() {
@@ -119,30 +113,39 @@ export function Showcase() {
           whileHover={{ scale: 1.05 }}
           className='max-w-95'
         >
-          <Skeleton isLoaded={isHydrated}>
-            <CardHeader className='flex gap-3'>
-              <Image
-                isBlurred
-                classNames={{
-                  img: 'rounded-none',
-                }}
-                alt={`${item.title} logo`}
-                height={40}
-                src={item.icon}
-                width={40}
-              />
-              <div className='flex flex-col'>
-                <p className='text-xl'>{item.title}</p>
-                <Link isExternal href={item.href} showAnchorIcon>
-                  {item.link}
-                </Link>
-              </div>
-            </CardHeader>
-            <Divider />
-            <CardBody>
-              <p>{item.description}</p>
-            </CardBody>
-          </Skeleton>
+          {isHydrated ? (
+            <>
+              <CardHeader className='flex grid-cols-none flex-row gap-3'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  alt={`${item.title} logo`}
+                  className='size-10 rounded-none'
+                  src={item.icon}
+                />
+                <div className='flex flex-col'>
+                  <p className='text-xl'>{item.title}</p>
+                  <Link
+                    target='_blank'
+                    className='text-primary inline-flex items-center gap-1 text-sm underline-offset-4 hover:underline'
+                    href={item.href}
+                  >
+                    {item.link}
+                    <ExternalLinkIcon className='size-3.5' />
+                  </Link>
+                </div>
+              </CardHeader>
+              <Separator />
+              <CardContent>
+                <p>{item.description}</p>
+              </CardContent>
+            </>
+          ) : (
+            <CardContent className='space-y-3'>
+              <Skeleton className='h-10 w-3/4' />
+              <Skeleton className='h-4 w-full' />
+              <Skeleton className='h-4 w-2/3' />
+            </CardContent>
+          )}
         </MotionCard>
       ))}
     </div>
