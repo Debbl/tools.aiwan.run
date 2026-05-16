@@ -37,15 +37,15 @@ msgstr "base64 to png"
 msgid "battery"
 msgstr "battery"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:224
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:245
 msgid "BIP-39 passphrase"
 msgstr "BIP-39 passphrase"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:379
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:425
 msgid "Changing the passphrase changes the derived seed completely."
 msgstr "Changing the passphrase changes the derived seed completely."
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:291
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:326
 msgid "Checksum bits"
 msgstr "Checksum bits"
 
@@ -57,7 +57,7 @@ msgstr "Code Diff is a tool that allows you to compare two code snippets side by
 msgid "code-diff"
 msgstr "code-diff"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:363
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:408
 msgid "Compatibility notes"
 msgstr "Compatibility notes"
 
@@ -82,11 +82,11 @@ msgstr "Count"
 msgid "Count is limited to 1-20"
 msgstr "Count is limited to 1-20"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:331
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:368
 msgid "Derived with PBKDF2-HMAC-SHA512 and 2048 iterations."
 msgstr "Derived with PBKDF2-HMAC-SHA512 and 2048 iterations."
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:275
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:304
 msgid "Detected words"
 msgstr "Detected words"
 
@@ -128,15 +128,15 @@ msgstr "Enter your base64 text"
 msgid "Enter your input text"
 msgstr "Enter your input text"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:305
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:340
 msgid "Entropy (hex)"
 msgstr "Entropy (hex)"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:282
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:315
 msgid "Entropy bits"
 msgstr "Entropy bits"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:320
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:357
 msgid "Entropy will appear here after validation"
 msgstr "Entropy will appear here after validation"
 
@@ -144,10 +144,11 @@ msgstr "Entropy will appear here after validation"
 msgid "Error"
 msgstr "Error"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:173
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:186
 msgid "Everything runs locally in your browser. Never share your mnemonic, entropy, seed, or passphrase with anyone."
 msgstr "Everything runs locally in your browser. Never share your mnemonic, entropy, seed, or passphrase with anyone."
 
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:264
 #: src/app/(locale)/[locale]/random-name/page.tsx:157
 msgid "Generate"
 msgstr "Generate"
@@ -160,19 +161,19 @@ msgstr "generate and validate BIP-39 mnemonic phrases locally in your browser"
 msgid "Generate and validate BIP-39 mnemonic phrases locally in your browser"
 msgstr "Generate and validate BIP-39 mnemonic phrases locally in your browser"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:144
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:154
 msgid "Generate and validate BIP-39 mnemonic phrases locally in your browser, with checksum checks, multiple official wordlists, and optional seed derivation."
 msgstr "Generate and validate BIP-39 mnemonic phrases locally in your browser, with checksum checks, multiple official wordlists, and optional seed derivation."
 
 #: src/app/(locale)/[locale]/mnemonic/page.tsx:239
-msgid "Generate new mnemonic"
-msgstr "Generate new mnemonic"
+#~ msgid "Generate new mnemonic"
+#~ msgstr "Generate new mnemonic"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:266
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:293
 msgid "Generate or paste a BIP-39 mnemonic phrase"
 msgstr "Generate or paste a BIP-39 mnemonic phrase"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:79
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:89
 msgid "Generate or paste a mnemonic phrase to begin."
 msgstr "Generate or paste a mnemonic phrase to begin."
 
@@ -202,7 +203,7 @@ msgstr "get battery information"
 msgid "Get battery information"
 msgstr "Get battery information"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:347
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:385
 msgid "Hide"
 msgstr "Hide"
 
@@ -267,15 +268,15 @@ msgstr "MiWiFi SSH Password Calculator"
 msgid "mnemonic generator"
 msgstr "mnemonic generator"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:141
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:151
 msgid "Mnemonic Generator"
 msgstr "Mnemonic Generator"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:248
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:273
 msgid "Mnemonic phrase"
 msgstr "Mnemonic phrase"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:367
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:413
 msgid "Most wallets that support mnemonic import expect standard BIP-39 English phrases."
 msgstr "Most wallets that support mnemonic import expect standard BIP-39 English phrases."
 
@@ -287,11 +288,11 @@ msgstr "Names are generated locally in your browser."
 msgid "No input"
 msgstr "No input"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:373
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:419
 msgid "Non-English BIP-39 wordlists exist, but cross-wallet support can be less consistent."
 msgstr "Non-English BIP-39 wordlists exist, but cross-wallet support can be less consistent."
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:231
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:252
 msgid "Optional extra password"
 msgstr "Optional extra password"
 
@@ -350,7 +351,7 @@ msgstr "Reset"
 msgid "Resolved Data"
 msgstr "Resolved Data"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:347
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:387
 msgid "Reveal"
 msgstr "Reveal"
 
@@ -358,15 +359,15 @@ msgstr "Reveal"
 msgid "roll a dice"
 msgstr "roll a dice"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:170
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:183
 msgid "Security reminder"
 msgstr "Security reminder"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:328
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:365
 msgid "Seed (hex)"
 msgstr "Seed (hex)"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:357
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:400
 msgid "Seed will appear here after validation"
 msgstr "Seed will appear here after validation"
 
@@ -409,15 +410,15 @@ msgstr "Stop"
 msgid "Text"
 msgstr "Text"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:88
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:98
 msgid "The mnemonic does not match the selected BIP-39 wordlist or checksum."
 msgstr "The mnemonic does not match the selected BIP-39 wordlist or checksum."
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:251
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:276
 msgid "The selected wordlist is {activeWordlistLabel}. English is usually the safest choice for wallet interoperability."
 msgstr "The selected wordlist is {activeWordlistLabel}. English is usually the safest choice for wallet interoperability."
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:308
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:343
 msgid "This is the raw secret entropy behind the mnemonic."
 msgstr "This is the raw secret entropy behind the mnemonic."
 
@@ -429,7 +430,7 @@ msgstr "Tone"
 msgid "transform base64 data to png"
 msgstr "transform base64 data to png"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:107
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:117
 msgid "Unable to derive seed with the current input."
 msgstr "Unable to derive seed with the current input."
 
@@ -437,7 +438,7 @@ msgstr "Unable to derive seed with the current input."
 msgid "Underscore"
 msgstr "Underscore"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:100
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:110
 msgid "Valid BIP-39 mnemonic."
 msgstr "Valid BIP-39 mnemonic."
 
@@ -453,14 +454,14 @@ msgstr "VSCode Extension Download"
 msgid "VSIX URL"
 msgstr "VSIX URL"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:186
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:201
 msgid "Word count"
 msgstr "Word count"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:205
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:222
 msgid "Wordlist"
 msgstr "Wordlist"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:197
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:213
 msgid "words"
 msgstr "words"

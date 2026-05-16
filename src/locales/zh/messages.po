@@ -37,15 +37,15 @@ msgstr "base64 转 png"
 msgid "battery"
 msgstr "电池"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:224
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:245
 msgid "BIP-39 passphrase"
 msgstr "BIP-39 密码短语"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:379
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:425
 msgid "Changing the passphrase changes the derived seed completely."
 msgstr "更改密码短语将完全改变派生的种子。"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:291
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:326
 msgid "Checksum bits"
 msgstr "校验位"
 
@@ -57,7 +57,7 @@ msgstr "Code Diff 是一个可以并排比较两段代码的工具。"
 msgid "code-diff"
 msgstr "code-diff"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:363
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:408
 msgid "Compatibility notes"
 msgstr "兼容性说明"
 
@@ -82,11 +82,11 @@ msgstr "数量"
 msgid "Count is limited to 1-20"
 msgstr "数量限制为 1-20"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:331
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:368
 msgid "Derived with PBKDF2-HMAC-SHA512 and 2048 iterations."
 msgstr "使用 PBKDF2-HMAC-SHA512 算法经过 2048 次迭代派生。"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:275
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:304
 msgid "Detected words"
 msgstr "检测到的单词"
 
@@ -128,15 +128,15 @@ msgstr "输入 base64 文本"
 msgid "Enter your input text"
 msgstr "输入文本"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:305
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:340
 msgid "Entropy (hex)"
 msgstr "熵值（十六进制）"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:282
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:315
 msgid "Entropy bits"
 msgstr "熵的位数"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:320
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:357
 msgid "Entropy will appear here after validation"
 msgstr "验证后熵值将显示在此处"
 
@@ -144,10 +144,11 @@ msgstr "验证后熵值将显示在此处"
 msgid "Error"
 msgstr "错误"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:173
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:186
 msgid "Everything runs locally in your browser. Never share your mnemonic, entropy, seed, or passphrase with anyone."
 msgstr "所有操作均在浏览器本地运行。切勿与任何人分享您的助记词、熵值、种子或密码短语。"
 
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:264
 #: src/app/(locale)/[locale]/random-name/page.tsx:157
 msgid "Generate"
 msgstr "生成"
@@ -160,19 +161,19 @@ msgstr "在浏览器本地生成并验证 BIP-39 助记词"
 msgid "Generate and validate BIP-39 mnemonic phrases locally in your browser"
 msgstr "在浏览器本地生成并验证 BIP-39 助记词"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:144
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:154
 msgid "Generate and validate BIP-39 mnemonic phrases locally in your browser, with checksum checks, multiple official wordlists, and optional seed derivation."
 msgstr "在浏览器本地生成并验证 BIP-39 助记词，支持校验和检查、多种官方词表及可选的种子派生。"
 
 #: src/app/(locale)/[locale]/mnemonic/page.tsx:239
-msgid "Generate new mnemonic"
-msgstr "生成新助记词"
+#~ msgid "Generate new mnemonic"
+#~ msgstr "生成新助记词"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:266
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:293
 msgid "Generate or paste a BIP-39 mnemonic phrase"
 msgstr "生成或粘贴 BIP-39 助记词"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:79
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:89
 msgid "Generate or paste a mnemonic phrase to begin."
 msgstr "生成或粘贴助记词以开始。"
 
@@ -202,7 +203,7 @@ msgstr "获取电池信息"
 msgid "Get battery information"
 msgstr "获取电池信息"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:347
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:385
 msgid "Hide"
 msgstr "隐藏"
 
@@ -267,15 +268,15 @@ msgstr "MiWiFi SSH 密码计算器"
 msgid "mnemonic generator"
 msgstr "助记词生成器"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:141
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:151
 msgid "Mnemonic Generator"
 msgstr "助记词生成器"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:248
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:273
 msgid "Mnemonic phrase"
 msgstr "助记词"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:367
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:413
 msgid "Most wallets that support mnemonic import expect standard BIP-39 English phrases."
 msgstr "大多数支持助记词导入的钱包都使用标准的 BIP-39 英文词组。"
 
@@ -287,11 +288,11 @@ msgstr "名称在浏览器本地生成。"
 msgid "No input"
 msgstr "无输入"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:373
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:419
 msgid "Non-English BIP-39 wordlists exist, but cross-wallet support can be less consistent."
 msgstr "存在非英文的 BIP-39 词表，但跨钱包的支持可能不太稳定。"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:231
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:252
 msgid "Optional extra password"
 msgstr "可选附加密码"
 
@@ -350,7 +351,7 @@ msgstr "重置"
 msgid "Resolved Data"
 msgstr "解析数据"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:347
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:387
 msgid "Reveal"
 msgstr "显示"
 
@@ -358,15 +359,15 @@ msgstr "显示"
 msgid "roll a dice"
 msgstr "掷骰子"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:170
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:183
 msgid "Security reminder"
 msgstr "安全提示"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:328
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:365
 msgid "Seed (hex)"
 msgstr "种子（十六进制）"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:357
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:400
 msgid "Seed will appear here after validation"
 msgstr "验证后种子将显示在此处"
 
@@ -409,15 +410,15 @@ msgstr "停止"
 msgid "Text"
 msgstr "文本"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:88
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:98
 msgid "The mnemonic does not match the selected BIP-39 wordlist or checksum."
 msgstr "助记词与所选的 BIP-39 词表或校验和不匹配。"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:251
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:276
 msgid "The selected wordlist is {activeWordlistLabel}. English is usually the safest choice for wallet interoperability."
 msgstr "当前词表为 {activeWordlistLabel}。英文通常是钱包互操作性的最安全选择。"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:308
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:343
 msgid "This is the raw secret entropy behind the mnemonic."
 msgstr "这是助记词背后的原始秘密熵值。"
 
@@ -429,7 +430,7 @@ msgstr "声调"
 msgid "transform base64 data to png"
 msgstr "将 base64 数据转换为 png"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:107
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:117
 msgid "Unable to derive seed with the current input."
 msgstr "无法根据当前输入派生种子。"
 
@@ -437,7 +438,7 @@ msgstr "无法根据当前输入派生种子。"
 msgid "Underscore"
 msgstr "下划线"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:100
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:110
 msgid "Valid BIP-39 mnemonic."
 msgstr "有效的 BIP-39 助记词。"
 
@@ -453,14 +454,14 @@ msgstr "VSCode 扩展下载"
 msgid "VSIX URL"
 msgstr "VSIX URL"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:186
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:201
 msgid "Word count"
 msgstr "单词数量"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:205
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:222
 msgid "Wordlist"
 msgstr "词表"
 
-#: src/app/(locale)/[locale]/mnemonic/page.tsx:197
+#: src/app/(locale)/[locale]/mnemonic/page.tsx:213
 msgid "words"
 msgstr "个单词"
