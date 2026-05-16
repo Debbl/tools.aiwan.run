@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import Script from 'next/script'
 import { Toaster } from 'sonner'
 import { Footer } from '~/components/footer'
-import { getWebsite } from '~/constants'
+import { getWebsite, isDev } from '~/constants'
 import { getI18nInstance } from '~/i18n'
 import { LinguiClientProvider } from '~/providers/lingui-client-provider'
 import { Providers } from '../providers'
@@ -103,6 +103,20 @@ export async function getRootLayout(lang: string) {
               __html: JSON.stringify(website.structuredData),
             }}
           />
+          {isDev && (
+            <Fragment>
+              <Script
+                src='//unpkg.com/react-scan/dist/auto.global.js'
+                crossOrigin='anonymous'
+                strategy='beforeInteractive'
+              />
+              <Script
+                src='//unpkg.com/react-grab/dist/index.global.js'
+                crossOrigin='anonymous'
+                strategy='beforeInteractive'
+              />
+            </Fragment>
+          )}
         </head>
         <body>
           <ThemeProvider attribute='class' defaultTheme='light'>
