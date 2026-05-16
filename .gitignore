@@ -41,3 +41,6 @@ public/swe-worker*
 
 # lingui
 src/locales/**/*.js
+
+# pnpm
+.pnpm-store
