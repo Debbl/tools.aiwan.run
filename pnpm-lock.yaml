@@ -37,7 +37,7 @@ importers:
         version: 2.2.0
       '@serwist/next':
         specifier: ^9.5.11
-        version: 9.5.11(@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.6)(esbuild@0.25.12)(typescript@6.0.3))(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))
+        version: 9.5.11(@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.7)(esbuild@0.25.12)(typescript@6.0.3))(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -146,7 +146,7 @@ importers:
         version: 6.2.0(babel-plugin-macros@3.1.0)
       '@lingui/loader':
         specifier: ^6.2.0
-        version: 6.2.0(babel-plugin-macros@3.1.0)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))
+        version: 6.2.0(babel-plugin-macros@3.1.0)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))
       '@lingui/swc-plugin':
         specifier: ^6.3.0
         version: 6.3.0(@lingui/core@6.2.0(babel-plugin-macros@3.1.0))(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
@@ -158,7 +158,7 @@ importers:
         version: 0.1.2
       '@serwist/cli':
         specifier: ^9.5.11
-        version: 9.5.11(@types/node@25.9.2)(browserslist@4.28.6)(esbuild@0.25.12)(typescript@6.0.3)
+        version: 9.5.11(@types/node@25.9.2)(browserslist@4.28.7)(esbuild@0.25.12)(typescript@6.0.3)
       '@tailwindcss/postcss':
         specifier: ^4.3.0
         version: 4.3.0
@@ -196,14 +196,14 @@ importers:
         specifier: ^0.0.4
         version: 0.0.4(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(swc-plugin-auto-import@0.0.7)
       postcss:
-        specifier: ^8.5.15
-        version: 8.5.15
+        specifier: ^8.5.18
+        version: 8.5.18
       prettier-plugin-tailwindcss:
         specifier: ^0.7.4
         version: 0.7.4(prettier@3.8.1)
       serwist:
         specifier: ^9.5.11
-        version: 9.5.11(browserslist@4.28.6)(typescript@6.0.3)
+        version: 9.5.11(browserslist@4.28.7)(typescript@6.0.3)
       shadcn:
         specifier: ^4.10.0
         version: 4.10.0(@types/node@25.9.2)(babel-plugin-macros@3.1.0)(typescript@6.0.3)
@@ -2470,6 +2470,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  baseline-browser-mapping@2.11.4:
+    resolution: {integrity: sha512-s4+sLr9mZ/CyqeRritFeYV/Zx73OAtmaHn6kkBS1XRoJn1hrg3xIDUcpicAEX68tkcIN0iBCgti31C8zxtkhsQ==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   bidi-js@1.0.3:
     resolution: {integrity: sha512-RKshQI1R3YQ+n9YJz2QQ147P66ELpa1FQEg20Dk8oW9t2KgLbpDLLp9aGZ7y8WHSshDknG0bknqGw5/tyCs5tw==}
 
@@ -2506,8 +2511,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  browserslist@4.28.6:
-    resolution: {integrity: sha512-FQBYNK15VMslhLHpA7+n+n1GOlF1kId2xcCg7/j95f24AOF6VDYMNH4mFxF7KuaTdv627faazpOAjFzMrfJOUw==}
+  browserslist@4.28.7:
+    resolution: {integrity: sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -2979,8 +2984,8 @@ packages:
   electron-to-chromium@1.5.344:
     resolution: {integrity: sha512-4MxfbmNDm+KPh066EZy+eUnkcDPcZ35wNmOWzFuh/ijvHsve6kbLTLURy88uCNK5FbpN+yk2nQY6BYh1GEt+wg==}
 
-  electron-to-chromium@1.5.392:
-    resolution: {integrity: sha512-1yQq3VQCZRwsnYc67Oc+1fge6Lwtn0hzi6zmEVkB61Zx21kTbwJAW4dFLadl5Rc1tKhG/kSpYXnfiAhu0f0a1g==}
+  electron-to-chromium@1.5.396:
+    resolution: {integrity: sha512-yHiw2Y3C3H9U6TMbOfoWK/BPreiOPXRfTWPBwQBoZG6/8TB6eOPnsy5oaRYuatR7Fw2SJ4kKforgufeo7fq0EQ==}
 
   embla-carousel-react@8.6.0:
     resolution: {integrity: sha512-0/PjqU7geVmo6F734pmPqpyHqiM99olvyecY7zdweCw+6tKEXnrE90pBiBbMMU8s5tICemzpQ3hi5EpxzGW+JA==}
@@ -3009,8 +3014,8 @@ packages:
     resolution: {integrity: sha512-otxSQPw4lkOZWkHpB3zaEQs6gWYEsmX4xQF68ElXC/TWvGxGMSGOvoNbaLXm6/cS/fSfHtsEdw90y20PCd+sCA==}
     engines: {node: '>=10.13.0'}
 
-  enhanced-resolve@5.24.2:
-    resolution: {integrity: sha512-rpsZEGT1jFuve6QlpyRp9ckQ+kN61hvF9BzCPyMdaKTm8UJce96KBn3sorXOFXlzjPrs3Vc4T1NsSroZ3PxlFw==}
+  enhanced-resolve@5.24.3:
+    resolution: {integrity: sha512-PwKooW9JUzh5chmYfHM3IQl5OkK2u2Nm011MgeZrss3JmFraUx/fqrf78kk8GUMYoibx/14MdwTl/1WKkG7TpQ==}
     engines: {node: '>=10.13.0'}
 
   env-paths@2.2.1:
@@ -4555,11 +4560,6 @@ packages:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  nanoid@3.3.12:
-    resolution: {integrity: sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.16:
     resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -4852,8 +4852,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.15:
-    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
+  postcss@8.5.18:
+    resolution: {integrity: sha512-xdB1oSLHbz1vRWgCDalrCqEFTWzFlhqFC5tIHLMOSUIjhm3XXQ1qrFy8S/ESr1JYRRXqM3c1QFiMZUJdUTqyMQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   potpack@1.0.2:
@@ -6185,7 +6185,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.29.7
       '@babel/helper-validator-option': 7.29.7
-      browserslist: 4.28.6
+      browserslist: 4.28.7
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -6221,7 +6221,7 @@ snapshots:
 
   '@babel/helper-member-expression-to-functions@7.28.5':
     dependencies:
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.7
       '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
@@ -6235,8 +6235,8 @@ snapshots:
 
   '@babel/helper-module-imports@7.28.6':
     dependencies:
-      '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
+      '@babel/traverse': 7.29.7
+      '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
 
@@ -6282,7 +6282,7 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-member-expression-to-functions': 7.28.5
       '@babel/helper-optimise-call-expression': 7.27.1
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.7
     transitivePeerDependencies:
       - supports-color
 
@@ -6403,7 +6403,7 @@ snapshots:
   '@babel/template@7.28.6':
     dependencies:
       '@babel/code-frame': 7.29.0
-      '@babel/parser': 7.29.3
+      '@babel/parser': 7.29.7
       '@babel/types': 7.29.0
 
   '@babel/template@7.29.7':
@@ -6417,7 +6417,7 @@ snapshots:
       '@babel/code-frame': 7.29.0
       '@babel/generator': 7.29.1
       '@babel/helper-globals': 7.28.0
-      '@babel/parser': 7.29.3
+      '@babel/parser': 7.29.7
       '@babel/template': 7.28.6
       '@babel/types': 7.29.0
       debug: 4.4.3
@@ -7228,12 +7228,12 @@ snapshots:
       '@lingui/message-utils': 6.2.0
       pofile-ts: 4.0.3
 
-  '@lingui/loader@6.2.0(babel-plugin-macros@3.1.0)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))':
+  '@lingui/loader@6.2.0(babel-plugin-macros@3.1.0)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))':
     dependencies:
       '@lingui/cli': 6.2.0(babel-plugin-macros@3.1.0)
       '@lingui/conf': 6.2.0
     optionalDependencies:
-      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.15)
+      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.18)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -7658,9 +7658,9 @@ snapshots:
     transitivePeerDependencies:
       - browserslist
 
-  '@serwist/build@9.5.11(browserslist@4.28.6)(typescript@6.0.3)':
+  '@serwist/build@9.5.11(browserslist@4.28.7)(typescript@6.0.3)':
     dependencies:
-      '@serwist/utils': 9.5.11(browserslist@4.28.6)
+      '@serwist/utils': 9.5.11(browserslist@4.28.7)
       common-tags: 1.8.2
       glob: 13.0.6
       pretty-bytes: 6.1.1
@@ -7672,11 +7672,11 @@ snapshots:
     transitivePeerDependencies:
       - browserslist
 
-  '@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.6)(esbuild@0.25.12)(typescript@6.0.3)':
+  '@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.7)(esbuild@0.25.12)(typescript@6.0.3)':
     dependencies:
       '@inquirer/prompts': 8.4.2(@types/node@25.9.2)
-      '@serwist/build': 9.5.11(browserslist@4.28.6)(typescript@6.0.3)
-      '@serwist/utils': 9.5.11(browserslist@4.28.6)
+      '@serwist/build': 9.5.11(browserslist@4.28.7)(typescript@6.0.3)
+      '@serwist/utils': 9.5.11(browserslist@4.28.7)
       chalk: 5.6.2
       chokidar: 5.0.0
       common-tags: 1.8.2
@@ -7693,11 +7693,11 @@ snapshots:
       - browserslist
       - typescript
 
-  '@serwist/next@9.5.11(@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.6)(esbuild@0.25.12)(typescript@6.0.3))(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))':
+  '@serwist/next@9.5.11(@serwist/cli@9.5.11(@types/node@25.9.2)(browserslist@4.28.7)(esbuild@0.25.12)(typescript@6.0.3))(next@16.2.10(@babel/core@7.29.7)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))':
     dependencies:
       '@serwist/build': 9.5.11(browserslist@4.28.2)(typescript@6.0.3)
       '@serwist/utils': 9.5.11(browserslist@4.28.2)
-      '@serwist/webpack-plugin': 9.5.11(browserslist@4.28.2)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))
+      '@serwist/webpack-plugin': 9.5.11(browserslist@4.28.2)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))
       '@serwist/window': 9.5.11(browserslist@4.28.2)(typescript@6.0.3)
       browserslist: 4.28.2
       glob: 13.0.6
@@ -7708,7 +7708,7 @@ snapshots:
       serwist: 9.5.11(browserslist@4.28.2)(typescript@6.0.3)
       zod: 4.4.1
     optionalDependencies:
-      '@serwist/cli': 9.5.11(@types/node@25.9.2)(browserslist@4.28.6)(esbuild@0.25.12)(typescript@6.0.3)
+      '@serwist/cli': 9.5.11(@types/node@25.9.2)(browserslist@4.28.7)(esbuild@0.25.12)(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
       - webpack
@@ -7717,11 +7717,11 @@ snapshots:
     optionalDependencies:
       browserslist: 4.28.2
 
-  '@serwist/utils@9.5.11(browserslist@4.28.6)':
+  '@serwist/utils@9.5.11(browserslist@4.28.7)':
     optionalDependencies:
-      browserslist: 4.28.6
+      browserslist: 4.28.7
 
-  '@serwist/webpack-plugin@9.5.11(browserslist@4.28.2)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))':
+  '@serwist/webpack-plugin@9.5.11(browserslist@4.28.2)(typescript@6.0.3)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))':
     dependencies:
       '@serwist/build': 9.5.11(browserslist@4.28.2)(typescript@6.0.3)
       '@serwist/utils': 9.5.11(browserslist@4.28.2)
@@ -7729,7 +7729,7 @@ snapshots:
       zod: 4.4.1
     optionalDependencies:
       typescript: 6.0.3
-      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.15)
+      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.18)
     transitivePeerDependencies:
       - browserslist
 
@@ -7824,7 +7824,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.3.0
       '@tailwindcss/oxide': 4.3.0
-      postcss: 8.5.15
+      postcss: 8.5.18
       tailwindcss: 4.3.0
 
   '@tailwindcss/typography@0.5.19(tailwindcss@4.3.0)':
@@ -8460,6 +8460,8 @@ snapshots:
 
   baseline-browser-mapping@2.10.43: {}
 
+  baseline-browser-mapping@2.11.4: {}
+
   bidi-js@1.0.3:
     dependencies:
       require-from-string: 2.0.2
@@ -8518,13 +8520,13 @@ snapshots:
       node-releases: 2.0.38
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
-  browserslist@4.28.6:
+  browserslist@4.28.7:
     dependencies:
-      baseline-browser-mapping: 2.10.43
+      baseline-browser-mapping: 2.11.4
       caniuse-lite: 1.0.30001806
-      electron-to-chromium: 1.5.392
+      electron-to-chromium: 1.5.396
       node-releases: 2.0.51
-      update-browserslist-db: 1.2.3(browserslist@4.28.6)
+      update-browserslist-db: 1.2.3(browserslist@4.28.7)
 
   buffer-from@1.1.2:
     optional: true
@@ -8910,7 +8912,7 @@ snapshots:
 
   electron-to-chromium@1.5.344: {}
 
-  electron-to-chromium@1.5.392: {}
+  electron-to-chromium@1.5.396: {}
 
   embla-carousel-react@8.6.0(react@19.2.7):
     dependencies:
@@ -8935,7 +8937,7 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.3.3
 
-  enhanced-resolve@5.24.2:
+  enhanced-resolve@5.24.3:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.3
@@ -9006,7 +9008,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@10.4.1(jiti@2.6.1)):
     dependencies:
       eslint: 10.4.1(jiti@2.6.1)
-      semver: 7.7.4
+      semver: 7.8.5
 
   eslint-config-flat-gitignore@2.3.0(eslint@10.4.1(jiti@2.6.1)):
     dependencies:
@@ -10828,8 +10830,6 @@ snapshots:
 
   mute-stream@3.0.0: {}
 
-  nanoid@3.3.12: {}
-
   nanoid@3.3.16: {}
 
   napi-postinstall@0.3.4: {}
@@ -11001,7 +11001,7 @@ snapshots:
       ky: 1.14.3
       registry-auth-token: 5.1.1
       registry-url: 6.0.1
-      semver: 7.7.4
+      semver: 7.8.5
 
   parent-module@1.0.1:
     dependencies:
@@ -11107,9 +11107,9 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.15:
+  postcss@8.5.18:
     dependencies:
-      nanoid: 3.3.12
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -11476,9 +11476,9 @@ snapshots:
     transitivePeerDependencies:
       - browserslist
 
-  serwist@9.5.11(browserslist@4.28.6)(typescript@6.0.3):
+  serwist@9.5.11(browserslist@4.28.7)(typescript@6.0.3):
     dependencies:
-      '@serwist/utils': 9.5.11(browserslist@4.28.6)
+      '@serwist/utils': 9.5.11(browserslist@4.28.7)
       idb: 8.0.3
     optionalDependencies:
       typescript: 6.0.3
@@ -11514,7 +11514,7 @@ snapshots:
       node-fetch: 3.3.2
       open: 11.0.0
       ora: 8.2.0
-      postcss: 8.5.15
+      postcss: 8.5.18
       postcss-selector-parser: 7.1.1
       prompts: 2.4.2
       recast: 0.23.11
@@ -11794,16 +11794,16 @@ snapshots:
 
   tapable@2.3.3: {}
 
-  terser-webpack-plugin@5.6.1(esbuild@0.25.12)(postcss@8.5.15)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15)):
+  terser-webpack-plugin@5.6.1(esbuild@0.25.12)(postcss@8.5.18)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       terser: 5.49.0
-      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.15)
+      webpack: 5.96.1(esbuild@0.25.12)(postcss@8.5.18)
     optionalDependencies:
       esbuild: 0.25.12
-      postcss: 8.5.15
+      postcss: 8.5.18
     optional: true
 
   terser@5.49.0:
@@ -12074,9 +12074,9 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-browserslist-db@1.2.3(browserslist@4.28.6):
+  update-browserslist-db@1.2.3(browserslist@4.28.7):
     dependencies:
-      browserslist: 4.28.6
+      browserslist: 4.28.7
       escalade: 3.2.0
       picocolors: 1.1.1
 
@@ -12228,7 +12228,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.2: {}
 
-  webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15):
+  webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.9
@@ -12236,9 +12236,9 @@ snapshots:
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
       acorn: 8.17.0
-      browserslist: 4.28.6
+      browserslist: 4.28.7
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.24.2
+      enhanced-resolve: 5.24.3
       es-module-lexer: 1.7.0
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -12250,7 +12250,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.3.3
-      terser-webpack-plugin: 5.6.1(esbuild@0.25.12)(postcss@8.5.15)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.15))
+      terser-webpack-plugin: 5.6.1(esbuild@0.25.12)(postcss@8.5.18)(webpack@5.96.1(esbuild@0.25.12)(postcss@8.5.18))
       watchpack: 2.5.2
       webpack-sources: 3.5.1
     transitivePeerDependencies:
